@@ -25,4 +25,26 @@ body {
 
 .hamburger {
 	display: none;
+	padding: 0 10px;
+}
+
+@media screen and (max-width: 768px){
+	.linksDiv {
+		display: none;
+	}
+
+	.links {
+		display: block;
+		padding: 10px 0;
+	}
+
+	.hamburger {
+		display: block;
+	}
+
+	.responsiveLinks {
+		position: absolute;
+		top: 50px;
+		text-align: left;
+	}
 }

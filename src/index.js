@@ -7,12 +7,26 @@ import style from '../public/style.css';
 class App extends Component {
 	constructor(props){
 		super(props);
+		this.state={
+			responsive: false
+		}
+
+		this.handleHamburger = this.handleHamburger.bind(this);
+	}
+
+	handleHamburger(){
+		this.setState((state) => ({
+			responsive: !state.responsive
+		}), () => {
+			const links = document.getElementById("linksDiv");
+			this.state.responsive ? links.className = "responsiveLinks" : links.className = "linksDiv";
+		});
 	}
 
 	render(){
 		return(
 			<div className="wrapper">
-				<Nav />
+				<Nav handleHamburger={this.handleHamburger} />
 			</div>
 			)
 	}
