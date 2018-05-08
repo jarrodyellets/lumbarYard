@@ -3,15 +3,13 @@ import React from 'react';
 const Nav = (props) => {
 	return (
 		<div className="navbar" id="navbar">
-			<div className="brandWrapper">
-				<a href="#home" className="brand"><img className="brandImg" src="https://www.jarrodyellets.com/images/lumbarLogo.png" /></a>
-			</div>
+			<a href="#home" className="brand"><img src="https://www.jarrodyellets.com/images/lumbarLogo.png" /></a>
 			<div className="linksDiv" id="linksDiv">
 				<a href="javascript:void(0)" className="closeBtn" onClick={props.handleHamburger}><i className="fas fa-times"></i></a>
-				<a href="#products" className="links"><i className="fas fa-bed"></i> Products</a>
-				<a href="#about" className="links"><i className="fas fa-newspaper"></i> About</a>
-				<a href="#contact" className="links"><i className="fas fa-phone"></i> Contact</a>
-				<a href="#cart" className="links"><i className="fas fa-shopping-cart"></i> Cart</a>
+				<a href="#products" className="links">Products</a>
+				<a href="#about" className="links aboutLink">About</a>
+				<a href="#contact" className="links contactLink">Contact</a>
+				<a href="#cart" className="links">Cart</a>
 			</div>
 			<a href="javascript:void(0);" 
 			   className="hamburger" 

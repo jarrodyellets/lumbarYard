@@ -1,7 +1,8 @@
 body {
-	background: #dfdfdf;
+	background: #ececec;
 	margin: 0;
 	overflow-x: hidden;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 .wrapper {
@@ -11,28 +12,26 @@ body {
 
 .navbar {
 	position: relative;
-	height: 50px;
-	max-height: 50px;
+	height: 100px;
+	max-height: 100px;
 	padding: 0 10px;
-	background: #557a95;
+	background: #faf9f5;
 	display: flex;
-	justify-content: space-between;
+	flex-direction: row;
+	justify-content: space-around;
 	align-items: center;
 }
 
-.brandWrapper {
-	position: relative;
-	height: 100%;
-}
-
 .brand {
-	position: absolute;
-	top: 0;
-	left: 5vw;
+	height: 100px;
 }
 
 .links {
-	padding: 0 10px;
+	padding: 0px 50px;
+	text-decoration: none;
+	color: #232323;
+	font-size: 20px;
+	font-family: 'Ropa Sans', sans-serif;
 }
 
 .linksDiv {
