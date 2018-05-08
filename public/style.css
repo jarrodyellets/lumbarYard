@@ -20,6 +20,17 @@ body {
 	align-items: center;
 }
 
+.brandWrapper {
+	position: relative;
+	height: 100%;
+}
+
+.brand {
+	position: absolute;
+	top: 0;
+	left: 5vw;
+}
+
 .links {
 	padding: 0 10px;
 }
@@ -62,6 +73,10 @@ body {
 
 	.width {
 		right: 0;
+	}
+
+	.brandImg {
+		height: 50px;
 	}
 
 	.links {
