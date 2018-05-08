@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import Nav from './components/nav';
+
+import style from '../public/style.css';
 
 class App extends Component {
 	constructor(props){
@@ -8,7 +11,9 @@ class App extends Component {
 
 	render(){
 		return(
-			<div>Welcome to the Lumbar Yard!</div>
+			<div className="wrapper">
+				<Nav />
+			</div>
 			)
 	}
 }
