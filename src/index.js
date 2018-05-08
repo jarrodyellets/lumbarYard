@@ -19,14 +19,14 @@ class App extends Component {
 			responsive: !state.responsive
 		}), () => {
 			const links = document.getElementById("linksDiv");
-			this.state.responsive ? links.className = "responsiveLinks" : links.className = "linksDiv";
+			this.state.responsive ? links.className += " width" : links.className = "linksDiv";
 		});
 	}
 
 	render(){
 		return(
 			<div className="wrapper">
-				<Nav handleHamburger={this.handleHamburger} />
+				<Nav handleHamburger={this.handleHamburger} responsive={this.state.responsive} />
 			</div>
 			)
 	}
