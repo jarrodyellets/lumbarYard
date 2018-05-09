@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import TopLinks from './components/topLinks';
 import Nav from './components/nav';
 
 import style from '../public/style.css';
@@ -26,6 +27,7 @@ class App extends Component {
 	render(){
 		return(
 			<div className="wrapper">
+				<TopLinks />
 				<Nav handleHamburger={this.handleHamburger} responsive={this.state.responsive} />
 			</div>
 			)
