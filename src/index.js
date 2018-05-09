@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import TopLinks from './components/topLinks';
 import Nav from './components/nav';
+import SlideShow from './components/slideShow';
 
 import style from '../public/style.css';
 
@@ -54,6 +55,7 @@ class App extends Component {
 						 responsive={this.state.responsive}
 						 sticky={this.state.sticky}
 						 handleScroll={this.handleScroll} />
+				<SlideShow />
 			</div>
 			)
 	}

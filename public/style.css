@@ -53,11 +53,16 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	border-bottom: 1px solid #888;
 	box-sizing: border-box;
 }
 
 .brand {
+	background-image: url("https://www.jarrodyellets.com/images/lumbarLogo.png");
 	height: 100px;
+	width: 100px;
+	border-bottom: 1px solid #888;
+	box-sizing: border-box;
 }
 
 .links {
@@ -87,6 +92,19 @@ body {
 	position: fixed;
 	top: 0;
 	width: 100%;
+}
+
+.sticky + .slides {
+	padding-top: 100px;
+}
+
+.slide1 {
+	background-image: url("https://www.jarrodyellets.com/images/lumbar/slide1.jpg");
+	background-size: cover;
+	background-position: bottom;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100vh;
 }
 
 @media screen and (max-width: 768px){
