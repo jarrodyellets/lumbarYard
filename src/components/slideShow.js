@@ -1,6 +1,7 @@
 import React from 'react';
 
-const SlideShow = (props) => {
+
+const SlideShow = () => {
 	return (
 		<div className="slides">
 			<div className="slide1 slide"></div>
