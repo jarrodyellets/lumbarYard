@@ -9,10 +9,20 @@ class App extends Component {
 	constructor(props){
 		super(props);
 		this.state={
-			responsive: false
+			responsive: false,
+			sticky: false
 		}
 
 		this.handleHamburger = this.handleHamburger.bind(this);
+		this.handleScroll = this.handleScroll.bind(this);
+	}
+
+	componentDidMount(){
+		window.addEventListener('scroll', this.handleScroll);
+	}
+
+	componentWillMount(){
+		window.removeEventListener('scroll', this.handleScroll);
 	}
 
 	handleHamburger(){
@@ -24,11 +34,26 @@ class App extends Component {
 		});
 	}
 
+	handleScroll(){
+		if (window.scrollY > 60){
+			this.setState({
+				sticky: true
+			});
+		} else if (window.scrollY < 60){
+				this.setState({
+					sticky: false
+				})
+		}
+	}
+
 	render(){
 		return(
 			<div className="wrapper">
 				<TopLinks />
-				<Nav handleHamburger={this.handleHamburger} responsive={this.state.responsive} />
+				<Nav handleHamburger={this.handleHamburger} 
+						 responsive={this.state.responsive}
+						 sticky={this.state.sticky}
+						 handleScroll={this.handleScroll} />
 			</div>
 			)
 	}

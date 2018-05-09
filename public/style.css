@@ -7,7 +7,7 @@ body {
 
 .wrapper {
 	position: relative;
-	height: 100vh;
+	height: 1000px;
 }
 
 .topIcons {
@@ -39,7 +39,7 @@ body {
 }
 
 .slogan {
-	color: #ececec;
+	color: #dbd263;
 	text-transform: uppercase;
 	font-size: 20px;
 }

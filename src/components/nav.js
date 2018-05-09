@@ -2,7 +2,7 @@ import React from 'react';
 
 const Nav = (props) => {
 	return (
-		<div className="navbar" id="navbar">
+		<div className={props.sticky ? "navbar sticky" : "navbar"} id="navbar">
 			<a href="#home" className="brand"><img src="https://www.jarrodyellets.com/images/lumbarLogo.png" /></a>
 			<div className="linksDiv" id="linksDiv">
 				<a href="javascript:void(0)" className="closeBtn" onClick={props.handleHamburger}><i className="fas fa-times"></i></a>
