@@ -116,6 +116,14 @@ body {
 	object-fit: cover;
 }
 
+.slide1 {
+	object-position: left bottom;
+}
+
+.slide2 {
+	object-position: center bottom;
+}
+
 .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
 	height: 100vh;
 }
