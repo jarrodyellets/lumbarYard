@@ -44,7 +44,9 @@ body {
 	font-size: 20px;
 }
 
-.navbar {
+.nav-bar {
+	position: relative;
+	z-index: 20;
 	height: 80px;
 	max-height: 80px;
 	width: 100%;
@@ -105,16 +107,16 @@ body {
 	width: 100%;
 }
 
-.sticky + .slides {
+.sticky + .carousel {
 	padding-top: 80px;
 }
 
-.slide1 {
-	background-image: url("https://www.jarrodyellets.com/images/lumbar/slide1.jpg");
-	background-size: cover;
-	background-position: bottom;
-	background-repeat: no-repeat;
+.slideImg {
 	width: 100%;
+	object-fit: cover;
+}
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
 	height: 100vh;
 }
 
