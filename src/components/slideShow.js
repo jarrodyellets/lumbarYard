@@ -20,7 +20,7 @@ const SlideShow = (props) => {
 			    </Carousel.Caption>
 			  </Carousel.Item>
 			</Carousel>
-			<i class="fas fa-angle-down downArrow"></i>
+			<i className="fas fa-angle-down downArrow"></i>
 		</div>
 		)
 }
