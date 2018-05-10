@@ -3,7 +3,7 @@ import React from 'react';
 const Nav = (props) => {
 	return (
 		<div className={props.sticky ? "nav-bar sticky" : "nav-bar"} id="nav-bar">
-			<a href="#home" className="brand"><img src="https://www.jarrodyellets.com/images/lumbarLogo2.png" /></a>
+			<a href="#home" className="brand"><div className="brandImg"></div></a>
 			<div className="linksWrapper">
 				<div className="linksDiv" id="linksDiv">
 					<a href="javascript:void(0)" className="closeBtn" onClick={props.handleHamburger}><i className="fas fa-times"></i></a>
