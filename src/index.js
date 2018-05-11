@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import TopLinks from './components/topLinks';
 import Nav from './components/nav';
 import SlideShow from './components/slideShow';
+import Featured from './components/featured';
 
 import mattress from './data/mattress';
 import style from '../public/style.css';
@@ -59,6 +60,7 @@ class App extends Component {
 						 handleScroll={this.handleScroll}
 						 cart={this.state.cart} />
 				<SlideShow />
+				<Featured mattress={mattress} />
 			</div>
 			)
 	}

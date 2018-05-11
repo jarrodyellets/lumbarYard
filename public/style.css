@@ -1,5 +1,5 @@
 body {
-	background: #ececec;
+	background: #faf9f5;
 	margin: 0;
 	overflow-x: hidden;
 	font-family: 'Ropa Sans', sans-serif;
@@ -196,6 +196,83 @@ body {
 	bottom: 5%;
 	font-size: 50px;
 	animation: bounce 2s infinite;
+}
+
+.featuredDiv {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	max-width: 1300px;
+	margin: 0 auto;
+	background: #faf9f5;
+	color: #353535;
+	padding: 50px 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+.featuredLeft {
+	display: flex;
+	width: 50%;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.featuredRight {
+	position: relative;
+	display: flex;
+	width: 50%;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-start;
+}
+
+.featuredLogo {
+	margin-bottom: 20px;
+}
+
+.featuredLeftTitle {
+	font-size: 40px;
+}
+
+.featuredLeftDescription {
+	font-size: 24px;
+}
+
+.featuredLeftPrice {
+	font-size: 24px;
+}
+
+.featuredButton {
+	background: #dbd263;
+	border: 1px solid #353535;
+	color: #353535;
+	font-size: 16px;
+	padding: 15px;
+	margin-top: 30px;
+}
+
+.featuredRightDescription {
+	font-size: 16px;
+	width: 70%;
+}
+
+.featuredRightReviewTitle {
+	font-size: 24px;
+}
+
+.featuredRightImg {
+	width: 100%;
+	object-fit: contain;
+	object-position: center;
+}
+
+.featuredWarranty {
+	height: 200px;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
 }
 
 @keyframes bounce {

@@ -19,7 +19,7 @@ let mattress = [
 	name: "Kramerica Sand Mattress",
 	price: ["$1,499", "$1,399", "$999"],
 	size: ["King, Queen, Double"],
-	image: "https://www.jarrodyellets.com/images/lumbar/mat5.png",
+	image: "https://www.jarrodyellets.com/images/lumbar/mat6.png",
 	description: "Ever dream of sleeping on the beach every night?  Now you can with the Kramerica Sand Mattress.  Filled with original Coney Island sand.",
 	id: "kram"
 },
