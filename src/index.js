@@ -12,7 +12,7 @@ class App extends Component {
 		this.state={
 			responsive: false,
 			sticky: false,
-			cart: []
+			cart: [1, 2, 3]
 		}
 
 		this.handleHamburger = this.handleHamburger.bind(this);
