@@ -6,7 +6,7 @@ const Featured = (props) => {
 			<div className="featuredLeft">
 				<img className="featuredLogo" src="https://www.jarrodyellets.com/images/lumbar/lumbarLogo1.png" />
 				<div className="featuredLeftTitle">Druidia Air Mattress</div>
-				<div className="featuredLeftDescription">The king of air mattressess!</div>
+				<div className="featuredLeftDescription">The king of air mattresses!</div>
 				<div className="featuredLeftPrice">$999</div>
 				<div className="featruedLeftSize">(King Mattress)</div>
 				<button className="featuredButton">Buy Now</button>
