@@ -11,7 +11,10 @@ const Nav = (props) => {
 					<a href="#about" className="links aboutLink">About</a>
 					<a href="#contact" className="links contactLink">Contact</a>
 				</div>
-				<a href="#cart" className="cart"><i className="fas fa-shopping-cart"></i></a>
+				<a href="#cart" className="cart">
+					<i className="fas fa-shopping-cart"></i>
+					<div className="cartQuantity">{props.cart.length}</div>
+				</a>
 				<a href="javascript:void(0);" 
 			   className="hamburger" 
 			   onClick={props.handleHamburger}><i className="fas fa-bars"></i></a>

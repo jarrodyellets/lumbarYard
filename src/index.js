@@ -11,7 +11,8 @@ class App extends Component {
 		super(props);
 		this.state={
 			responsive: false,
-			sticky: false
+			sticky: false,
+			cart: []
 		}
 
 		this.handleHamburger = this.handleHamburger.bind(this);
@@ -54,7 +55,8 @@ class App extends Component {
 				<Nav handleHamburger={this.handleHamburger} 
 						 responsive={this.state.responsive}
 						 sticky={this.state.sticky}
-						 handleScroll={this.handleScroll} />
+						 handleScroll={this.handleScroll}
+						 cart={this.state.cart} />
 				<SlideShow />
 			</div>
 			)
