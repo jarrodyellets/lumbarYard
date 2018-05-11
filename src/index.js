@@ -4,6 +4,7 @@ import TopLinks from './components/topLinks';
 import Nav from './components/nav';
 import SlideShow from './components/slideShow';
 
+import mattress from './data/mattress';
 import style from '../public/style.css';
 
 class App extends Component {
