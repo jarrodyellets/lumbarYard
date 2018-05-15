@@ -5,6 +5,7 @@ import Nav from './components/nav';
 import SlideShow from './components/slideShow';
 import Featured from './components/featured';
 import FinanceBar from './components/financeBar';
+import New from './components/new';
 
 import mattress from './data/mattress';
 import style from '../public/style.css';
@@ -63,6 +64,7 @@ class App extends Component {
 				<SlideShow />
 				<Featured mattress={mattress} />
 				<FinanceBar />
+				<New mattress={mattress} />
 			</div>
 			)
 	}
