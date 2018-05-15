@@ -2,10 +2,8 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import TopLinks from './components/topLinks';
 import Nav from './components/nav';
-import SlideShow from './components/slideShow';
-import Featured from './components/featured';
-import FinanceBar from './components/financeBar';
-import New from './components/new';
+import Home from './components/home';
+import Footer from './components/footer';
 
 import mattress from './data/mattress';
 import style from '../public/style.css';
@@ -16,6 +14,7 @@ class App extends Component {
 		this.state={
 			responsive: false,
 			sticky: false,
+			page: "home",
 			cart: [1, 2, 3]
 		}
 
@@ -61,10 +60,8 @@ class App extends Component {
 						 sticky={this.state.sticky}
 						 handleScroll={this.handleScroll}
 						 cart={this.state.cart} />
-				<SlideShow />
-				<Featured mattress={mattress} />
-				<FinanceBar />
-				<New mattress={mattress} />
+				{this.state.page == "home" ? <Home mattress={mattress} /> : null}
+				<Footer />
 			</div>
 			)
 	}
