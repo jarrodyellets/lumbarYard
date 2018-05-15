@@ -236,7 +236,7 @@ body {
 }
 
 .featuredLeftTitle {
-	font-size: 40px;
+	font-size: 2.4em;
 }
 
 .featuredLeftDescription {
@@ -244,7 +244,7 @@ body {
 }
 
 .featuredLeftPrice {
-	font-size: 24px;
+	font-size: 1.4em;
 }
 
 .featuredButton {
@@ -263,7 +263,7 @@ body {
 }
 
 .featuredRightReviewTitle {
-	font-size: 24px;
+	font-size: 1.4em;
 }
 
 .featuredRightImg {
@@ -304,6 +304,71 @@ body {
 	margin-left: 20px;
 	border-radius: 5px;
 	padding: 5px 15px;
+}
+
+.newWrapper {
+	position: relative;
+	padding: 50px 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+.newNew {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.newContent {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.newTitleUpper {
+	font-size: 2.4em;
+}
+
+.newTitleLower {
+	font-size: 2em;
+	margin-bottom: 30px;
+}
+
+.newDescription {
+	width: 50%;
+	font-size: 1.6em;
+	margin-bottom: 30px;
+}
+
+.newDetailsDiv {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.newPriceDiv {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+}
+
+.newPrice {
+	font-size: 1.4em;
+}
+
+.newReview {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	width: 30%;
+	font-size: 1em;
+}
+
+.newBold {
+	font-size: 1.4em;
 }
 
 @keyframes bounce {

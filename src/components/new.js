@@ -3,7 +3,7 @@ import React from 'react';
 const New = (props) => {
 	return(
 		<div className="newWrapper">
-			<img src="https://www.jarrodyellets.com/images/lumbar/new.png" className="newLogo" />
+			<img src="https://www.jarrodyellets.com/images/lumbar/new.png" className="newNew" />
 			<div className="newContent">
 				<img src="https://www.jarrodyellets.com/images/lumbar/lumbarLogo1.png" />
 				<div className="newTitleUpper">NexGen</div>
