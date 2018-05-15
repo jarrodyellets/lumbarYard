@@ -371,6 +371,14 @@ body {
 	font-size: 1.4em;
 }
 
+.newIphone {
+	position: absolute;
+	bottom: 50px;
+	left: 30%;
+	height: 300px;
+	object-fit: contain;
+}
+
 @keyframes bounce {
 	0%{
 		transform: translate(-50%, 0);
