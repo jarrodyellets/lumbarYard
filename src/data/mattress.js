@@ -28,7 +28,7 @@ let mattress = [
 	price: ["$2,199", "$1,999", "$1,699", "$1,399"],
 	size: ["King, Queen, Double, Twin"],
 	image: "https://www.jarrodyellets.com/images/lumbar/mat3.png",
-	description: "Developed by NASA, the NextGen Memory Foam Mattress will remember the contours of up to 6 people.  Supporting app is available via Andriod or iPhone.",
+	description: "Developed by NASA, the NextGen Memory Foam Mattress will remember the contours of up to 6 people.  Supporting app is available via Android or iPhone.",
 	id: "next"
 },
 {

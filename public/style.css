@@ -343,32 +343,32 @@ body {
 .newDetailsDiv {
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 }
 
 .newPriceDiv {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
-	width: 50%;
+	width: 30%;
 }
 
 .newPrice {
-	font-size: 1.4em;
+	font-size: 1.8em;
 }
 
 .newReview {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: flex-start;
 	width: 30%;
 	font-size: 1em;
 }
 
 .newBold {
-	font-size: 1.4em;
+	font-size: 1.8em;
 }
 
 .newIphone {
