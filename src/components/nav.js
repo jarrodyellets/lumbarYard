@@ -3,12 +3,12 @@ import React from 'react';
 const Nav = (props) => {
 	return (
 		<div className={props.sticky ? "nav-bar sticky" : "nav-bar"} id="nav-bar">
-			<a href="#home" className="brand"><div className="brandImg"></div></a>
+			<a href="#home" className="brand" onClick={()=> {props.handlePage("home")}}><div className="brandImg"></div></a>
 			<div className="linksWrapper">
 				<div className="linksDiv" id="linksDiv">
 					<a href="javascript:void(0)" className="closeBtn" onClick={props.handleHamburger}><i className="fas fa-times"></i></a>
-					<a href="#products" className="links">Products</a>
-					<a href="#about" className="links aboutLink">About</a>
+					<a href="#products" className="links">Mattresses</a>
+					<a href="#about" className="links aboutLink" onClick={()=> {props.handlePage("about")}}>About</a>
 					<a href="#contact" className="links contactLink">Contact</a>
 				</div>
 				<a href="#cart" className="cart">

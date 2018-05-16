@@ -24,8 +24,8 @@ const Footer = (props) => {
 						</div>
 					</div>
 				<div className="footerPayment">
-					<div><i class="fab fa-cc-visa card"></i><i class="fab fa-cc-mastercard card"></i><i class="fab fa-cc-discover card"></i></div>
-					<div><i class="fab fa-cc-amex card"></i><i class="fab fa-cc-apple-pay card"></i><i class="fab fa-cc-amazon-pay card"></i></div>
+					<div><i className="fab fa-cc-visa card"></i><i className="fab fa-cc-mastercard card"></i><i className="fab fa-cc-discover card"></i></div>
+					<div><i className="fab fa-cc-amex card"></i><i className="fab fa-cc-apple-pay card"></i><i className="fab fa-cc-amazon-pay card"></i></div>
 				</div>
 			</div>
 		</div>

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import TopLinks from './components/topLinks';
 import Nav from './components/nav';
 import Home from './components/home';
+import About from './components/about';
 import Footer from './components/footer';
 
 import mattress from './data/mattress';
@@ -14,12 +15,13 @@ class App extends Component {
 		this.state={
 			responsive: false,
 			sticky: false,
-			page: "home",
+			page: "about",
 			cart: [1, 2, 3]
 		}
 
 		this.handleHamburger = this.handleHamburger.bind(this);
 		this.handleScroll = this.handleScroll.bind(this);
+		this.handlePage = this.handlePage.bind(this);
 	}
 
 	componentDidMount(){
@@ -51,6 +53,12 @@ class App extends Component {
 		}
 	}
 
+	handlePage(page){
+		this.setState({
+			page: page
+		})
+	}
+
 	render(){
 		return(
 			<div className="wrapper">
@@ -59,8 +67,10 @@ class App extends Component {
 						 responsive={this.state.responsive}
 						 sticky={this.state.sticky}
 						 handleScroll={this.handleScroll}
-						 cart={this.state.cart} />
+						 cart={this.state.cart}
+						 handlePage={this.handlePage} />
 				{this.state.page == "home" ? <Home mattress={mattress} /> : null}
+				{this.state.page == "about" ? <About /> : null}
 				<Footer />
 			</div>
 			)

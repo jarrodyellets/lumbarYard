@@ -9,7 +9,7 @@ const TopLinks = (props) => {
 					<i className="fab fa-twitter-square socialTop"></i>
 					<div className="shipping">Free shipping on orders over $1000!</div>
 				</div>
-				<div className="slogan">Mattress professionals since 1951</div>
+				<div className="slogan">Mattress professionals since 1997</div>
 			</div>
 		)
 }
