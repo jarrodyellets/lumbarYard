@@ -15,7 +15,7 @@ class App extends Component {
 		this.state={
 			responsive: false,
 			sticky: false,
-			page: "about",
+			page: "home",
 			cart: [1, 2, 3]
 		}
 

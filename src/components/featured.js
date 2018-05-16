@@ -14,7 +14,8 @@ const Featured = (props) => {
 			<div className="featuredRight">
 				<div className="featuredRightDescription">
 					<div className="featuredRightReviewTitle">Best air mattress in the galaxy</div>
-					<div>"After fighting Planet Spaceball all day, coming home to the Druidia Air Mattress has been a lifesaver.  Every morning I awake refreshed and ready to do battle with Dark Helmet"</div>
+					<div>"After fighting Planet Spaceball all day, coming home to the Druidia Air Mattress has been a lifesaver.  
+					Every morning I awake refreshed and ready to do battle with Dark Helmet."</div>
 					<div>-Lone Star-</div>
 				</div>
 				<img className="featuredRightImg" src={props.mattress[1].image} />

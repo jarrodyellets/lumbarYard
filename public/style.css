@@ -390,7 +390,7 @@ body {
 
 .aboutImg {
 	float: left;
-	margin: 0 10px;
+	margin-right: 10px;
 }
 
 .aboutTitle {
