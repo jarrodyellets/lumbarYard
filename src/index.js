@@ -69,8 +69,10 @@ class App extends Component {
 						 handleScroll={this.handleScroll}
 						 cart={this.state.cart}
 						 handlePage={this.handlePage} />
-				{this.state.page == "home" ? <Home mattress={mattress} /> : null}
-				{this.state.page == "about" ? <About /> : null}
+				<div className="contentWrapper">
+					{this.state.page == "home" ? <Home mattress={mattress} /> : null}
+					{this.state.page == "about" ? <About /> : null}
+				</div>
 				<Footer />
 			</div>
 			)

@@ -2,13 +2,12 @@ body {
 	background: #faf9f5;
 	margin: 0;
 	overflow-x: hidden;
-	font-family: 'Ropa Sans', sans-serif;
+	font-family: 'Poppins', sans-serif;
 	font-size: 16px;
 }
 
 .wrapper {
 	position: relative;
-	height: 1000px;
 }
 
 .topIcons {
@@ -20,6 +19,7 @@ body {
 	color: #888;
 	padding: 0 5%;
 	box-sizing: border-box;
+	font-family: 'Ropa Sans', sans-serif;
 }
 
 .topLeft {
@@ -59,6 +59,7 @@ body {
 	border-top: 1px solid #888;
 	border-bottom: 1px solid #888;
 	box-sizing: border-box;
+	font-family: 'Ropa Sans', sans-serif;
 }
 
 .brand {
@@ -137,7 +138,7 @@ body {
 	width: 100%;
 }
 
-.sticky + .homeWrapper {
+.sticky + .contentWrapper {
 	padding-top: 80px;
 }
 
@@ -384,7 +385,7 @@ body {
 	width: 100%;
 	margin: 0 auto;
 	max-width: 1000px;
-	padding: 20px 0;
+	padding: 40px 0;
 }
 
 .aboutImg {
@@ -392,6 +393,13 @@ body {
 	margin: 0 10px;
 }
 
+.aboutTitle {
+	font-size: 1.6em;
+}
+
+.aboutStore {
+	filter: sepia(100%);
+}
 
 .footerWrapper {
 	width: 100%;
@@ -401,6 +409,7 @@ body {
 	display: flex;
 	align-items: center;
 	padding: 0 50px;
+	font-family: 'Ropa Sans', sans-serif;
 }
 
 .footerAddress {
