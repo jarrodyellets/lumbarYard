@@ -391,6 +391,15 @@ body {
 	padding: 0 50px;
 }
 
+.footerSocial {
+	text-align: center;
+}
+
+.socialFoot {
+	font-size: 1.8em;
+	margin: 0 10px;
+}
+
 .card {
 	font-size: 1.8em;
   margin: 0 10px;
