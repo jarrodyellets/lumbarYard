@@ -386,13 +386,40 @@ body {
 	background: #353535;
 	color: #888;
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
 	padding: 0 50px;
 }
 
+.footerAddress {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+	margin-right: auto;
+}
+
+.footerContact {
+	margin-left: 30px;
+}
+
+.author {
+	display: flex;
+	justify-content: center;
+	flex: 1;
+	margin: 0 auto;
+}
+
+.footerRight {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+	margin-left: auto;
+}
+
 .footerSocial {
 	text-align: center;
+	margin-right: 30px;
 }
 
 .socialFoot {
