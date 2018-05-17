@@ -455,6 +455,10 @@ body {
 	justify-content: flex-start;
 }
 
+.contactLabel input {
+	padding: 5px 0;
+}
+
 .contactInput {
 	margin: 0 30px 20px 0;
 }
