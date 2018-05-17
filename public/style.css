@@ -465,6 +465,7 @@ body {
 
 .contactTextArea {
 	margin-bottom: 20px;
+	resize: none;
 }
 
 .contactButton {
