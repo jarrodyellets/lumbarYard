@@ -4,6 +4,7 @@ import TopLinks from './components/topLinks';
 import Nav from './components/nav';
 import Home from './components/home';
 import About from './components/about';
+import Contact from './components/contact';
 import Footer from './components/footer';
 
 import mattress from './data/mattress';
@@ -72,6 +73,7 @@ class App extends Component {
 				<div className="contentWrapper">
 					{this.state.page == "home" ? <Home mattress={mattress} /> : null}
 					{this.state.page == "about" ? <About /> : null}
+					{this.state.page == "contact" ? <Contact /> : null}
 				</div>
 				<Footer />
 			</div>
