@@ -4,7 +4,7 @@ const Footer = (props) => {
 	return (
 		<div className="footerWrapper">
 			<div className="footerAddress">
-				<div>
+				<div className="addressDiv">
 					<div>129 W 81st St</div>
 					<div>New York, NY</div>
 				</div>
@@ -24,8 +24,8 @@ const Footer = (props) => {
 						</div>
 					</div>
 				<div className="footerPayment">
-					<div><i className="fab fa-cc-visa card"></i><i className="fab fa-cc-mastercard card"></i><i className="fab fa-cc-discover card"></i></div>
-					<div><i className="fab fa-cc-amex card"></i><i className="fab fa-cc-apple-pay card"></i><i className="fab fa-cc-amazon-pay card"></i></div>
+					<div className="cardDiv"><i className="fab fa-cc-visa card"></i><i className="fab fa-cc-mastercard card"></i><i className="fab fa-cc-discover card"></i></div>
+					<div className="cardDiv"><i className="fab fa-cc-amex card"></i><i className="fab fa-cc-apple-pay card"></i><i className="fab fa-cc-amazon-pay card"></i></div>
 				</div>
 			</div>
 		</div>

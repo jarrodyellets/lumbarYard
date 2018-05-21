@@ -528,6 +528,7 @@ body {
 .footerSocial {
 	text-align: center;
 	margin-right: 30px;
+	align-self: flex-start;
 }
 
 .socialFoot {
@@ -549,6 +550,13 @@ body {
 	}
 	100%{
 		transform: translate(-50%, 0);
+	}
+}
+
+@media screen and (max-width: 1150px){
+	
+	.footerWrapper{
+		font-size: .8em;
 	}
 }
 
@@ -596,6 +604,10 @@ body {
 		top: 15px;
 		right: 25px;
 	}
+	
+	.contentWrapper {
+		padding-bottom: 200px;
+	}
 
 	.featuredDiv {
 		flex-direction: column;
@@ -638,7 +650,59 @@ body {
 	.featuredButton {
 		font-size: 12px;
 	}
+
+	.footerWrapper {
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: flex-start;
+		height: 200px;
+		font-size: .8em;
+		padding: 0 5px;
+	}
+
+	.footerAddress {
+		display: block;
+		flex: 0;
+	}
+
+	.addressDiv {
+		margin-bottom: 10px;
+	}
+
+	.footerContact {
+		margin-left: 0;
+		margin-bottom: 10px;
+	}
+
+	.author {
+		display: block;
+		margin: 0 0 10px 0;
+		flex: 0;
+	}
+
+	.footerRight {
+		display: block;
+		margin: 0;
+	}
+
+	.footerSocial {
+		text-align: left;
+		margin-bottom: 10px;
+	}
+
+	.socialFoot {
+		margin: 0 10px 0 0;
+	}
+
+	.cardDiv {
+		display: inline-block;
+	}
+
+	.card {
+		margin: 0 10px 0 0;
+	}
 }
+
 
 @media screen and (max-width: 768px){
 	.slogan {
