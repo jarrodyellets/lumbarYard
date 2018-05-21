@@ -419,6 +419,7 @@ body {
 
 .aboutStore {
 	filter: sepia(100%);
+	width: 100%;
 }
 
 .contactWrapper {
@@ -654,7 +655,32 @@ body {
 	}
 
 	.financeBar {
-		font-size: .5em;
+		font-size: .7em;
+	}
+
+	.contactWrapper {
+		flex-direction: column;
+		padding: 20px 20px;
+	}
+
+	.contactLeft {
+		margin-right:  0;
+	}
+
+	.contactRight {
+		margin-top: 20px;
+	}
+
+	.contactFormUpper {
+		flex-direction: column;
+	}
+
+	.contactInput {
+		margin: 0 0 20px 0;
+	}
+
+	.input {
+		margin-bottom: 20px;
 	}
 
 	.footerWrapper {
@@ -727,8 +753,8 @@ body {
 	}
 
 	.brand {
-	height: 80px;
-	width: 80px;
+		height: 80px;
+		width: 80px;
 	}
 
 	.brandImg {
@@ -752,8 +778,12 @@ body {
 		position: relative;
 	}
 
-	.sticky + .carouselDiv {
+	.sticky + .contentWrapper {
 		padding-top: 0;
+	}
+
+	.financeBar {
+		font-size: .4em;
 	}
 
 	.newNew {
@@ -789,6 +819,11 @@ body {
 
 	.newIphone {
 		height: 35vw;
+	}
+
+	.aboutWrapper {
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 
 }
