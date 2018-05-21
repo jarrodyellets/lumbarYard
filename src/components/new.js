@@ -5,9 +5,9 @@ const New = (props) => {
 		<div className="newWrapper">
 			<img src="https://www.jarrodyellets.com/images/lumbar/new.png" className="newNew" />
 			<div className="newContent">
-				<img src="https://www.jarrodyellets.com/images/lumbar/lumbarLogo1.png" />
-				<div className="newTitleUpper">NexGen</div>
-				<div className="newTitleLower">Memory Foam</div>
+				<img src="https://www.jarrodyellets.com/images/lumbar/lumbarLogo1.png" className="featuredLogo" />
+				<div className="newTitleUpper newTitle">NexGen</div>
+				<div className="newTitleLower newTitle">Memory Foam</div>
 				<div className="newDescription">{props.mattress[3].description}</div>
 				<div className="newDetailsDiv">
 					<div className="newPriceDiv">

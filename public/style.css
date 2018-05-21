@@ -760,6 +760,29 @@ body {
 		width: 150px;
 	}
 
+	.newTitle {
+		font-size: 1.8em;
+	}
+
+	.newDescription {
+		width: 80%;
+		font-size: 1.2em;
+	}
+
+	.newDetailsDiv {
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 15px;
+	}
+
+	.newBold {
+		margin: 0 auto;
+	}
+
+	.newReview {
+		width: 80%;
+	}
+
 	.newImg {
 		width: 100%;
 	}
