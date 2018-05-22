@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import TopLinks from './components/topLinks';
 import Nav from './components/nav';
 import Home from './components/home';
+import Mattresses from './components/mattresses';
 import About from './components/about';
 import Contact from './components/contact';
 import Footer from './components/footer';
@@ -72,6 +73,7 @@ class App extends Component {
 						 handlePage={this.handlePage} />
 				<div className="contentWrapper">
 					{this.state.page == "home" ? <Home mattress={mattress} /> : null}
+					{this.state.page == "mattresses" ? <Mattresses mattress={mattress} /> : null}
 					{this.state.page == "about" ? <About /> : null}
 					{this.state.page == "contact" ? <Contact /> : null}
 				</div>
