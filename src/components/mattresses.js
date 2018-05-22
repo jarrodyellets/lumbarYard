@@ -11,6 +11,7 @@ const Mattresses = (props) =>{
   });
   return (
     <div className="mattressWrapper">
+      <div className="mattressTitle">Mattress Collections</div>
       <div className="mattressGrid">
         {mattresses}
       </div>

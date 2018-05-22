@@ -401,6 +401,44 @@ body {
 	object-fit: contain;
 }
 
+.mattressWrapper {
+	padding: 20px;
+}
+
+.mattressTitle {
+	width: 100%;
+	height: 50px;
+	color: #353535;
+	background: #dbd263;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	font-size: 2.3em;
+	padding-left: 10px;
+}
+
+.mattressGrid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 30px;
+	border-left: 1px solid #dbd263;
+	border-right: 1px solid #dbd263;
+	border-bottom: 1px solid #dbd263;
+	padding: 10px;
+}
+
+.singleWrapper {
+	width: 100%;
+}
+
+.singleImageDiv {
+	height: 70%;
+}
+
+.singleImage {
+	width: 100%;
+}
+
 .aboutWrapper {
 	width: 100%;
 	margin: 0 auto;

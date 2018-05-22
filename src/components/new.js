@@ -23,7 +23,7 @@ const New = (props) => {
 						<div>-Marty McFly-</div>
 					</div>
 				</div>
-				<img src={props.mattress[3].image} className="newImg" />
+				<img src="https://www.jarrodyellets.com/images/lumbar/mat3.png" className="newImg" />
 				<img src="https://www.jarrodyellets.com/images/lumbar/iphoneLumbar.png" className="newIphone" />
 			</div>
 		</div>
