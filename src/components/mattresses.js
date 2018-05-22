@@ -3,9 +3,11 @@ import SingleMattress from './singleMattress';
 
 const Mattresses = (props) =>{
   const mattresses = props.mattress.map((mattress) => {
-    return  <div key={mattress.name}>
+    return  <div key={mattress.id}>
               <SingleMattress name={mattress.name}
+                              size={mattress.size}
                               image={mattress.image}
+                              id={mattress.id}
                               price={mattress.price} />
             </div>
   });
