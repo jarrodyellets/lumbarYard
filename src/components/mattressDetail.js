@@ -6,17 +6,20 @@ const MattressDetail = (props) => {
       <div className="detailLeft">
         <div className="detailTitle">{props.currentMattress.name}</div>
         <div className="detailDetail">{props.currentMattress.description}</div>
+        <div className="detailSelectDiv">
+          <div className="detailSelectText">Mattress Size</div>
+          <select className="mattressSelect" onChange={props.handleIndex} value={props.mattressIndex}>
+            <option value="3">King</option>
+            <option value="2">Queen</option>
+            <option value="1">Double</option>
+            <option value="0">Twin</option>
+          </select>
+        </div>
+        <button className="detailButton">Add To Cart</button>
       </div>
       <div className="detailRight">
         <div className="detailPrice">{props.currentMattress.price[props.mattressIndex]}</div>
         <img src={props.currentMattress.image} className="detailImage" />
-        <select className="mattressSelect" onChange={props.handleIndex} value={props.mattressIndex}>
-          <option value="3">King</option>
-          <option value="2">Queen</option>
-          <option value="1">Double</option>
-          <option value="0">Twin</option>
-        </select>
-        <button className="detailButton">Add To Cart</button>
       </div>
     </div>
     )

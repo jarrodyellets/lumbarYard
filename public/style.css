@@ -425,7 +425,7 @@ body {
 	border-left: 1px solid #dbd263;
 	border-right: 1px solid #dbd263;
 	border-bottom: 1px solid #dbd263;
-	padding: 20px;
+	padding: 40px;
 }
 
 .singleWrapper {
@@ -458,6 +458,48 @@ body {
 	padding: 10px 15px;
 	border-radius: 5px;
 	text-transform: uppercase;
+}
+
+.detailWrapper {
+	display: flex;
+	justify-content: center;
+	padding: 40px 0;
+}
+
+.detailLeft, .detailRight {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	width: 40%;
+}
+
+.detailTitle {
+	font-size: 2.4em;
+}
+
+.detailDetail {
+	padding: 20px;
+}
+
+.detailSelectDiv {
+	display: flex;
+	margin: 30px 0;
+}
+
+.detailSelectText {
+	font-size: 1.4em;
+	margin-right: 20px;
+}
+
+.detailPrice {
+	font-size: 2.4em;
+	padding-left: 20%;
+	align-self: flex-start;
+}
+
+.detailImage {
+	width: 100%;
 }
 
 .aboutWrapper {

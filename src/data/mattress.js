@@ -1,7 +1,7 @@
 let mattress = [
 {
 	name: "Hal Kitzmiller Signature Mattress",
-	price: ["$899", "$1099", "$1,599", "$1,799"],
+	price: ["$899", "$1,099", "$1,599", "$1,799"],
 	size: ["Twin, Double, Queen, King"],
 	image: "https://www.jarrodyellets.com/images/lumbar/mat5.png",
 	description: "Designed by Hal himself, the Hal Kitzmiller Signature mattress will perfectly conform to you back shape.  This mattress is perfect for people who spend all day sitting on park benches.  Guarenteed not to smell like the East River.",

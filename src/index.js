@@ -93,8 +93,7 @@ class App extends Component {
 				<div className="contentWrapper">
 					{this.state.page == "home" ? <Home mattress={mattress} 
 																						 handlePage={this.handlePage} 
-																						 handleCurrentMattress={this.handleCurrentMattress}
-																						  /> : null}
+																						 handleCurrentMattress={this.handleCurrentMattress} /> : null}
 					{this.state.page == "mattresses" ? <Mattresses mattress={mattress} 
 																												 handleCurrentMattress={this.handleCurrentMattress}
 																												 handleIndex={this.handleIndex} /> : null}
