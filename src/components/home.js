@@ -7,13 +7,13 @@ import New from './new';
 const Home = (props) => {
 	return (
 		<div className="homeWrapper">
-			<SlideShow handlePage={props.handlePage} />
-			<Featured mattress={props.mattress} 
-                handlePage={props.handlePage} 
+			<SlideShow mattress={props.mattress}
+                 handlePage={props.handlePage} 
+                 handleCurrentMattress={props.handleCurrentMattress} />
+			<Featured mattress={props.mattress}  
                 handleCurrentMattress={props.handleCurrentMattress} />
 			<FinanceBar />
 			<New mattress={props.mattress}
-           handlePage={props.handlePage} 
            handleCurrentMattress={props.handleCurrentMattress} />
 		</div>
 		)

@@ -75,6 +75,8 @@ class App extends Component {
 	handleCurrentMattress(mattress){
 		this.setState({
 			currentMattress: mattress
+		}, () => {
+			this.handlePage("mattressDetail")
 		})
 	}
 
@@ -94,7 +96,7 @@ class App extends Component {
 																						 handleIndex={this.handleIndex}
 																						 handleCurrentMattress={this.handleCurrentMattress}
 																						  /> : null}
-					{this.state.page == "mattresses" ? <Mattresses mattress={mattress} /> : null}
+					{this.state.page == "mattresses" ? <Mattresses mattress={mattress} handleCurrentMattress={this.handleCurrentMattress} /> : null}
 					{this.state.page == "mattressDetail" ? <MattressDetail currentMattress={this.state.currentMattress} 
 																																 mattressIndex={this.state.mattressIndex} 
 																																 mattress={mattress} /> : null}

@@ -8,7 +8,10 @@ const Mattresses = (props) =>{
                               size={mattress.size}
                               image={mattress.image}
                               id={mattress.id}
-                              price={mattress.price} />
+                              price={mattress.price}
+                              index={mattress.index}
+                              mattress={props.mattress}
+                              handleCurrentMattress={props.handleCurrentMattress} />
             </div>
   });
   return (

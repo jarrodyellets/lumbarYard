@@ -9,7 +9,7 @@ const Featured = (props) => {
 				<div className="featuredLeftDescription">The king of air mattresses!</div>
 				<div className="featuredLeftPrice">$999</div>
 				<div className="featruedLeftSize">(King Mattress)</div>
-				<button className="featuredButton" onClick={()=> {props.handlePage("mattressDetail"); props.handleCurrentMattress(props.mattress[1])}}>Buy Now</button>
+				<button className="featuredButton" onClick={()=> {props.handleCurrentMattress(props.mattress[1])}}>Buy Now</button>
 			</div>
 			<div className="featuredRight">
 				<div className="featuredRightDescription">

@@ -16,7 +16,7 @@ const SlideShow = (props) => {
 			    <img className="slideImg slide2" alt="900x500" src="https://www.jarrodyellets.com/images/lumbar/slide1.jpg" />
 			    <Carousel.Caption>
 			      <h3>Hal Kitzmiller signature mattress</h3>
-			      <button className="slideButton">Buy now</button>
+			      <button className="slideButton" onClick={()=> {props.handleCurrentMattress(props.mattress[0])}}>Buy now</button>
 			    </Carousel.Caption>
 			  </Carousel.Item>
 			</Carousel>
