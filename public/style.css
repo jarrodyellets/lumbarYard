@@ -420,12 +420,12 @@ body {
 .mattressGrid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-column-gap: 50px;
 	grid-row-gap: 100px;
+	grid-column-gap: 50px;
 	border-left: 1px solid #dbd263;
 	border-right: 1px solid #dbd263;
 	border-bottom: 1px solid #dbd263;
-	padding: 10px;
+	padding: 20px;
 }
 
 .singleWrapper {

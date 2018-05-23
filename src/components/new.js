@@ -13,7 +13,7 @@ const New = (props) => {
 					<div className="newPriceDiv">
 						<div className="newPrice">$2,199</div>
 						<div className="newSize">(King Matress)</div>
-						<button className="featuredButton">Buy Now</button>
+						<button className="featuredButton" onClick={()=> {props.handlePage("mattressDetail"); props.handleCurrentMattress(props.mattress[3])}}>Buy Now</button>
 					</div>
 					<div className="newReview">
 						<div className="newBold">The future is here</div>

@@ -9,7 +9,7 @@ const SlideShow = (props) => {
 			    <img className="slideImg slide1" alt="900x500" src="https://www.jarrodyellets.com/images/lumbar/slide2.jpg" />
 			    <Carousel.Caption>
 			      <h3>feel the good vertibrations</h3>
-			      <button className="slideButton">Shop all mattresses</button>
+			      <button className="slideButton" onClick={()=> {props.handlePage("mattresses")}}>Shop all mattresses</button>
 			    </Carousel.Caption>
 			  </Carousel.Item>
 			  <Carousel.Item>

@@ -4,6 +4,7 @@ import TopLinks from './components/topLinks';
 import Nav from './components/nav';
 import Home from './components/home';
 import Mattresses from './components/mattresses';
+import MattressDetail from './components/mattressDetail';
 import About from './components/about';
 import Contact from './components/contact';
 import Footer from './components/footer';
@@ -18,12 +19,16 @@ class App extends Component {
 			responsive: false,
 			sticky: false,
 			page: "home",
+			currentMattress: mattress[4],
+			mattressIndex: 0,
 			cart: [1, 2, 3]
 		}
 
 		this.handleHamburger = this.handleHamburger.bind(this);
 		this.handleScroll = this.handleScroll.bind(this);
 		this.handlePage = this.handlePage.bind(this);
+		this.handleIndex = this.handleIndex.bind(this);
+		this.handleCurrentMattress = this.handleCurrentMattress.bind(this);
 	}
 
 	componentDidMount(){
@@ -61,6 +66,18 @@ class App extends Component {
 		})
 	}
 
+	handleIndex(index){
+		this.setState({
+			mattressIndex: index
+		})
+	}
+
+	handleCurrentMattress(mattress){
+		this.setState({
+			currentMattress: mattress
+		})
+	}
+
 	render(){
 		return(
 			<div className="wrapper">
@@ -72,8 +89,15 @@ class App extends Component {
 						 cart={this.state.cart}
 						 handlePage={this.handlePage} />
 				<div className="contentWrapper">
-					{this.state.page == "home" ? <Home mattress={mattress} /> : null}
+					{this.state.page == "home" ? <Home mattress={mattress} 
+																						 handlePage={this.handlePage} 
+																						 handleIndex={this.handleIndex}
+																						 handleCurrentMattress={this.handleCurrentMattress}
+																						  /> : null}
 					{this.state.page == "mattresses" ? <Mattresses mattress={mattress} /> : null}
+					{this.state.page == "mattressDetail" ? <MattressDetail currentMattress={this.state.currentMattress} 
+																																 mattressIndex={this.state.mattressIndex} 
+																																 mattress={mattress} /> : null}
 					{this.state.page == "about" ? <About /> : null}
 					{this.state.page == "contact" ? <Contact /> : null}
 				</div>
