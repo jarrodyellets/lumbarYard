@@ -21,7 +21,7 @@ class App extends Component {
 			page: "home",
 			currentMattress: mattress[4],
 			mattressIndex: 3,
-			cart: [1, 2, 3]
+			cart: []
 		}
 
 		this.handleHamburger = this.handleHamburger.bind(this);
