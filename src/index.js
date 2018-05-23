@@ -20,7 +20,7 @@ class App extends Component {
 			sticky: false,
 			page: "home",
 			currentMattress: mattress[4],
-			mattressIndex: 0,
+			mattressIndex: 3,
 			cart: [1, 2, 3]
 		}
 
@@ -66,9 +66,9 @@ class App extends Component {
 		})
 	}
 
-	handleIndex(index){
+	handleIndex(e){
 		this.setState({
-			mattressIndex: index
+			mattressIndex: e.target.value
 		})
 	}
 
@@ -93,12 +93,14 @@ class App extends Component {
 				<div className="contentWrapper">
 					{this.state.page == "home" ? <Home mattress={mattress} 
 																						 handlePage={this.handlePage} 
-																						 handleIndex={this.handleIndex}
 																						 handleCurrentMattress={this.handleCurrentMattress}
 																						  /> : null}
-					{this.state.page == "mattresses" ? <Mattresses mattress={mattress} handleCurrentMattress={this.handleCurrentMattress} /> : null}
+					{this.state.page == "mattresses" ? <Mattresses mattress={mattress} 
+																												 handleCurrentMattress={this.handleCurrentMattress}
+																												 handleIndex={this.handleIndex} /> : null}
 					{this.state.page == "mattressDetail" ? <MattressDetail currentMattress={this.state.currentMattress} 
-																																 mattressIndex={this.state.mattressIndex} 
+																																 mattressIndex={this.state.mattressIndex}
+																																 handleIndex={this.handleIndex} 
 																																 mattress={mattress} /> : null}
 					{this.state.page == "about" ? <About /> : null}
 					{this.state.page == "contact" ? <Contact /> : null}
