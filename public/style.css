@@ -419,7 +419,7 @@ body {
 
 .mattressGrid {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(2, 1fr);
 	grid-row-gap: 100px;
 	grid-column-gap: 50px;
 	border-left: 1px solid #dbd263;
@@ -710,7 +710,7 @@ body {
 	}
 	
 	.contentWrapper {
-		padding-bottom: 200px;
+		padding-bottom: 250px;
 	}
 
 	.featuredDiv {
@@ -784,11 +784,15 @@ body {
 		margin-bottom: 20px;
 	}
 
+	.mattressGrid {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
 	.footerWrapper {
 		flex-direction: column;
 		justify-content: space-around;
 		align-items: flex-start;
-		height: 200px;
+		height: 250px;
 		padding: 5px 5px 0 5px;
 		font-size: 1em;
 	}
@@ -867,6 +871,10 @@ body {
 		background-size: contain;
 	}
 
+	.contentWrapper {
+		padding-bottom: 200px;
+	}
+
 	.carousel-caption h3 {
 		font-size: 30px;
 	}
@@ -925,6 +933,10 @@ body {
 	.aboutWrapper {
 		padding-left: 15px;
 		padding-right: 15px;
+	}
+
+	.footerWrapper {
+		height: 200px;
 	}
 
 }
