@@ -1,5 +1,6 @@
 import React from 'react';
 import {Carousel} from 'react-bootstrap';
+import Scroll from 'react-scroll-to-element';
 
 const SlideShow = (props) => {
 	return (
@@ -16,11 +17,13 @@ const SlideShow = (props) => {
 			    <img className="slideImg slide2" alt="900x500" src="https://www.jarrodyellets.com/images/lumbar/slide1.jpg" />
 			    <Carousel.Caption>
 			      <h3>Hal Kitzmiller signature mattress</h3>
-			      <button className="slideButton" onClick={()=> {props.handleCurrentMattress(props.mattress[0])}}>Buy now</button>
+			      <button className="slideButton" onClick={() => {props.handleCurrentMattress(props.mattress[0])}}>Buy now</button>
 			    </Carousel.Caption>
 			  </Carousel.Item>
 			</Carousel>
-			<i className="fas fa-angle-down downArrow"></i>
+			<Scroll type="class" element="featuredDiv" offset={-50}>
+				<i className="fas fa-angle-down downArrow"></i>
+			</Scroll>
 		</div>
 		)
 }
