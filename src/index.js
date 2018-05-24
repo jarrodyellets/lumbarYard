@@ -29,6 +29,7 @@ class App extends Component {
 		this.handlePage = this.handlePage.bind(this);
 		this.handleIndex = this.handleIndex.bind(this);
 		this.handleCurrentMattress = this.handleCurrentMattress.bind(this);
+		this.handleCartAdd = this.handleCartAdd.bind(this);
 	}
 
 	componentDidMount(){
@@ -80,6 +81,17 @@ class App extends Component {
 		})
 	}
 
+	handleCartAdd(name, price, size) {
+		let item = {
+			name: name,
+			price: price,
+			size: size
+		}
+		this.setState(prevState => ({
+			cart: [...prevState.cart, item]
+		}))
+	}
+
 	render(){
 		return(
 			<div className="wrapper">
@@ -99,6 +111,7 @@ class App extends Component {
 																												 handleIndex={this.handleIndex} /> : null}
 					{this.state.page == "mattressDetail" ? <MattressDetail currentMattress={this.state.currentMattress} 
 																																 mattressIndex={this.state.mattressIndex}
+																																 handleCartAdd={this.handleCartAdd}
 																																 handleIndex={this.handleIndex} 
 																																 mattress={mattress} /> : null}
 					{this.state.page == "about" ? <About /> : null}

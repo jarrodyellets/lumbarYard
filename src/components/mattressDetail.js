@@ -15,7 +15,7 @@ const MattressDetail = (props) => {
             <option value="0">Twin</option>
           </select>
         </div>
-        <button className="detailButton">Add To Cart</button>
+        <button className="detailButton" onClick={() => {props.handleCartAdd(props.currentMattress.name, props.currentMattress.price[props.mattressIndex], props.currentMattress.size[props.mattressIndex])}}>Add To Cart</button>
       </div>
       <div className="detailRight">
         <div className="detailPrice">{props.currentMattress.price[props.mattressIndex]}</div>
