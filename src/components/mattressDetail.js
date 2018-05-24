@@ -4,7 +4,7 @@ const MattressDetail = (props) => {
   return (
     <div className="detailWrapper">
       <div className="detailLeft">
-        <div className="detailTitle">{props.currentMattress.name}</div>
+        <div className="detailTitle">{props.currentMattress.name} Mattress</div>
         <div className="detailDetail">{props.currentMattress.description}</div>
         <div className="detailSelectDiv">
           <div className="detailSelectText">Mattress Size</div>

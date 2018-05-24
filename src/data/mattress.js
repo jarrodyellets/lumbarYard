@@ -1,6 +1,6 @@
 let mattress = [
 {
-	name: "Hal Kitzmiller Signature Mattress",
+	name: "Hal Kitzmiller Signature",
 	price: ["$899", "$1,099", "$1,599", "$1,799"],
 	size: ["Twin", "Double", "Queen", "King"],
 	image: "https://www.jarrodyellets.com/images/lumbar/mat5.png",
@@ -9,7 +9,7 @@ let mattress = [
 	index: 0
 },
 {
-	name: "Druidia Air Mattress",
+	name: "Druidia Air",
 	price: ["$499", "$599", "$799", "$999"],
 	size: ["Twin", "Double", "Queen", "King"],
 	image: "https://www.jarrodyellets.com/images/lumbar/mat1.png",
@@ -18,7 +18,7 @@ let mattress = [
 	index: 1
 },
 {
-	name: "Kramerica Sand Mattress",
+	name: "Kramerica Sand",
 	price: ["$799", "$999", "$1,299", "$1,599"],
 	size: ["Twin", "Double", "Queen", "King"],
 	image: "https://www.jarrodyellets.com/images/lumbar/mat6.png",
@@ -27,7 +27,7 @@ let mattress = [
 	index: 2
 },
 {
-	name: "NextGen Memory Foam Mattress",
+	name: "NextGen Memory Foam",
 	price: ["$1,399", "$1,699", "$1,999", "$2,199"],
 	size: ["Twin", "Double", "Queen", "King"],
 	image: "https://www.jarrodyellets.com/images/lumbar/mat3large.png",
@@ -36,7 +36,7 @@ let mattress = [
 	index: 3
 },
 {
-	name: "Lumbar Yard Classic Mattress",
+	name: "Lumbar Yard Classic",
 	price: ["$399", "$499", "$699", "$999"],
 	size: ["Twin", "Double", "Queen", "King"],
 	image: "https://www.jarrodyellets.com/images/lumbar/mat2.png",
@@ -45,7 +45,7 @@ let mattress = [
 	index: 4
 },
 {
-	name: "Faux Feather Mattress",
+	name: "Faux Feather",
 	price: ["$1,199", "$1,599", "$1,899", "$1,999"],
 	size: ["Twin", "Double", "Queen", "King"],
 	image: "https://www.jarrodyellets.com/images/lumbar/mat4.png",

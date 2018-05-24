@@ -419,7 +419,7 @@ body {
 
 .mattressGrid {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 	grid-row-gap: 100px;
 	grid-column-gap: 50px;
 	border-left: 1px solid #dbd263;
