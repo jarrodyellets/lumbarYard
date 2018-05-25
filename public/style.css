@@ -874,6 +874,19 @@ body {
 	.contentWrapper {
 		padding-bottom: 200px;
 	}
+	.carousel-caption {
+		font-family: 'Poppins', sans-serif;
+		bottom: 30%;
+		color: #faf9f5;
+	}
+
+	.carousel-caption h3 {
+		font-size: 1.2em;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-shadow: 1px 1px 5px rgba(0, 0, 0, .6);
+		margin-bottom: 40px;
+	}
 
 	.carousel-caption h3 {
 		font-size: 30px;
@@ -881,6 +894,11 @@ body {
 
 	.slideButton {
 		font-size: 12px;
+		padding: 5px 10px;
+	}
+
+	.downArrow {
+		font-size: 1.8em;
 	}
 
 	.sticky {
