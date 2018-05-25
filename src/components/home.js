@@ -8,9 +8,10 @@ const Home = (props) => {
 	return (
 		<div className="homeWrapper">
 			<SlideShow mattress={props.mattress}
-                 handlePage={props.handlePage} 
+								 width={props.width}
+                 handlePage={props.handlePage}
                  handleCurrentMattress={props.handleCurrentMattress} />
-			<Featured mattress={props.mattress}  
+			<Featured mattress={props.mattress}
                 handleCurrentMattress={props.handleCurrentMattress} />
 			<FinanceBar />
 			<New mattress={props.mattress}

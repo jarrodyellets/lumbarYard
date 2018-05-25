@@ -17,6 +17,7 @@ class App extends Component {
 		super(props);
 		this.state={
 			responsive: false,
+			width: screen.width,
 			sticky: false,
 			page: "home",
 			currentMattress: mattress[4],
@@ -96,23 +97,24 @@ class App extends Component {
 		return(
 			<div className="wrapper">
 				<TopLinks />
-				<Nav handleHamburger={this.handleHamburger} 
+				<Nav handleHamburger={this.handleHamburger}
 						 responsive={this.state.responsive}
 						 sticky={this.state.sticky}
 						 handleScroll={this.handleScroll}
 						 cart={this.state.cart}
 						 handlePage={this.handlePage} />
 				<div className="contentWrapper">
-					{this.state.page == "home" ? <Home mattress={mattress} 
-																						 handlePage={this.handlePage} 
+					{this.state.page == "home" ? <Home mattress={mattress}
+						 																 width={this.state.width}
+																						 handlePage={this.handlePage}
 																						 handleCurrentMattress={this.handleCurrentMattress} /> : null}
-					{this.state.page == "mattresses" ? <Mattresses mattress={mattress} 
+					{this.state.page == "mattresses" ? <Mattresses mattress={mattress}
 																												 handleCurrentMattress={this.handleCurrentMattress}
 																												 handleIndex={this.handleIndex} /> : null}
-					{this.state.page == "mattressDetail" ? <MattressDetail currentMattress={this.state.currentMattress} 
+					{this.state.page == "mattressDetail" ? <MattressDetail currentMattress={this.state.currentMattress}
 																																 mattressIndex={this.state.mattressIndex}
 																																 handleCartAdd={this.handleCartAdd}
-																																 handleIndex={this.handleIndex} 
+																																 handleIndex={this.handleIndex}
 																																 mattress={mattress} /> : null}
 					{this.state.page == "about" ? <About /> : null}
 					{this.state.page == "contact" ? <Contact /> : null}

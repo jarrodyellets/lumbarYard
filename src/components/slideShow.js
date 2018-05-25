@@ -25,7 +25,7 @@ const SlideShow = (props) => {
 					</div>
 				</Carousel.Item>
 			</Carousel>
-			<Scroll type="class" element="featuredDiv" offset={-50}>
+			<Scroll type="class" element="featuredDiv" offset={props.width > 850 ? -50 : 0}>
 				<i className="fas fa-angle-down downArrow"></i>
 			</Scroll>
 		</div>
