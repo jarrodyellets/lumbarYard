@@ -484,7 +484,7 @@ body {
 	padding: 40px 0;
 }
 
-.detailLeft, .detailRight {
+.detailLeft {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -512,8 +512,14 @@ body {
 
 .detailPrice {
 	font-size: 2.4em;
-	padding-left: 10%;
-	align-self: flex-start;
+}
+
+.detailRight {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 40%
 }
 
 .detailImage {
@@ -971,6 +977,15 @@ body {
 	.aboutWrapper {
 		padding-left: 15px;
 		padding-right: 15px;
+	}
+
+	.detailWrapper {
+		flex-direction: column;
+	}
+
+	.detailLeft, .detailRight {
+		width: 100%;
+		padding: 40px;
 	}
 
 	.footerWrapper {
