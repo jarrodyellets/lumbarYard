@@ -497,7 +497,7 @@ body {
 }
 
 .detailDetail {
-	padding: 20px;
+	padding: 20px 0;
 }
 
 .detailSelectDiv {
@@ -925,8 +925,12 @@ body {
 		padding-top: 0;
 	}
 
-	.financeBar {
-		font-size: .4em;
+	.financeBold {
+		display: block;
+	}
+
+	.finaceDash {
+		display: none;
 	}
 
 	.newNew {
