@@ -216,7 +216,7 @@ body {
 .slideButton {
 	background: rgba(35, 35, 35, .6);
 	font-size: 1em;
-	padding: 15px;
+	padding: 10px 15px;
 	border: 1px solid #faf9f5;
 	text-transform: uppercase;
 	border-radius: 5px;
