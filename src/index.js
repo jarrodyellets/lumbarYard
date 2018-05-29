@@ -7,6 +7,7 @@ import Mattresses from './components/mattresses';
 import MattressDetail from './components/mattressDetail';
 import About from './components/about';
 import Contact from './components/contact';
+import Cart from './components/cart';
 import Footer from './components/footer';
 
 import mattress from './data/mattress';
@@ -82,11 +83,12 @@ class App extends Component {
 		})
 	}
 
-	handleCartAdd(name, price, size) {
+	handleCartAdd(name, price, size, image) {
 		let item = {
 			name: name,
 			price: price,
-			size: size
+			size: size,
+			image: image
 		}
 		this.setState(prevState => ({
 			cart: [...prevState.cart, item]
@@ -118,6 +120,7 @@ class App extends Component {
 																																 mattress={mattress} /> : null}
 					{this.state.page == "about" ? <About /> : null}
 					{this.state.page == "contact" ? <Contact /> : null}
+					{this.state.page == "cart" ? <Cart cart={this.state.cart} /> : null}
 				</div>
 				<Footer />
 			</div>

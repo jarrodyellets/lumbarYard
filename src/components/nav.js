@@ -11,7 +11,7 @@ const Nav = (props) => {
 					<a href="#about" className="links aboutLink" onClick={()=> {props.handlePage("about")}}>About</a>
 					<a href="#contact" className="links contactLink" onClick={()=> {props.handlePage("contact")}}>Contact</a>
 				</div>
-				<a href="#cart" className="cart">
+				<a href="#cart" className="cart" onClick={()=> {props.handlePage("cart")}}>
 					<i className="fas fa-shopping-cart"></i>
 					<div className="cartQuantity">{props.cart.length}</div>
 				</a>
