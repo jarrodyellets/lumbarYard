@@ -1,7 +1,7 @@
 let mattress = [
 {
 	name: "Hal Kitzmiller Signature",
-	price: ["$899", "$1,099", "$1,599", "$1,799"],
+	price: ["$899.00", "$1,099.00", "$1,599.00", "$1,799.00"],
 	size: ["Twin", "Double", "Queen", "King"],
 	image: "https://www.jarrodyellets.com/images/lumbar/mat5.png",
 	description: "Designed by Hal himself, the Hal Kitzmiller Signature mattress will perfectly conform to you back shape.  This mattress is perfect for people who spend all day sitting on park benches.  Guarenteed not to smell like the East River.",
@@ -10,7 +10,7 @@ let mattress = [
 },
 {
 	name: "Druidia Air",
-	price: ["$499", "$599", "$799", "$999"],
+	price: ["$499.00", "$599.00", "$799.00", "$999.00"],
 	size: ["Twin", "Double", "Queen", "King"],
 	image: "https://www.jarrodyellets.com/images/lumbar/mat1.png",
 	description: "Filled with air from Planet Drudidia, the Drudidia Air Mattress is the envy of the galaxy.  The mattress comes with a 1 year protection guarentee from Lone Star.",
@@ -19,7 +19,7 @@ let mattress = [
 },
 {
 	name: "Kramerica Sand",
-	price: ["$799", "$999", "$1,299", "$1,599"],
+	price: ["$799.00", "$999.00", "$1,299.00", "$1,599.00"],
 	size: ["Twin", "Double", "Queen", "King"],
 	image: "https://www.jarrodyellets.com/images/lumbar/mat6.png",
 	description: "Ever dream of sleeping on the beach every night?  Now you can with the Kramerica Sand Mattress.  Filled with original Coney Island sand.",
@@ -28,7 +28,7 @@ let mattress = [
 },
 {
 	name: "NextGen Memory Foam",
-	price: ["$1,399", "$1,699", "$1,999", "$2,199"],
+	price: ["$1,399.00", "$1,699.00", "$1,999.00", "$2,199.00"],
 	size: ["Twin", "Double", "Queen", "King"],
 	image: "https://www.jarrodyellets.com/images/lumbar/mat3large.png",
 	description: "Developed by NASA, the NextGen Memory Foam Mattress will remember the contours of up to 6 people.  Supporting app is available via Android or iPhone.",
@@ -37,7 +37,7 @@ let mattress = [
 },
 {
 	name: "Lumbar Yard Classic",
-	price: ["$399", "$499", "$699", "$999"],
+	price: ["$399.00", "$499.00", "$699.00", "$999.00"],
 	size: ["Twin", "Double", "Queen", "King"],
 	image: "https://www.jarrodyellets.com/images/lumbar/mat2.png",
 	description: "First mattress every designed by the Lumbar Yard.  Built with a mix of foam, latex and springs, this mattress will fit most sleeping needs.",
@@ -46,7 +46,7 @@ let mattress = [
 },
 {
 	name: "Faux Feather",
-	price: ["$1,199", "$1,599", "$1,899", "$1,999"],
+	price: ["$1,199.00", "$1,599.00", "$1,899.00", "$1,999.00"],
 	size: ["Twin", "Double", "Queen", "King"],
 	image: "https://www.jarrodyellets.com/images/lumbar/mat4.png",
 	description: "Made with synthetic feathers, the vegan friendly Faux Feather Mattress is the perfect mattress for cold climates.",

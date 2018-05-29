@@ -2,13 +2,15 @@ import React from 'react';
 import CartItem from './cartItem';
 
 const Cart = (props) => {
-  const items = props.cart.map((item) => {
+  const items = props.cart.map((item, i) => {
     return (
       <div key={item.name}>
         <CartItem image={item.image}
                   name={item.name}
                   size={item.size}
-                  price={item.price} />
+                  price={item.price}
+                  quantity={props.quantity[i]}
+                  index={i} />
       </div>
       )
   })

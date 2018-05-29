@@ -24,7 +24,7 @@ class App extends Component {
 			currentMattress: mattress[4],
 			mattressIndex: 3,
 			cart: [],
-			mattressCart: [],
+			sortedCart: [],
 			quantity: []
 		}
 
@@ -126,7 +126,7 @@ class App extends Component {
 			prev = JSON.stringify(cart[i]);
 		}
 		this.setState({
-			mattressCart: a,
+			sortedCart: a,
 			quantity: b
 		})
 	}
@@ -156,7 +156,7 @@ class App extends Component {
 																																 mattress={mattress} /> : null}
 					{this.state.page == "about" ? <About /> : null}
 					{this.state.page == "contact" ? <Contact /> : null}
-					{this.state.page == "cart" ? <Cart cart={this.state.cart} /> : null}
+					{this.state.page == "cart" ? <Cart cart={this.state.sortedCart} quantity={this.state.quantity} /> : null}
 				</div>
 				<Footer />
 			</div>
