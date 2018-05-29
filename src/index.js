@@ -23,7 +23,9 @@ class App extends Component {
 			page: "home",
 			currentMattress: mattress[4],
 			mattressIndex: 3,
-			cart: []
+			cart: [],
+			mattressCart: [],
+			quantity: []
 		}
 
 		this.handleHamburger = this.handleHamburger.bind(this);
@@ -32,6 +34,7 @@ class App extends Component {
 		this.handleIndex = this.handleIndex.bind(this);
 		this.handleCurrentMattress = this.handleCurrentMattress.bind(this);
 		this.handleCartAdd = this.handleCartAdd.bind(this);
+		this.handleCartQuantity = this.handleCartQuantity.bind(this);
 	}
 
 	componentDidMount(){
@@ -83,16 +86,49 @@ class App extends Component {
 		})
 	}
 
-	handleCartAdd(name, price, size, image) {
+	handleCartAdd(name, price, size, image, id) {
 		let item = {
 			name: name,
 			price: price,
 			size: size,
-			image: image
+			image: image,
+			id: id
 		}
+		console.log("hi");
 		this.setState(prevState => ({
 			cart: [...prevState.cart, item]
-		}))
+		}), () => {
+			console.log("here");
+			this.handleCartQuantity()
+		})
+	}
+
+	handleCartQuantity(){
+		let cart = this.state.cart
+		let prev;
+		let a = [];
+		let b = [];
+		cart.sort((a, b) => {
+			if(a.id < b.id){
+				return -1;
+			} else if(a.id > b.id){
+				return 1
+			}
+			return 0
+		});
+		for (var i = 0; i < cart.length; i++){
+			if (JSON.stringify(cart[i]) !== prev){
+				a.push(cart[i]);
+				b.push(1);
+			} else {
+				b[b.length - 1]++
+			}
+			prev = JSON.stringify(cart[i]);
+		}
+		this.setState({
+			mattressCart: a,
+			quantity: b
+		})
 	}
 
 	render(){
