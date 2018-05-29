@@ -19,9 +19,11 @@ const Cart = (props) => {
       <div className="cartTitle">Your Cart</div>
       <div className="cartHeader">
         <div className="cartHeaderItem">Item</div>
-        <div className="cartHeaderPrice">Price</div>
+        <div className="cartHeaderPrice">Item Price</div>
+        <div className="cartHeaderQuantity">Quantity</div>
+        <div className="cartHeaderTotal">Price</div>
       </div>
-      {items}
+      {props.cart.length > 0 ? items : "Your Cart is Empty"}
     </div>
     )
 }

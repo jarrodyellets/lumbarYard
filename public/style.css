@@ -613,6 +613,46 @@ body {
 	font-weight: 700;
 }
 
+.cartWrapper {
+	padding: 40px;
+}
+
+.cartHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.cartTitle {
+	width: 100%;
+	height: 50px;
+	color: #353535;
+	background: #dbd263;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	font-size: 2.3em;
+	padding-left: 10px;
+}
+
+.cartItemWrapper {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.cartItemItem {
+	width: 25%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.cartItemImage {
+	width: 50%;
+}
+
 .footerWrapper {
 	position: absolute;
 	bottom: 0;

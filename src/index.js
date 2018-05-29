@@ -106,8 +106,8 @@ class App extends Component {
 	handleCartQuantity(){
 		let cart = this.state.cart
 		let prev;
-		let a = [];
-		let b = [];
+		let mattresses = [];
+		let quantity = [];
 		cart.sort((a, b) => {
 			if(a.id < b.id){
 				return -1;
@@ -118,16 +118,16 @@ class App extends Component {
 		});
 		for (var i = 0; i < cart.length; i++){
 			if (JSON.stringify(cart[i]) !== prev){
-				a.push(cart[i]);
-				b.push(1);
+				mattresses.push(cart[i]);
+				quantity.push(1);
 			} else {
-				b[b.length - 1]++
+				quantity[quantity.length - 1]++
 			}
 			prev = JSON.stringify(cart[i]);
 		}
 		this.setState({
-			sortedCart: a,
-			quantity: b
+			sortedCart: mattresses,
+			quantity: quantity
 		})
 	}
 
