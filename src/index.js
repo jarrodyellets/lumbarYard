@@ -35,6 +35,7 @@ class App extends Component {
 		this.handleCurrentMattress = this.handleCurrentMattress.bind(this);
 		this.handleCartAdd = this.handleCartAdd.bind(this);
 		this.handleCartQuantity = this.handleCartQuantity.bind(this);
+		this.handleChangeQuantity = this.handleChangeQuantity.bind(this);
 	}
 
 	componentDidMount(){
@@ -94,7 +95,6 @@ class App extends Component {
 			image: image,
 			id: id
 		}
-		console.log("hi");
 		this.setState(prevState => ({
 			cart: [...prevState.cart, item]
 		}), () => {
@@ -130,6 +130,11 @@ class App extends Component {
 		})
 	}
 
+	handleChangeQuantity(e, item, quantity){
+		console.log(e.target.value);
+		console.log(quantity);
+	}
+
 	render(){
 		return(
 			<div className="wrapper">
@@ -157,7 +162,7 @@ class App extends Component {
 					{this.state.page == "contact" ? <Contact /> : null}
 					{this.state.page == "cart" ? <Cart cart={this.state.sortedCart} 
 																						 quantity={this.state.quantity}
-																						 handleCartAdd={this.handleCartAdd} /> : null}
+																						 handleChangeQuantity={this.handleChangeQuantity} /> : null}
 				</div>
 				<Footer />
 			</div>

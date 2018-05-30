@@ -1,6 +1,7 @@
 import React from 'react';
 
 const CartItem = (props) => {
+  let quantity = props.quantity;
   let price = (Number((props.price).replace(/[^\d.]/g, ''))) * props.quantity;
   let stringPrice = '$' + price.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
   return (
@@ -18,7 +19,7 @@ const CartItem = (props) => {
                                          step="1" 
                                          min="0" 
                                          value={props.quantity} 
-                                         onChange={() => {props.handleCartAdd(props.name, props.price, props.size, props.image, props.id)}} />
+                                         onChange={(e) => props.handleChangeQuantity(e, props.item, quantity)} />
       </div>
       <div className="cartItemPrice">{stringPrice}</div>
     </div>
