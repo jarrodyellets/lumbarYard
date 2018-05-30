@@ -34,6 +34,7 @@ class App extends Component {
 		this.handleIndex = this.handleIndex.bind(this);
 		this.handleCurrentMattress = this.handleCurrentMattress.bind(this);
 		this.handleCartAdd = this.handleCartAdd.bind(this);
+		this.handleCartSubtract = this.handleCartSubtract.bind(this);
 		this.handleCartQuantity = this.handleCartQuantity.bind(this);
 		this.handleChangeQuantity = this.handleChangeQuantity.bind(this);
 	}
@@ -102,6 +103,22 @@ class App extends Component {
 		})
 	}
 
+	handleCartSubtract(item){
+		let id = item.id;
+		let cart = this.state.cart
+		for (let i = 0; i < cart.length; i++){
+			if(cart[i].id == id){
+				cart.splice(i, 1);
+				break;
+			}
+		}
+		this.setState({
+			cart: cart
+		}, () => {
+			this.handleCartQuantity();
+		})
+	}
+
 	handleCartQuantity(){
 		let cart = this.state.cart
 		let prev;
@@ -131,8 +148,11 @@ class App extends Component {
 	}
 
 	handleChangeQuantity(e, item, quantity){
-		console.log(e.target.value);
-		console.log(quantity);
+		if(Number(e.target.value) > quantity){
+			this.handleCartAdd(item.name, item.price, item.size, item.image, item.id);
+		} else {
+			this.handleCartSubtract(item);
+		}
 	}
 
 	render(){
