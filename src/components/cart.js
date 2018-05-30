@@ -10,7 +10,9 @@ const Cart = (props) => {
                   size={item.size}
                   price={item.price}
                   quantity={props.quantity[i]}
-                  index={i} />
+                  id={item.id}
+                  index={i}
+                  handleCartAdd={props.handleCartAdd} />
       </div>
       )
   })

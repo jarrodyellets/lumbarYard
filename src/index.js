@@ -98,7 +98,6 @@ class App extends Component {
 		this.setState(prevState => ({
 			cart: [...prevState.cart, item]
 		}), () => {
-			console.log("here");
 			this.handleCartQuantity()
 		})
 	}
@@ -156,7 +155,9 @@ class App extends Component {
 																																 mattress={mattress} /> : null}
 					{this.state.page == "about" ? <About /> : null}
 					{this.state.page == "contact" ? <Contact /> : null}
-					{this.state.page == "cart" ? <Cart cart={this.state.sortedCart} quantity={this.state.quantity} /> : null}
+					{this.state.page == "cart" ? <Cart cart={this.state.sortedCart} 
+																						 quantity={this.state.quantity}
+																						 handleCartAdd={this.handleCartAdd} /> : null}
 				</div>
 				<Footer />
 			</div>

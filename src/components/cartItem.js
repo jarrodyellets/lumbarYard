@@ -14,7 +14,11 @@ const CartItem = (props) => {
       </div>
       <div className="cartItemUnitPrice">{props.price}</div>
       <div className="cartItemQuantity">
-        <input className="cartItemInput" type="number" step="1" min="0" value={props.quantity} />
+        <input className="cartItemInput" type="number" 
+                                         step="1" 
+                                         min="0" 
+                                         value={props.quantity} 
+                                         onChange={() => {props.handleCartAdd(props.name, props.price, props.size, props.image, props.id)}} />
       </div>
       <div className="cartItemPrice">{stringPrice}</div>
     </div>
