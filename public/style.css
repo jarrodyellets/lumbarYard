@@ -665,6 +665,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin: 20px 0;
 }
 
 .cartItemItem {
@@ -699,6 +700,10 @@ body {
 }
 
 .cartSubTotal {
+	width: 100%;
+	border-left: 1px solid #dbd263;
+	border-right: 1px solid #dbd263;
+	border-bottom: 1px solid #dbd263;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
