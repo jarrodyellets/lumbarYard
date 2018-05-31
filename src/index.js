@@ -26,7 +26,7 @@ class App extends Component {
 			cart: [],
 			sortedCart: [],
 			quantity: [],
-			total: 0
+			total: "$0.00"
 		}
 
 		this.handleHamburger = this.handleHamburger.bind(this);
@@ -123,13 +123,15 @@ class App extends Component {
 
 	handleTotal(){
 		let totalPrice = [];
+		let total
 		for (let i = 0; i < this.state.quantity.length; i++){
 			let price = (Number((this.state.sortedCart[i].price).replace(/[^\d.]/g, ''))) * this.state.quantity[i];
 			totalPrice.push(price);
 		}
-		let total = totalPrice.reduce(function(a, b){
+		this.state.cart.length > 0 ? total = totalPrice.reduce(function(a, b){
 			return a + b;
-		})
+		}) : total = 0.00;
+		total = '$' + total.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
 		this.setState({
 			total: total
 		})
@@ -198,7 +200,9 @@ class App extends Component {
 																																 mattress={mattress} /> : null}
 					{this.state.page == "about" ? <About /> : null}
 					{this.state.page == "contact" ? <Contact /> : null}
-					{this.state.page == "cart" ? <Cart cart={this.state.sortedCart} 
+					{this.state.page == "cart" ? <Cart sortedCart={this.state.sortedCart}
+																						 cart={this.state.cart}
+																						 total={this.state.total} 
 																						 quantity={this.state.quantity}
 																						 handleChangeQuantity={this.handleChangeQuantity} /> : null}
 				</div>

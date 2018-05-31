@@ -2,7 +2,8 @@ import React from 'react';
 import CartItem from './cartItem';
 
 const Cart = (props) => {
-  const items = props.cart.map((item, i) => {
+  let totalNum = (Number((props.total).replace(/[^\d.]/g, '')))
+  const items = props.sortedCart.map((item, i) => {
     return (
       <div key={item.name}>
         <CartItem image={item.image}
@@ -26,7 +27,17 @@ const Cart = (props) => {
         <div className="cartHeaderTotal headerItem">Price</div>
       </div>
       <div className="cartDisplay">
-        {props.cart.length > 0 ? items : "Your Cart is Empty"}
+        {props.sortedCart.length > 0 ? items : "Your Cart is Empty"}
+      </div>
+      <div className="cartSubTotal">
+        <div className="subTotalText">
+          <div className="subtotal">Subtotal ({props.cart.length} {props.cart.length == 0 || props.cart.length > 1 ? "items" : "item"}):</div>
+          <div>Shipping:</div>
+        </div>
+        <div className="subTotalPrice">
+          <div className="subtotal">{props.total}</div>
+          <div>{totalNum < 1000 && totalNum != 0 ? "$150.00" : "Free"}</div>
+        </div>
       </div>
     </div>
     )

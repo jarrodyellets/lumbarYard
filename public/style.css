@@ -698,6 +698,26 @@ body {
 	width: 40px;
 }
 
+.cartSubTotal {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 10px;
+}
+
+.subTotalText {
+	text-align: right;
+	margin-right: 10vw;
+}
+
+.subTotalPrice {
+	text-align: right;
+}
+
+.subtotal {
+	margin: 10px 0;
+}
+
 .footerWrapper {
 	position: absolute;
 	bottom: 0;
