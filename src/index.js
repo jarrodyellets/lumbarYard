@@ -25,7 +25,8 @@ class App extends Component {
 			mattressIndex: 3,
 			cart: [],
 			sortedCart: [],
-			quantity: []
+			quantity: [],
+			total: 0
 		}
 
 		this.handleHamburger = this.handleHamburger.bind(this);
@@ -37,6 +38,7 @@ class App extends Component {
 		this.handleCartSubtract = this.handleCartSubtract.bind(this);
 		this.handleCartQuantity = this.handleCartQuantity.bind(this);
 		this.handleChangeQuantity = this.handleChangeQuantity.bind(this);
+		this.handleTotal = this.handleTotal.bind(this);
 	}
 
 	componentDidMount(){
@@ -119,6 +121,20 @@ class App extends Component {
 		})
 	}
 
+	handleTotal(){
+		let totalPrice = [this.state.total];
+		for (let i = 0; i < this.state.quantity.length; i++){
+			let price = (Number((this.state.sortedCart[i].price).replace(/[^\d.]/g, ''))) * this.state.quantity[i];
+			totalPrice.push(price);
+		}
+		let total = totalPrice.reduce(function(a, b){
+			return a + b;
+		})
+		this.setState({
+			total: total
+		})
+	}
+
 	handleCartQuantity(){
 		let cart = this.state.cart
 		let prev;
@@ -144,6 +160,8 @@ class App extends Component {
 		this.setState({
 			sortedCart: mattresses,
 			quantity: quantity
+		}, () => {
+			this.handleTotal()
 		})
 	}
 
