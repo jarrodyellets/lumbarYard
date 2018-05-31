@@ -122,7 +122,7 @@ class App extends Component {
 	}
 
 	handleTotal(){
-		let totalPrice = [this.state.total];
+		let totalPrice = [];
 		for (let i = 0; i < this.state.quantity.length; i++){
 			let price = (Number((this.state.sortedCart[i].price).replace(/[^\d.]/g, ''))) * this.state.quantity[i];
 			totalPrice.push(price);
