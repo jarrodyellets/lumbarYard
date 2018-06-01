@@ -755,6 +755,11 @@ body {
 	font-weight: 700;
 }
 
+.totalText {
+	text-align: right;
+	margin-right: 10vw;
+}
+
 .cartButtonWrapper {
 	display: flex;
 	justify-content: flex-end;
@@ -776,10 +781,6 @@ body {
 		background: #dbd263;
 }
 
-.totalText {
-	text-align: right;
-	margin-right: 10vw;
-}
 
 .footerWrapper {
 	position: absolute;

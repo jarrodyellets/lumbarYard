@@ -48,8 +48,12 @@ const Cart = (props) => {
         </div>
       </div>
       <div className="cartTotal">
-        <div className="totalText">Total: </div>
-        <div className="totalPrice">{formattedShipping}</div>
+        <div className="totalText">
+          <div>Total: </div>
+        </div>
+        <div className="totalPrice">
+          <div>{formattedShipping}</div>
+        </div>
       </div>
       <div className="cartButtonWrapper">
         <button className="cartButton continueShopping" onClick={() => {props.handlePage("mattresses")}}>Continue Shopping</button>
