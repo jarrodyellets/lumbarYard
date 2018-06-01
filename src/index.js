@@ -197,6 +197,7 @@ class App extends Component {
 																																 mattressIndex={this.state.mattressIndex}
 																																 handleCartAdd={this.handleCartAdd}
 																																 handleIndex={this.handleIndex}
+																																 handlePage={this.handlePage}
 																																 mattress={mattress} /> : null}
 					{this.state.page == "about" ? <About /> : null}
 					{this.state.page == "contact" ? <Contact /> : null}

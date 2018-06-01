@@ -10,7 +10,7 @@ const CartItem = (props) => {
         <img src={props.image} className="cartItemImage" />
         <div className="cartItemDescription">
           <div className="cartItemName">{props.name} Mattress</div>
-          <div className="cartItemSize">Size: {props.size}</div>
+          <div className="cartItemSize"><span className="size">Size: </span>{props.size}</div>
         </div>
       </div>
       <div className="cartItemUnitPrice">{props.price}</div>

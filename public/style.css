@@ -680,6 +680,22 @@ body {
 	margin-right: 10px;
 }
 
+.cartItemDescription {
+	margin-left: 10px;
+}
+
+.cartItemName {
+	font-weight: 700;
+}
+
+.cartItemSize {
+	font-size: .9em;
+}
+
+.size {
+	font-weight: 700;
+}
+
 .cartItemUnitPrice {
 	width: 25%;
 	text-align: center;
