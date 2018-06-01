@@ -723,6 +723,23 @@ body {
 	margin: 10px 0;
 }
 
+.cartTotal {
+	width: 100%;
+	border-left: 1px solid #dbd263;
+	border-right: 1px solid #dbd263;
+	border-bottom: 1px solid #dbd263;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 10px;
+	font-weight: 700;
+}
+
+.totalText {
+	text-align: right;
+	margin-right: 10vw;
+}
+
 .footerWrapper {
 	position: absolute;
 	bottom: 0;

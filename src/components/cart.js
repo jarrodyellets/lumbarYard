@@ -3,6 +3,8 @@ import CartItem from './cartItem';
 
 const Cart = (props) => {
   let totalNum = (Number((props.total).replace(/[^\d.]/g, '')))
+  let totalWithShipping = totalNum + 150;
+  let formattedShipping = '$' + totalWithShipping.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
   const items = props.sortedCart.map((item, i) => {
     return (
       <div key={item.name}>
@@ -38,6 +40,10 @@ const Cart = (props) => {
           <div className="subtotal">{props.total}</div>
           <div>{totalNum < 1000 && totalNum != 0 ? "$150.00" : "Free"}</div>
         </div>
+      </div>
+      <div className="cartTotal">
+        <div className="totalText">Total: </div>
+        <div className="totalPrice">{totalNum < 1000 && totalNum != 0? formattedShipping : props.total}</div>
       </div>
     </div>
     )
