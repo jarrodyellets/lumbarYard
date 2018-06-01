@@ -204,6 +204,7 @@ class App extends Component {
 																						 cart={this.state.cart}
 																						 total={this.state.total} 
 																						 quantity={this.state.quantity}
+																						 handlePage={this.handlePage}
 																						 handleChangeQuantity={this.handleChangeQuantity} /> : null}
 				</div>
 				<Footer />

@@ -45,6 +45,10 @@ const Cart = (props) => {
         <div className="totalText">Total: </div>
         <div className="totalPrice">{totalNum < 1000 && totalNum != 0? formattedShipping : props.total}</div>
       </div>
+      <div className="cartButtonWrapper">
+        <button className="cartButton continueShopping" onClick={() => {props.handlePage("mattresses")}}>Continue Shopping</button>
+        {props.sortedCart.length > 0 && (<button className="cartButton checkout">Proceed to Checkout <i className="fas fa-shopping-cart"></i></button>)}
+      </div>
     </div>
     )
 }
