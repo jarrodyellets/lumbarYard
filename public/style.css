@@ -147,8 +147,8 @@ body {
 }
 
 .sticky {
-	position: fixed;
-	top: 0;
+	position: fixed !important;
+	top: 0 !important;
 	width: 100%;
 }
 
@@ -736,6 +736,10 @@ body {
 }
 
 .subtotal {
+	margin: 10px 0;
+}
+
+.taxes {
 	margin: 10px 0;
 }
 
