@@ -21,7 +21,8 @@ const MattressDetail = (props) => {
                                                     props.currentMattress.price[props.mattressIndex], 
                                                     props.currentMattress.size[props.mattressIndex], 
                                                     props.currentMattress.image,
-                                                    props.currentMattress.name + props.currentMattress.size[props.mattressIndex]); props.handlePage("cart")}}>Add To Cart</button>
+                                                    props.currentMattress.name + props.currentMattress.size[props.mattressIndex],
+                                                    1); props.handlePage("cart")}}>Add To Cart</button>
       </div>
       <div className="detailRight">
         <img src={props.currentMattress.image} className="detailImage" />

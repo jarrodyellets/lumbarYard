@@ -18,15 +18,12 @@ class App extends Component {
 		super(props);
 		this.state={
 			responsive: false,
-			width: screen.width,
 			sticky: false,
 			page: "home",
 			currentMattress: mattress[4],
 			mattressIndex: 3,
 			cart: [],
-			sortedCart: [],
-			quantity: [],
-			displayQuantity: [],
+			quantity: 0,
 			total: "$0.00"
 		}
 
@@ -36,10 +33,7 @@ class App extends Component {
 		this.handleIndex = this.handleIndex.bind(this);
 		this.handleCurrentMattress = this.handleCurrentMattress.bind(this);
 		this.handleCartAdd = this.handleCartAdd.bind(this);
-		this.handleCartSubtract = this.handleCartSubtract.bind(this);
-		this.handleCartQuantity = this.handleCartQuantity.bind(this);
-		this.handleDisplayQuantity = this.handleDisplayQuantity.bind(this);
-		this.handleChangeQuantity = this.handleChangeQuantity.bind(this);
+		this.handleUpdateCart = this.handleUpdateCart.bind(this);
 		this.handleTotal = this.handleTotal.bind(this);
 	}
 
@@ -92,42 +86,76 @@ class App extends Component {
 		})
 	}
 
-	handleCartAdd(name, price, size, image, id) {
+	handleCartAdd(name, price, size, image, id, quantity) {
+		let cart = this.state.cart;
+		let newQuantity = 0;
 		let item = {
 			name: name,
 			price: price,
 			size: size,
 			image: image,
-			id: id
+			id: id,
+			quantity: quantity
 		}
-		this.setState(prevState => ({
-			cart: [...prevState.cart, item]
-		}), () => {
-			this.handleCartQuantity()
+
+		if(cart.length == 0){
+			cart.push(item);
+		} else {
+			for (var i = 0; i < cart.length; i++){
+				if (item.id == cart[i].id){
+					console.log(cart)
+					cart[i].quantity = cart[i].quantity + 1;
+					break
+				} else if (i == cart.length - 1){
+					console.log("pousshed")
+					cart.push(item);
+					break
+				}
+			}
+		}
+
+		this.setState({
+			cart: cart,
+			quantity: newQuantity
+		}, () => {
+			this.handleTotal()
 		})
 	}
 
-	handleCartSubtract(item){
-		let id = item.id;
-		let cart = this.state.cart
-		for (let i = 0; i < cart.length; i++){
-			if(cart[i].id == id){
-				cart.splice(i, 1);
-				break;
+	handleUpdateCart(name, price, size, image, id, quantity) {
+		let cart = this.state.cart;
+		let newQuantity = 0;
+		let item = {
+			name: name,
+			price: price,
+			size: size,
+			image: image,
+			id: id,
+			quantity: quantity
+		}
+
+		for (var i = 0; i < cart.length; i ++){
+			if (item.id == cart[i].id){
+				cart[i].quantity = quantity;
+				break
+			} else if (i == cart.length - 1){
+				cart.push(item);
 			}
 		}
+
 		this.setState({
-			cart: cart
+			cart: cart,
+			quantity: newQuantity
 		}, () => {
-			this.handleCartQuantity();
+			this.handleTotal()
 		})
 	}
 
 	handleTotal(){
 		let totalPrice = [];
 		let total
-		for (let i = 0; i < this.state.quantity.length; i++){
-			let price = (Number((this.state.sortedCart[i].price).replace(/[^\d.]/g, ''))) * this.state.quantity[i];
+		for (let i = 0; i < this.state.cart.length; i++){
+			let price = (Number((this.state.cart[i].price).replace(/[^\d.]/g, ''))) * this.state.cart[i].quantity;
 			totalPrice.push(price);
 		}
 		this.state.cart.length > 0 ? total = totalPrice.reduce(function(a, b){
@@ -139,53 +167,6 @@ class App extends Component {
 		})
 	}
 
-	handleCartQuantity(){
-		let cart = this.state.cart
-		let prev;
-		let mattresses = [];
-		let quantity = [];
-		cart.sort((a, b) => {
-			if(a.id < b.id){
-				return -1;
-			} else if(a.id > b.id){
-				return 1
-			}
-			return 0
-		});
-		for (var i = 0; i < cart.length; i++){
-			if (JSON.stringify(cart[i]) !== prev){
-				mattresses.push(cart[i]);
-				quantity.push(1);
-			} else {
-				quantity[quantity.length - 1]++
-			}
-			prev = JSON.stringify(cart[i]);
-		}
-		this.setState({
-			sortedCart: mattresses,
-			quantity: quantity,
-			displayQuantity: quantity
-		}, () => {
-			this.handleTotal()
-		})
-	}
-
-	handleDisplayQuantity(e, index){
-		let quantity = this.state.displayQuantity;
-		quantity[index] = Number(e.target.value);
-		this.setState({
-			displayQuantity: quantity
-		})
-	}
-
-	handleChangeQuantity(e, item, quantity){
-		if(Number(e.target.value) > quantity){
-			this.handleCartAdd(item.name, item.price, item.size, item.image, item.id);
-		} else {
-			this.handleCartSubtract(item);
-		}
-	}
-
 	render(){
 		return(
 			<div className="wrapper">
@@ -194,7 +175,7 @@ class App extends Component {
 						 responsive={this.state.responsive}
 						 sticky={this.state.sticky}
 						 handleScroll={this.handleScroll}
-						 cart={this.state.cart}
+						 quantity={this.state.quantity}
 						 handlePage={this.handlePage} />
 				<div className="contentWrapper">
 					{this.state.page == "home" ? <Home mattress={mattress}
@@ -218,7 +199,8 @@ class App extends Component {
 																						 quantity={this.state.quantity}
 																						 displayQuantity={this.state.displayQuantity}
 																						 handlePage={this.handlePage}
-																						 handleDisplayQuantity={this.handleDisplayQuantity}
+																						 handleCartAdd={this.handleCartAdd}
+																						 handleUpdateCart={this.handleUpdateCart}
 																						 handleChangeQuantity={this.handleChangeQuantity} /> : null}
 				</div>
 				<Footer />

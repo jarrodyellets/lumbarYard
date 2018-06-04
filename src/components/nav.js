@@ -13,7 +13,7 @@ const Nav = (props) => {
 				</div>
 				<a href="#cart" className="cart" onClick={()=> {props.handlePage("cart")}}>
 					<i className="fas fa-shopping-cart"></i>
-					<div className="cartQuantity">{props.cart.length}</div>
+					<div className="cartQuantity">{props.quantity}</div>
 				</a>
 				<a href="javascript:void(0);" 
 			   className="hamburger" 

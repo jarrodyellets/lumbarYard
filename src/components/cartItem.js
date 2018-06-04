@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 class CartItem extends Component {
   constructor(props){
     super(props);
+
     this.state = {
       quantity: this.props.quantity
     }
@@ -36,12 +37,17 @@ class CartItem extends Component {
         </div>
       </div>
       <div className="cartItemUnitPrice">{this.props.price}</div>
-      <form className="cartItemQuantity">
+      <form className="cartItemQuantity" onSubmit={() => this.props.handleUpdateCart(this.props.name, 
+                                                                                  this.props.price,
+                                                                                  this.props.size,
+                                                                                  this.props.image,
+                                                                                  this.props.id,
+                                                                                  this.state.quantity)}>
         <input className="cartItemInput" type="number"  
                                          min="0" 
                                          value={this.state.quantity} 
                                          onChange={this.handleQuantity} />
-        <button className="quantityButton" type="submit" onChange={(e) => this.props.handleChangeQuantity(e, props.item, quantity)}>Update</button>
+        <button className="quantityButton" type="submit" value="submit">Update</button>
       </form>
       <div className="cartItemPrice">{stringPrice}</div>
     </div>

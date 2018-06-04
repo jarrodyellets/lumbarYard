@@ -9,17 +9,19 @@ const Cart = (props) => {
   let formatedTaxes = '$' + taxes.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
   let total = taxes + totalWithShipping
   let formattedShipping = '$' + total.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
-  const items = props.sortedCart.map((item, i) => {
+  const items = props.cart.map((item, i) => {
     return (
       <div key={item.name}>
         <CartItem image={item.image}
                   name={item.name}
                   size={item.size}
                   price={item.price}
-                  quantity={props.quantity[i]}
-                  displayQuantity={props.displayQuantity[i]}
+                  id={item.id}
+                  quantity={item.quantity}
                   item={item}
                   index={i}
+                  handleCartAdd={props.handleCartAdd}
+                  handleUpdateCart={props.handleUpdateCart}
                   handleDisplayQuantity={props.handleDisplayQuantity}
                   handleChangeQuantity={props.handleChangeQuantity} />
       </div>
@@ -35,7 +37,7 @@ const Cart = (props) => {
         <div className="cartHeaderTotal headerItem">Price</div>
       </div>
       <div className="cartDisplay">
-        {props.sortedCart.length > 0 ? items : "Your Cart is Empty"}
+        {props.cart.length > 0 ? items : "Your Cart is Empty"}
       </div>
       <div className="cartSubTotal">
         <div className="subTotalText">
@@ -59,7 +61,7 @@ const Cart = (props) => {
       </div>
       <div className="cartButtonWrapper">
         <button className="cartButton continueShopping" onClick={() => {props.handlePage("mattresses")}}>Continue Shopping</button>
-        {props.sortedCart.length > 0 && (<button className="cartButton checkout">Proceed to Checkout <i className="fas fa-shopping-cart"></i></button>)}
+        {props.cart.length > 0 && (<button className="cartButton checkout">Proceed to Checkout <i className="fas fa-shopping-cart"></i></button>)}
       </div>
     </div>
     )
