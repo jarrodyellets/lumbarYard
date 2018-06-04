@@ -35,6 +35,7 @@ class App extends Component {
 		this.handleCartAdd = this.handleCartAdd.bind(this);
 		this.handleUpdateCart = this.handleUpdateCart.bind(this);
 		this.handleTotal = this.handleTotal.bind(this);
+		this.handleRemove = this.handleRemove.bind(this);
 	}
 
 	componentDidMount(){
@@ -88,7 +89,7 @@ class App extends Component {
 
 	handleCartAdd(name, price, size, image, id, quantity) {
 		let cart = this.state.cart;
-		let newQuantity = this.state.quantity;
+		let newQuantity = this.state.quantity + 1;
 		let item = {
 			name: name,
 			price: price,
@@ -97,8 +98,6 @@ class App extends Component {
 			id: id,
 			quantity: quantity
 		}
-
-		newQuantity = newQuantity + 1;
 
 		if(cart.length == 0){
 			cart.push(item);
@@ -122,20 +121,12 @@ class App extends Component {
 		})
 	}
 
-	handleUpdateCart(name, price, size, image, id, quantity) {
+	handleUpdateCart(id, quantity) {
 		let cart = this.state.cart;
 		let newQuantity = 0;
-		let item = {
-			name: name,
-			price: price,
-			size: size,
-			image: image,
-			id: id,
-			quantity: quantity
-		}
 
 		for (var i = 0; i < cart.length; i ++){
-			if (item.id == cart[i].id){
+			if (id == cart[i].id){
 				cart[i].quantity = quantity;
 				newQuantity = newQuantity + cart[i].quantity;
 			} else {
@@ -164,6 +155,24 @@ class App extends Component {
 		total = '$' + total.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
 		this.setState({
 			total: total
+		})
+	}
+
+	handleRemove(id){
+		let cart = this.state.cart;
+		let quantity;
+		for (let i = 0; i < cart.length; i++){
+			if(id == cart[i].id){
+				quantity = this.state.quantity - cart[i].quantity;
+				cart.splice(i, 1);
+			}
+		}
+
+		this.setState({
+			cart: cart,
+			quantity: quantity
+		}, () => {
+			this.handleTotal()
 		})
 	}
 
@@ -197,6 +206,7 @@ class App extends Component {
 																						 total={this.state.total} 
 																						 quantity={this.state.quantity}
 																						 handlePage={this.handlePage}
+																						 handleRemove={this.handleRemove}
 																						 handleUpdateCart={this.handleUpdateCart} /> : null}
 				</div>
 				<Footer />

@@ -37,17 +37,13 @@ class CartItem extends Component {
         </div>
       </div>
       <div className="cartItemUnitPrice">{this.props.price}</div>
-      <form className="cartItemQuantity" onSubmit={() => this.props.handleUpdateCart(this.props.name, 
-                                                                                     this.props.price,
-                                                                                     this.props.size,
-                                                                                     this.props.image,
-                                                                                     this.props.id,
-                                                                                     this.state.quantity)}>
+      <form className="cartItemQuantity" onSubmit={() => this.props.handleUpdateCart(this.props.id, this.state.quantity)}>
         <input className="cartItemInput" type="number"  
                                          min="0" 
                                          value={this.state.quantity} 
                                          onChange={this.handleQuantity} />
         <button className="quantityButton" type="submit" value="submit">Update</button>
+        <div className="quantityRemove" onClick={() => {this.props.handleRemove(this.props.id)}}><i className="fas fa-times-circle quantityX"></i> REMOVE</div>
       </form>
       <div className="cartItemPrice">{stringPrice}</div>
     </div>

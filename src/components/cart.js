@@ -20,6 +20,7 @@ const Cart = (props) => {
                   quantity={item.quantity}
                   item={item}
                   index={i}
+                  handleRemove={props.handleRemove}
                   handleUpdateCart={props.handleUpdateCart} />
       </div>
       )
@@ -58,7 +59,7 @@ const Cart = (props) => {
       </div>
       <div className="cartButtonWrapper">
         <button className="cartButton continueShopping" onClick={() => {props.handlePage("mattresses")}}>Continue Shopping</button>
-        {props.cart.length > 0 && (<button className="cartButton checkout">Proceed to Checkout <i className="fas fa-shopping-cart"></i></button>)}
+        {props.cart.length > 0 && (<button className="cartButton checkout">Checkout <i className="fas fa-shopping-cart"></i></button>)}
       </div>
     </div>
     )
