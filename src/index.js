@@ -88,7 +88,7 @@ class App extends Component {
 
 	handleCartAdd(name, price, size, image, id, quantity) {
 		let cart = this.state.cart;
-		let newQuantity = 0;
+		let newQuantity = this.state.quantity;
 		let item = {
 			name: name,
 			price: price,
@@ -98,16 +98,16 @@ class App extends Component {
 			quantity: quantity
 		}
 
+		newQuantity = newQuantity + 1;
+
 		if(cart.length == 0){
 			cart.push(item);
 		} else {
 			for (var i = 0; i < cart.length; i++){
 				if (item.id == cart[i].id){
-					console.log(cart)
 					cart[i].quantity = cart[i].quantity + 1;
 					break
 				} else if (i == cart.length - 1){
-					console.log("pousshed")
 					cart.push(item);
 					break
 				}
@@ -137,9 +137,9 @@ class App extends Component {
 		for (var i = 0; i < cart.length; i ++){
 			if (item.id == cart[i].id){
 				cart[i].quantity = quantity;
-				break
-			} else if (i == cart.length - 1){
-				cart.push(item);
+				newQuantity = newQuantity + cart[i].quantity;
+			} else {
+				newQuantity = newQuantity + cart[i].quantity;
 			}
 		}
 
@@ -193,15 +193,11 @@ class App extends Component {
 																																 mattress={mattress} /> : null}
 					{this.state.page == "about" ? <About /> : null}
 					{this.state.page == "contact" ? <Contact /> : null}
-					{this.state.page == "cart" ? <Cart sortedCart={this.state.sortedCart}
-																						 cart={this.state.cart}
+					{this.state.page == "cart" ? <Cart cart={this.state.cart}
 																						 total={this.state.total} 
 																						 quantity={this.state.quantity}
-																						 displayQuantity={this.state.displayQuantity}
 																						 handlePage={this.handlePage}
-																						 handleCartAdd={this.handleCartAdd}
-																						 handleUpdateCart={this.handleUpdateCart}
-																						 handleChangeQuantity={this.handleChangeQuantity} /> : null}
+																						 handleUpdateCart={this.handleUpdateCart} /> : null}
 				</div>
 				<Footer />
 			</div>

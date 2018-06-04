@@ -20,10 +20,7 @@ const Cart = (props) => {
                   quantity={item.quantity}
                   item={item}
                   index={i}
-                  handleCartAdd={props.handleCartAdd}
-                  handleUpdateCart={props.handleUpdateCart}
-                  handleDisplayQuantity={props.handleDisplayQuantity}
-                  handleChangeQuantity={props.handleChangeQuantity} />
+                  handleUpdateCart={props.handleUpdateCart} />
       </div>
       )
   })
@@ -41,7 +38,7 @@ const Cart = (props) => {
       </div>
       <div className="cartSubTotal">
         <div className="subTotalText">
-          <div className="subtotal">Subtotal ({props.cart.length} {props.cart.length == 0 || props.cart.length > 1 ? "items" : "item"}):</div>
+          <div className="subtotal">Subtotal ({props.quantity} {props.quantity == 0 || props.cart.length > 1 ? "items" : "item"}):</div>
           <div>Shipping:</div>
           <div className="taxes">Taxes (4.5%):</div>
         </div>
