@@ -4,7 +4,7 @@ let mattress = [
 	price: ["$899.00", "$1,099.00", "$1,599.00", "$1,799.00"],
 	size: ["Twin", "Double", "Queen", "King"],
 	image: "https://www.jarrodyellets.com/images/lumbar/mat5.png",
-	description: "Designed by Hal himself, the Hal Kitzmiller Signature mattress will perfectly conform to you back shape.  This mattress is perfect for people who spend all day sitting on park benches.  Guarenteed not to smell like the East River.",
+	description: "Designed by Hal himself, the Hal Kitzmiller Signature mattress will perfectly conform to you back shape.  This mattress is perfect for people who spend all day sitting on park benches.  Guaranteed not to smell like the East River.",
 	id: "kitz",
 	index: 0
 },

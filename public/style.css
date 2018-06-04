@@ -704,15 +704,20 @@ body {
 .cartItemQuantity {
 	width: 25%;
 	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center
+}
+
+.cartItemInput {
+	width: 40px;
+	margin-bottom: 10px;
 }
 
 .cartItemPrice{
 	width: 25%;
 	text-align: right;
-}
-
-.cartItemInput {
-	width: 40px;
 }
 
 .cartSubTotal {
@@ -780,7 +785,6 @@ body {
 .checkout {
 		background: #dbd263;
 }
-
 
 .footerWrapper {
 	position: absolute;
@@ -1093,7 +1097,7 @@ body {
 	}
 
 	.sticky {
-		position: relative;
+		position: relative !important;;
 	}
 
 	.sticky + .contentWrapper {
@@ -1155,6 +1159,18 @@ body {
 	.detailLeft, .detailRight {
 		width: 100%;
 		padding: 40px;
+	}
+
+	.cartHeader {
+		display: none;
+	}
+
+	.cartItemImage {
+		display: none;
+	}
+
+	.cartItemUnitPrice {
+		display: none;
 	}
 
 	.footerWrapper {

@@ -4,6 +4,7 @@ const CartItem = (props) => {
   let quantity = props.quantity;
   let price = (Number((props.price).replace(/[^\d.]/g, ''))) * props.quantity;
   let stringPrice = '$' + price.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+  let newQuantity = props.quantity;
   return (
     <div className="cartItemWrapper">
       <div className="cartItemItem">
@@ -14,13 +15,12 @@ const CartItem = (props) => {
         </div>
       </div>
       <div className="cartItemUnitPrice">{props.price}</div>
-      <div className="cartItemQuantity">
-        <input className="cartItemInput" type="number" 
-                                         step="1" 
+      <form className="cartItemQuantity">
+        <input className="cartItemInput" type="number"  
                                          min="0" 
                                          value={props.quantity} 
                                          onChange={(e) => props.handleChangeQuantity(e, props.item, quantity)} />
-      </div>
+      </form>
       <div className="cartItemPrice">{stringPrice}</div>
     </div>
     )
