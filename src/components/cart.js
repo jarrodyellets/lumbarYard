@@ -17,8 +17,10 @@ const Cart = (props) => {
                   size={item.size}
                   price={item.price}
                   quantity={props.quantity[i]}
+                  displayQuantity={props.displayQuantity[i]}
                   item={item}
                   index={i}
+                  handleDisplayQuantity={props.handleDisplayQuantity}
                   handleChangeQuantity={props.handleChangeQuantity} />
       </div>
       )

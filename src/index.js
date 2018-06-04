@@ -26,6 +26,7 @@ class App extends Component {
 			cart: [],
 			sortedCart: [],
 			quantity: [],
+			displayQuantity: [],
 			total: "$0.00"
 		}
 
@@ -37,6 +38,7 @@ class App extends Component {
 		this.handleCartAdd = this.handleCartAdd.bind(this);
 		this.handleCartSubtract = this.handleCartSubtract.bind(this);
 		this.handleCartQuantity = this.handleCartQuantity.bind(this);
+		this.handleDisplayQuantity = this.handleDisplayQuantity.bind(this);
 		this.handleChangeQuantity = this.handleChangeQuantity.bind(this);
 		this.handleTotal = this.handleTotal.bind(this);
 	}
@@ -161,9 +163,18 @@ class App extends Component {
 		}
 		this.setState({
 			sortedCart: mattresses,
-			quantity: quantity
+			quantity: quantity,
+			displayQuantity: quantity
 		}, () => {
 			this.handleTotal()
+		})
+	}
+
+	handleDisplayQuantity(e, index){
+		let quantity = this.state.displayQuantity;
+		quantity[index] = Number(e.target.value);
+		this.setState({
+			displayQuantity: quantity
 		})
 	}
 
@@ -205,7 +216,9 @@ class App extends Component {
 																						 cart={this.state.cart}
 																						 total={this.state.total} 
 																						 quantity={this.state.quantity}
+																						 displayQuantity={this.state.displayQuantity}
 																						 handlePage={this.handlePage}
+																						 handleDisplayQuantity={this.handleDisplayQuantity}
 																						 handleChangeQuantity={this.handleChangeQuantity} /> : null}
 				</div>
 				<Footer />
