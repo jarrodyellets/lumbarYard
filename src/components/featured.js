@@ -18,8 +18,7 @@ const Featured = (props) => {
 					Every morning I awake refreshed and ready to do battle with Dark Helmet."</div>
 					<div>-Lone Star-</div>
 				</div>
-				<img className="featuredRightImg" src={props.mattress[1].image} />
-				<img className="featuredWarranty" src="https://www.jarrodyellets.com/images/lumbar/warranty.png" />
+				<img className="featuredRightImg" src="https://www.jarrodyellets.com/images/lumbar/mat1war.png" />
 			</div>
 		</div>
 		)
