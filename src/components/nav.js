@@ -6,7 +6,7 @@ const Nav = (props) => {
 			<a href="#home" className="brand" onClick={()=> {props.handlePage("home")}}><div className="brandImg"></div></a>
 			<div className="linksWrapper">
 				<div className="linksDiv" id="linksDiv">
-					<a href="javascript:void(0)" className="closeBtn" onClick={props.handleHamburger}><i className="fas fa-times"></i></a>
+					<a href="javascript:void(0)" className="closeBtn" onClick={props.handleClose}><i className="fas fa-times"></i></a>
 					<a href="#products" className="links" onClick={()=> {props.handlePage("mattresses")}}>Mattresses</a>
 					<a href="#about" className="links aboutLink" onClick={()=> {props.handlePage("about")}}>About</a>
 					<a href="#contact" className="links contactLink" onClick={()=> {props.handlePage("contact")}}>Contact</a>

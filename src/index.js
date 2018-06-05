@@ -27,7 +27,6 @@ class App extends Component {
 			total: "$0.00"
 		}
 
-		this.handleHamburger = this.handleHamburger.bind(this);
 		this.handleScroll = this.handleScroll.bind(this);
 		this.handlePage = this.handlePage.bind(this);
 		this.handleIndex = this.handleIndex.bind(this);
@@ -47,12 +46,13 @@ class App extends Component {
 	}
 
 	handleHamburger(){
-		this.setState((state) => ({
-			responsive: !state.responsive
-		}), () => {
-			const links = document.getElementById("linksDiv");
-			this.state.responsive ? links.className += " width" : links.className = "linksDiv";
-		});
+		const links = document.getElementById("linksDiv");
+		links.className += " width";
+	}
+
+	handleClose(){
+		const links = document.getElementById("linksDiv");
+		links.className = "linksDiv"
 	}
 
 	handleScroll(){
@@ -70,6 +70,8 @@ class App extends Component {
 	handlePage(page){
 		this.setState({
 			page: page
+		}, () => {
+			this.handleClose();
 		})
 	}
 
@@ -181,6 +183,7 @@ class App extends Component {
 			<div className="wrapper">
 				<TopLinks />
 				<Nav handleHamburger={this.handleHamburger}
+						 handleClose={this.handleClose}
 						 responsive={this.state.responsive}
 						 sticky={this.state.sticky}
 						 handleScroll={this.handleScroll}

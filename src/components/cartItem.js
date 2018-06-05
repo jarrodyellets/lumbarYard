@@ -38,8 +38,7 @@ class CartItem extends Component {
       </div>
       <div className="cartItemUnitPrice">{this.props.price}</div>
       <form className="cartItemQuantity" onSubmit={(e) => this.props.handleUpdateCart(e, this.props.id, this.state.quantity)}>
-        <input className="cartItemInput" type="number"  
-                                         min="0" 
+        <input className="cartItemInput" type="number"   
                                          value={this.state.quantity} 
                                          onChange={this.handleQuantity} />
         <button className="quantityButton" type="submit" value="submit">Update</button>
