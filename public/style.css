@@ -941,44 +941,6 @@ input[type=number]::-webkit-outer-spin-button {
 		padding-bottom: 250px;
 	}
 
-	.featuredDiv {
-		flex-direction: column;
-	}
-
-	.featuredLeft {
-		width: 100%;
-	}
-
-	.featuredRight {
-		width: 100%;
-		justify-content: center;
-		align-items: center;
-		padding: 0 10px;
-	}
-	.featuredLeftTitle {
-		font-size: 20px;
-	}
-
-	.featuredLeftDescription {
-		font-size: 16px;
-	}
-
-	.featuredLeftPrice {
-		font-size: 16px;
-	}
-	.featuredRightDescription {
-		font-size: 12px;
-		width: 100%;
-	}
-
-	.featuredRightReviewTitle {
-		font-size: 20px;
-	}
-
-	.featuredButton {
-		font-size: 12px;
-	}
-
 	.financeBar {
 		font-size: .7em;
 	}
@@ -1131,6 +1093,49 @@ input[type=number]::-webkit-outer-spin-button {
 		padding-top: 0;
 	}
 
+	.featuredDiv {
+		flex-direction: column;
+	}
+
+	.featuredLeft {
+		width: 100%;
+	}
+
+	.featuredRight {
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		padding: 0 10px;
+	}
+	.featuredLeftTitle {
+		font-size: 20px;
+	}
+
+	.featuredLeftDescription {
+		font-size: 16px;
+	}
+
+	.featuredLeftPrice {
+		font-size: 16px;
+	}
+	.featuredRightDescription {
+		font-size: 12px;
+		width: 80%;
+	}
+
+	.featuredRightReviewTitle {
+		font-size: 20px;
+		text-align: center;
+	}
+
+	.featuredButton {
+		font-size: 12px;
+	}
+
+	.featuredRightImg {
+		width: 80%;
+	}
+
 	.financeBold {
 		display: block;
 	}
@@ -1167,7 +1172,7 @@ input[type=number]::-webkit-outer-spin-button {
 	}
 
 	.newImg {
-		width: 100%;
+		width: 80%;
 	}
 
 	.newIphone {
