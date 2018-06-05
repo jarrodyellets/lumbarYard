@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FinanceBar = (props) => {
+const FinanceBar = () => {
 	return(
 		<div className="financeBar">
 			<div className="financeText">

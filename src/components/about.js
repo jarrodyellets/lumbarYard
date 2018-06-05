@@ -1,6 +1,6 @@
 import React from 'react';
 
-const About = (props) => {
+const About = () => {
 	return (
 		<div className="aboutWrapper">
 			<img src="https://www.jarrodyellets.com/images/lumbar/gack.jpg" className="aboutImg" />

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TopLinks = (props) => {
+const TopLinks = () => {
 	return (
 			<div className="topIcons">
 				<div className="topLeft">
