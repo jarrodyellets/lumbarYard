@@ -20,7 +20,7 @@ class CartItem extends Component {
 
   handleQuantity(e){
     this.setState({
-      quantity: Number(e.target.value)
+      quantity: Number(e.target.value) == 0 ? undefined : Number(e.target.value)
     })
   }
 
@@ -37,8 +37,9 @@ class CartItem extends Component {
         </div>
       </div>
       <div className="cartItemUnitPrice">{this.props.price}</div>
-      <form className="cartItemQuantity" onSubmit={(e) => this.props.handleUpdateCart(e, this.props.id, this.state.quantity)}>
-        <input className="cartItemInput" type="number"   
+      <form className="cartItemQuantity" onSubmit={(e) => this.props.handleUpdateCart(e, this.props.id, this.state.quantity == undefined ? 0 : this.state.quantity)}>
+        <input className="cartItemInput" type="number" 
+                                         min="0"  
                                          value={this.state.quantity} 
                                          onChange={this.handleQuantity} />
         <button className="quantityButton" type="submit" value="submit">Update</button>
