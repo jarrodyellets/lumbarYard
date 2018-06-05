@@ -187,27 +187,27 @@ class App extends Component {
 						 quantity={this.state.quantity}
 						 handlePage={this.handlePage} />
 				<div className="contentWrapper">
-					{this.state.page == "home" ? <Home mattress={mattress}
+					{(this.state.page == "home") && (<Home mattress={mattress}
 						 																 width={this.state.width}
 																						 handlePage={this.handlePage}
-																						 handleCurrentMattress={this.handleCurrentMattress} /> : null}
-					{this.state.page == "mattresses" ? <Mattresses mattress={mattress}
+																						 handleCurrentMattress={this.handleCurrentMattress} />)}
+					{(this.state.page == "mattresses") && (<Mattresses mattress={mattress}
 																												 handleCurrentMattress={this.handleCurrentMattress}
-																												 handleIndex={this.handleIndex} /> : null}
-					{this.state.page == "mattressDetail" ? <MattressDetail currentMattress={this.state.currentMattress}
+																												 handleIndex={this.handleIndex} />)}
+					{(this.state.page == "mattressDetail") && (<MattressDetail currentMattress={this.state.currentMattress}
 																																 mattressIndex={this.state.mattressIndex}
 																																 handleCartAdd={this.handleCartAdd}
 																																 handleIndex={this.handleIndex}
 																																 handlePage={this.handlePage}
-																																 mattress={mattress} /> : null}
-					{this.state.page == "about" ? <About /> : null}
-					{this.state.page == "contact" ? <Contact /> : null}
-					{this.state.page == "cart" ? <Cart cart={this.state.cart}
+																																 mattress={mattress} />)}
+					{(this.state.page == "about") && (<About />)}
+					{(this.state.page == "contact") && (<Contact />)}
+					{(this.state.page == "cart") && (<Cart cart={this.state.cart}
 																						 total={this.state.total} 
 																						 quantity={this.state.quantity}
 																						 handlePage={this.handlePage}
 																						 handleRemove={this.handleRemove}
-																						 handleUpdateCart={this.handleUpdateCart} /> : null}
+																						 handleUpdateCart={this.handleUpdateCart} />)}
 				</div>
 				<Footer />
 			</div>
