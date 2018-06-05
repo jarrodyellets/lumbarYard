@@ -121,10 +121,10 @@ class App extends Component {
 		})
 	}
 
-	handleUpdateCart(id, quantity) {
+	handleUpdateCart(e, id, quantity) {
 		let cart = this.state.cart;
 		let newQuantity = 0;
-
+		e.preventDefault();
 		for (var i = 0; i < cart.length; i ++){
 			if (id == cart[i].id){
 				cart[i].quantity = quantity;
