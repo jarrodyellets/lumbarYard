@@ -71,6 +71,7 @@ class App extends Component {
 		this.setState({
 			page: page
 		}, () => {
+			window.scrollTo(0, 0);
 			this.handleClose();
 		})
 	}
