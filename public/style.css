@@ -745,7 +745,7 @@ input[type=number]::-webkit-outer-spin-button {
 .quantityRemove {
 	display: flex;
 	align-items: center;
-	color: #aaa;
+	color: #757575;
 	font-size: .7em;
 	cursor: pointer;
 }
@@ -756,18 +756,19 @@ input[type=number]::-webkit-outer-spin-button {
 	border-right: 1px solid #dbd263;
 	border-bottom: 1px solid #dbd263;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: flex-start;
 	align-items: center;
 	padding: 10px;
 }
 
 .subTotalText {
 	text-align: right;
-	margin-right: 10vw;
+	width: 85%;
 }
 
 .subTotalPrice {
 	text-align: right;
+	width: 15%;
 }
 
 .subtotal {
@@ -784,15 +785,20 @@ input[type=number]::-webkit-outer-spin-button {
 	border-right: 1px solid #dbd263;
 	border-bottom: 1px solid #dbd263;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: flex-start;
 	align-items: center;
 	padding: 10px;
 	font-weight: 700;
 }
 
 .totalText {
+	width: 85%;
 	text-align: right;
-	margin-right: 10vw;
+}
+
+.totalPrice {
+	width: 15%;
+	text-align: right;
 }
 
 .cartButtonWrapper {
@@ -972,6 +978,26 @@ input[type=number]::-webkit-outer-spin-button {
 
 	.mattressGrid {
 		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.subTotalText {
+		text-align: right;
+		width: 80%;
+	}
+
+	.subTotalPrice {
+		text-align: right;
+		width: 20%;
+	}
+
+	.totalText {
+		width: 80%;
+		text-align: right;
+	}
+
+	.totalPrice {
+		width: 20%;
+		text-align: right;
 	}
 
 	.footerWrapper {
@@ -1228,6 +1254,28 @@ input[type=number]::-webkit-outer-spin-button {
 		height: 200px;
 	}
 
+}
+
+@media screen and (max-width: 414px ){
+	.subTotalText {
+		text-align: right;
+		width: 65%;
+	}
+
+	.subTotalPrice {
+		text-align: right;
+		width: 35%;
+	}
+
+	.totalText {
+		width: 65%;
+		text-align: right;
+	}
+
+	.totalPrice {
+		width: 35%;
+		text-align: right;
+	}
 }
 
 @media screen and (max-width: 350px){
