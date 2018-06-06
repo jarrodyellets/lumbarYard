@@ -43,8 +43,9 @@ body {
 }
 
 .socialTop {
-	padding-right: 20px;
+	margin-right: 20px;
 	font-size: 26px;
+	cursor: pointer;
 }
 
 .shipping {
@@ -872,6 +873,7 @@ input[type=number]::-webkit-outer-spin-button {
 .socialFoot {
 	font-size: 1.8em;
 	margin: 0 10px;
+	cursor: pointer;
 }
 
 .card {
