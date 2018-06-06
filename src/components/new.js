@@ -12,7 +12,7 @@ const New = (props) => {
 				<div className="newDetailsDiv">
 					<div className="newPriceDiv">
 						<div className="newPrice">$2,199</div>
-						<div className="newSize">(King Matress)</div>
+						<div className="newSize">(King Mattress)</div>
 						<button className="featuredButton" onClick={()=> {props.handleCurrentMattress(props.mattress[3])}}>Buy Now</button>
 					</div>
 					<div className="newReview">

@@ -1179,6 +1179,10 @@ input[type=number]::-webkit-outer-spin-button {
 		height: 35vw;
 	}
 
+	.mattressGrid {
+		grid-row-gap: 60px;
+	}
+
 	.aboutWrapper {
 		padding-left: 15px;
 		padding-right: 15px;
@@ -1188,9 +1192,14 @@ input[type=number]::-webkit-outer-spin-button {
 		flex-direction: column;
 	}
 
-	.detailLeft, .detailRight {
+	.detailLeft {
 		width: 100%;
 		padding: 40px;
+	}
+
+	.detailRight {
+		width: 100%;
+		padding: 0 40px;
 	}
 
 	.cartHeader {
