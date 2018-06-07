@@ -2,13 +2,6 @@ import React from 'react';
 import CartItem from './cartItem';
 
 const Cart = (props) => {
-  let totalNum = (Number((props.total).replace(/[^\d.]/g, '')))
-  let shipping = totalNum < 1000 && totalNum != 0 ? 150.00 : 0.00;
-  let totalWithShipping = totalNum + shipping;
-  let taxes = totalNum * .045
-  let formatedTaxes = '$' + taxes.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
-  let total = taxes + totalWithShipping
-  let formattedShipping = '$' + total.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
   const items = props.cart.map((item, i) => {
     return (
       <div key={item.name}>
@@ -44,9 +37,9 @@ const Cart = (props) => {
           <div className="taxes">Taxes (4.5%):</div>
         </div>
         <div className="subTotalPrice">
-          <div className="subtotal">{props.total}</div>
-          <div>{totalNum < 1000 && totalNum != 0 ? "$150.00" : "Free"}</div>
-          <div className="taxes">{formatedTaxes}</div>
+          <div className="subtotal">{props.subTotal}</div>
+          <div>{props.shipping}</div>
+          <div className="taxes">{props.taxes}</div>
         </div>
       </div>
       <div className="cartTotal">
@@ -54,7 +47,7 @@ const Cart = (props) => {
           <div>Total: </div>
         </div>
         <div className="totalPrice">
-          <div>{formattedShipping}</div>
+          <div>{props.grandTotal}</div>
         </div>
       </div>
       <div className="cartButtonWrapper">

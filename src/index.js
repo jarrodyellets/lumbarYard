@@ -25,7 +25,10 @@ class App extends Component {
 			mattressIndex: 3,
 			cart: [],
 			quantity: 0,
-			total: "$0.00"
+			subTotal: "$0.00",
+			shipping: "Free",
+			taxes: "$0.00",
+			grandTotal: "0.00"
 		}
 
 		this.handleScroll = this.handleScroll.bind(this);
@@ -148,7 +151,7 @@ class App extends Component {
 
 	handleTotal(){
 		let totalPrice = [];
-		let total
+		let subTotal
 		for (let i = 0; i < this.state.cart.length; i++){
 			let price = (Number((this.state.cart[i].price).replace(/[^\d.]/g, ''))) * this.state.cart[i].quantity;
 			totalPrice.push(price);
@@ -156,9 +159,20 @@ class App extends Component {
 		this.state.cart.length > 0 ? total = totalPrice.reduce(function(a, b){
 			return a + b;
 		}) : total = 0.00;
-		total = '$' + total.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+		subTotal = '$' + total.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+		let totalNum = (Number((subTotal).replace(/[^\d.]/g, '')))
+	  let shipping = totalNum < 1000 && totalNum != 0 ? 150.00 : 0.00;
+	  let totalWithShipping = totalNum + shipping;
+	  let taxes = totalNum * .045
+	  let formatedTaxes = '$' + taxes.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+	  let total = taxes + totalWithShipping
+	  let formattedShipping = '$' + total.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+	  shipping = totalNum < 1000 && totalNum != 0 ? "$150.00" : "Free";
 		this.setState({
-			total: total
+			subTotal: subTotal,
+			shipping: shipping,
+			taxes: formatedTaxes,
+			grandTotal: formattedShipping
 		})
 	}
 
@@ -193,27 +207,35 @@ class App extends Component {
 						 handlePage={this.handlePage} />
 				<div className="contentWrapper">
 					{(this.state.page == "home") && (<Home mattress={mattress}
-						 																 width={this.state.width}
-																						 handlePage={this.handlePage}
-																						 handleCurrentMattress={this.handleCurrentMattress} />)}
+								 																 width={this.state.width}
+																								 handlePage={this.handlePage}
+																								 handleCurrentMattress={this.handleCurrentMattress} />)}
 					{(this.state.page == "mattresses") && (<Mattresses mattress={mattress}
-																												 handleCurrentMattress={this.handleCurrentMattress}
-																												 handleIndex={this.handleIndex} />)}
+																														 handleCurrentMattress={this.handleCurrentMattress}
+																														 handleIndex={this.handleIndex} />)}
 					{(this.state.page == "mattressDetail") && (<MattressDetail currentMattress={this.state.currentMattress}
-																																 mattressIndex={this.state.mattressIndex}
-																																 handleCartAdd={this.handleCartAdd}
-																																 handleIndex={this.handleIndex}
-																																 handlePage={this.handlePage}
-																																 mattress={mattress} />)}
+																																		 mattressIndex={this.state.mattressIndex}
+																																		 handleCartAdd={this.handleCartAdd}
+																																		 handleIndex={this.handleIndex}
+																																		 handlePage={this.handlePage}
+																																		 mattress={mattress} />)}
 					{(this.state.page == "about") && (<About />)}
 					{(this.state.page == "contact") && (<Contact />)}
 					{(this.state.page == "cart") && (<Cart cart={this.state.cart}
-																						 total={this.state.total} 
-																						 quantity={this.state.quantity}
-																						 handlePage={this.handlePage}
-																						 handleRemove={this.handleRemove}
-																						 handleUpdateCart={this.handleUpdateCart} />)}
-					{(this.state.page == "checkout") && (<Checkout />)}
+																								 subTotal={this.state.subTotal}
+																								 shipping={this.state.shipping}
+																								 taxes={this.state.taxes}
+																								 grandTotal={this.state.grandTotal} 
+																								 quantity={this.state.quantity}
+																								 handlePage={this.handlePage}
+																								 handleRemove={this.handleRemove}
+																								 handleUpdateCart={this.handleUpdateCart} />)}
+					{(this.state.page == "checkout") && (<Checkout cart={this.state.cart}
+																												 total={this.state.total} 
+																												 quantity={this.state.quantity}
+																												 handlePage={this.handlePage}
+																												 handleRemove={this.handleRemove}
+																												 handleUpdateCart={this.handleUpdateCart}/>)}
 				</div>
 				<Footer />
 			</div>
