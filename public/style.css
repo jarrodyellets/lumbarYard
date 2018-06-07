@@ -826,6 +826,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 .checkoutWrapper {
 	padding: 40px;
+	margin: 0 auto;
+	max-width: 1000px;
 }
 
 .checkoutTitle {
@@ -851,6 +853,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .checkoutInfoWrapper {
 	width: 60%;
+	margin-right: 20px;
 }
 
 .addressWrapper {
@@ -865,7 +868,29 @@ input[type=number]::-webkit-outer-spin-button {
 
 .checkoutInput {
 	margin-bottom: 20px;
+}
+
+.orderSubTotal {
+	display: flex;
+}
+
+.checkoutOrder {
+	width: 40%;
+}
+
+.orderSubTotalText {
 	width: 50%;
+	text-align: left;
+}
+
+.orderSubTotalPrice {
+	width: 50%;
+	text-align: right;
+}
+
+.orderTotal {
+	margin-top: 20px;
+	font-weight: 700;
 }
 
 .footerWrapper {

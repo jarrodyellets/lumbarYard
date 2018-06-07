@@ -230,12 +230,12 @@ class App extends Component {
 																								 handlePage={this.handlePage}
 																								 handleRemove={this.handleRemove}
 																								 handleUpdateCart={this.handleUpdateCart} />)}
-					{(this.state.page == "checkout") && (<Checkout cart={this.state.cart}
-																												 total={this.state.total} 
+					{(this.state.page == "checkout") && (<Checkout subTotal={this.state.subTotal}
+																												 shipping={this.state.shipping}
+																												 taxes={this.state.taxes}
 																												 quantity={this.state.quantity}
-																												 handlePage={this.handlePage}
-																												 handleRemove={this.handleRemove}
-																												 handleUpdateCart={this.handleUpdateCart}/>)}
+																												 cart={this.state.cart}
+																												 grandTotal={this.state.grandTotal} />)}
 				</div>
 				<Footer />
 			</div>

@@ -41,7 +41,22 @@ const Checkout = (props) => {
         </div>
         <div className="checkoutOrder">
           <div className="orderTitle">Order Summary</div>
-          
+          <div className="orderInnerWrapper">
+            <div className="orderSubTotal">
+              <div className="orderSubTotalText">
+                <div className="subtotal">Merchandise ({props.quantity} {props.quantity == 0 || props.cart.length > 1 ? "items" : "item"}):</div>
+                <div>Shipping:</div>
+                <div className="taxes">Taxes (4.5%):</div>
+                <div className="orderTotal">Order Total: </div>
+              </div>
+              <div className="orderSubTotalPrice">
+                <div className="subtotal">{props.subTotal}</div>
+                <div>{props.shipping}</div>
+                <div className="taxes">{props.taxes}</div>
+                <div className="orderTotal">{props.grandTotal}</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
