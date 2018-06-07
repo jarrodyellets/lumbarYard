@@ -8,6 +8,7 @@ import MattressDetail from './components/mattressDetail';
 import About from './components/about';
 import Contact from './components/contact';
 import Cart from './components/cart';
+import Checkout from './components/checkout';
 import Footer from './components/footer';
 
 import mattress from './data/mattress';
@@ -212,6 +213,7 @@ class App extends Component {
 																						 handlePage={this.handlePage}
 																						 handleRemove={this.handleRemove}
 																						 handleUpdateCart={this.handleUpdateCart} />)}
+					{(this.state.page == "checkout") && (<Checkout />)}
 				</div>
 				<Footer />
 			</div>

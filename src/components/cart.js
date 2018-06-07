@@ -59,7 +59,7 @@ const Cart = (props) => {
       </div>
       <div className="cartButtonWrapper">
         <button className="cartButton continueShopping" onClick={() => {props.handlePage("mattresses")}}>Continue Shopping</button>
-        {props.cart.length > 0 && (<button className="cartButton checkout">Checkout <i className="fas fa-shopping-cart"></i></button>)}
+        {props.cart.length > 0 && (<button className="cartButton checkout" onClick={() => {props.handlePage("checkout")}}>Checkout <i className="fas fa-shopping-cart"></i></button>)}
       </div>
     </div>
     )
