@@ -842,18 +842,39 @@ input[type=number]::-webkit-outer-spin-button {
 	padding-left: 10px;
 }
 
+.checkoutMenu {
+	display: flex;
+	padding: 20px;
+	border-left: 1px solid #dbd263;
+	border-right: 1px solid #dbd263;
+	border-bottom: 1px solid #dbd263;
+}
+
+.checkoutWrapper h3 {
+	margin: 0 0 20px 0;
+}
+
+.checkoutMenuItem {
+	margin-right: 20px;
+	color: #ccc;
+}
+
+.checkoutActive {
+	color: #353535;
+}
+
 .checkoutInnerWrapper {
 	display: flex;
 	width: 100%;
 	border-left: 1px solid #dbd263;
 	border-right: 1px solid #dbd263;
 	border-bottom: 1px solid #dbd263;
-	padding: 10px;
+	padding: 20px;
 }
 
 .checkoutInfoWrapper {
 	width: 60%;
-	margin-right: 20px;
+	padding-right: 40px;
 }
 
 .addressWrapper {
