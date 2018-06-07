@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import Address from './address';
+import Payment from './payment';
 
 class Checkout extends Component {
   constructor(props){
@@ -21,37 +23,8 @@ class Checkout extends Component {
         </div>
         <div className="checkoutInnerWrapper">
           <div className="checkoutInfoWrapper">
-            <div className="addressWrapper">
-              <h3>Delivery Address</h3>
-              <label htmlFor="name">Name</label>
-              <input className="checkoutName checkoutInput" type="text" name="name" size="35" />
-              <label htmlFor="street">Street</label>
-              <input className="checkoutName checkoutInput" type="text" name="street" />
-              <label htmlFor="city">City</label>
-              <input className="checkoutName checkoutInput" type="text" name="city" />
-              <label htmlFor="state">State</label>
-              <input className="checkoutName checkoutInput" type="text" name="state" />
-            </div>
-            <div className="paymentWrapper">
-              <h3>Payment</h3>
-              <label htmlFor="cardType">Card Type</label>
-              <select className="checkoutInput">
-                <option>Visa</option>
-                <option>Mastercard</option>
-                <option>Discover</option>
-                <option>American Express</option>
-                <option>Apple Pay</option>
-                <option>Amazon Pay</option>
-              </select>
-              <label htmlFor="cardNumber">Card Number</label>
-              <input className="checkoutName checkoutInput" type="text" name="cardNumber" />
-              <label htmlFor="cardName">Card Name</label>
-              <input className="checkoutName checkoutInput" type="text" name="cardName" />
-              <label htmlFor="experation">Experation Date</label>
-              <input className="checkoutName checkoutInput" type="text" name="experation" />
-              <label htmlFor="code">Security Code</label>
-              <input className="checkoutName checkoutInput" type="text" name="code" />
-            </div>
+            {(this.state.section == "address") && (<Address />)}
+            {(this.state.section == "payment") && (<Payment />)}
           </div>
           <div className="checkoutOrder">
             <h3 className="orderTitle">Order Summary</h3>

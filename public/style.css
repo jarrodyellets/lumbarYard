@@ -877,7 +877,7 @@ input[type=number]::-webkit-outer-spin-button {
 	padding-right: 40px;
 }
 
-.addressWrapper {
+.addressForm {
 	display: flex;
 	flex-direction: column;
 }
@@ -889,6 +889,16 @@ input[type=number]::-webkit-outer-spin-button {
 
 .checkoutInput {
 	margin-bottom: 20px;
+}
+
+.checkoutButton {
+	width: 30%;
+	border: 1px solid #353535;
+	color: #353535;
+	font-size: .9em;
+	padding: 5px 10px;
+	border-radius: 5px;
+	text-transform: uppercase;
 }
 
 .orderSubTotal {
