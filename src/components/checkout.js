@@ -8,8 +8,38 @@ class Checkout extends Component {
 
     this.state = {
       section: "address",
-      customer: {}
+      customer: {
+        name: "",
+        street: "",
+        city: "",
+        state: "",
+        zip: "",
+        cardType: "",
+        cardNumber: "",
+        cardName: "",
+        exDate: "",
+        code: ""
+      }
     }
+
+    this.handleSection = this.handleSection.bind(this);
+    this.handleCustomer = this.handleCustomer.bind(this);
+
+  }
+
+  handleSection(section){
+    console.log(this.state.customer);
+    this.setState({
+      section: section
+    })
+  }
+
+  handleCustomer(e, value){
+    let customer = this.state.customer;
+    customer[value] = e.target.value;
+    this.setState({
+      customer: customer
+    })
   }
 
   render(){
@@ -17,14 +47,18 @@ class Checkout extends Component {
       <div className="checkoutWrapper">
         <div className="checkoutTitle">Checkout</div>
         <div className="checkoutMenu">
-          <div className="menuAddress checkoutMenuItem checkoutActive">1. Address</div>
-          <div className="menuPayment checkoutMenuItem">2. Payment</div>
-          <div className="menuReview checkoutMenuItem">3. Review</div>
+          <div className={this.state.section == "address" ? "checkoutMenuItem checkoutActive" : "checkoutMenuItem"} >1. Address</div>
+          <div className={this.state.section == "payment" ? "checkoutMenuItem checkoutActive" : "checkoutMenuItem"}>2. Payment</div>
+          <div className={this.state.section == "review" ? "checkoutMenuItem checkoutActive" : "checkoutMenuItem"}>3. Review</div>
         </div>
         <div className="checkoutInnerWrapper">
           <div className="checkoutInfoWrapper">
-            {(this.state.section == "address") && (<Address />)}
-            {(this.state.section == "payment") && (<Payment />)}
+            {(this.state.section == "address") && (<Address handleSection={this.handleSection} 
+                                                            handleCustomer={this.handleCustomer} 
+                                                            customer={this.state.customer} />)}
+            {(this.state.section == "payment") && (<Payment handleSection={this.handleSection} 
+                                                            handleCustomer={this.handleCustomer}
+                                                            customer={this.handleCustomer} />)}
           </div>
           <div className="checkoutOrder">
             <h3 className="orderTitle">Order Summary</h3>
