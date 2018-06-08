@@ -7,12 +7,12 @@ const Payment = (props) => {
       <form className="paymentForm" onSubmit={() => {props.handleSection("review")}}>
         <label htmlFor="cardType" >Card Type</label>
         <select className="checkoutInput" value={props.customer.cardType} autoComplete="cc-type" onChange={(e) => {props.handleCustomer(e, "cardType")}} >
-          <option value="visa" >Visa</option>
-          <option value="mastercard" >Mastercard</option>
-          <option value="discover ">Discover</option>
-          <option value="amercianExpress" >American Express</option>
-          <option value="applePay" >Apple Pay</option>
-          <option value="amazonPay" >Amazon Pay</option>
+          <option value="Visa" >Visa</option>
+          <option value="Mastercard" >Mastercard</option>
+          <option value="Discover ">Discover</option>
+          <option value="Amercian Express" >American Express</option>
+          <option value="Apple Pay" >Apple Pay</option>
+          <option value="Amazon Pay" >Amazon Pay</option>
         </select>
         <label htmlFor="cardNumber">Card Number</label>
         <input className="checkoutInput" type="text" 
@@ -20,15 +20,15 @@ const Payment = (props) => {
                                                       value={props.customer.cardNumber}
                                                       autoComplete="cc-number"
                                                       onChange={(e) => {props.handleCustomer(e, "cardNumber")}} />
-        <label htmlFor="cardName">Card Name</label>
+        <label htmlFor="cardName">Name on Card</label>
         <input className="checkoutInput" type="text" 
                                                       name="cardName" 
                                                       value={props.customer.cardName} 
                                                       autoComplete="cc-name"
                                                       onChange={(e) => {props.handleCustomer(e, "cardName")}} />
-        <label htmlFor="experation">Experation Date</label>
+        <label htmlFor="experation">Expiration Date</label>
         <input className="checkoutInput" type="text" 
-                                                      name="experation" 
+                                                      name="expiration" 
                                                       value={props.customer.exDate}
                                                       autoComplete="cc-exp"
                                                       onChange={(e) => {props.handleCustomer(e, "exDate")}} />

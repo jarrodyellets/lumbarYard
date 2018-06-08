@@ -5,12 +5,18 @@ const Address = (props) => {
     <div className="addressWrapper">
       <h3>Delivery Address</h3>
       <form className="addressForm" onSubmit={() => {props.handleSection("payment")}}>
-        <label htmlFor="name">Name</label>
+        <label htmlFor="firstName">First Name</label>
         <input className="checkoutInput" type="text" 
-                                                      name="name" 
+                                                      name="firstName" 
                                                       value={props.customer.name}
                                                       autoComplete="name"
-                                                      onChange={(e) => {props.handleCustomer(e, "name")}} />
+                                                      onChange={(e) => {props.handleCustomer(e, "firstName")}} />
+        <label htmlFor="lastName">Last Name</label>
+        <input className="checkoutInput" type="text" 
+                                                      name="lastName" 
+                                                      value={props.customer.name}
+                                                      autoComplete="name"
+                                                      onChange={(e) => {props.handleCustomer(e, "lastName")}} />
         <label htmlFor="street">Street</label>
         <input className="checkoutInput" type="text" 
                                                       name="street" 

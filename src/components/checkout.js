@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Address from './address';
 import Payment from './payment';
+import Review from './review';
 
 class Checkout extends Component {
   constructor(props){
@@ -9,7 +10,8 @@ class Checkout extends Component {
     this.state = {
       section: "address",
       customer: {
-        name: "",
+        firstName: "",
+        lastName: "",
         street: "",
         city: "",
         state: "",
@@ -58,7 +60,8 @@ class Checkout extends Component {
                                                             customer={this.state.customer} />)}
             {(this.state.section == "payment") && (<Payment handleSection={this.handleSection} 
                                                             handleCustomer={this.handleCustomer}
-                                                            customer={this.handleCustomer} />)}
+                                                            customer={this.state.customer} />)}
+            {(this.state.section == "review") && (<Review customer={this.state.customer} />)}
           </div>
           <div className="checkoutOrder">
             <h3 className="orderTitle">Order Summary</h3>
