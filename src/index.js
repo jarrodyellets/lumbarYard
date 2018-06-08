@@ -28,7 +28,21 @@ class App extends Component {
 			subTotal: "$0.00",
 			shipping: "Free",
 			taxes: "$0.00",
-			grandTotal: "0.00"
+			grandTotal: "0.00",
+			section: "address",
+      customer: {
+        firstName: "",
+        lastName: "",
+        street: "",
+        city: "",
+        state: "",
+        zip: "",
+        cardType: "Visa",
+        cardNumber: "",
+        cardName: "",
+        exDate: "",
+        code: ""
+      }
 		}
 
 		this.handleScroll = this.handleScroll.bind(this);
@@ -39,6 +53,8 @@ class App extends Component {
 		this.handleUpdateCart = this.handleUpdateCart.bind(this);
 		this.handleTotal = this.handleTotal.bind(this);
 		this.handleRemove = this.handleRemove.bind(this);
+		this.handleSection = this.handleSection.bind(this);
+    this.handleCustomer = this.handleCustomer.bind(this);
 	}
 
 	componentDidMount(){
@@ -194,6 +210,21 @@ class App extends Component {
 		})
 	}
 
+	handleSection(section){
+    console.log(this.state.customer);
+    this.setState({
+      section: section
+    })
+  }
+
+  handleCustomer(e, value){
+    let customer = this.state.customer;
+    customer[value] = e.target.value;
+    this.setState({
+      customer: customer
+    })
+  }
+
 	render(){
 		return(
 			<div className="wrapper">
@@ -235,6 +266,10 @@ class App extends Component {
 																												 taxes={this.state.taxes}
 																												 quantity={this.state.quantity}
 																												 cart={this.state.cart}
+																												 customer={this.state.customer}
+																												 handleCustomer={this.handleCustomer}
+																												 handleSection={this.handleSection}
+																												 section={this.state.section}
 																												 grandTotal={this.state.grandTotal} />)}
 				</div>
 				<Footer />

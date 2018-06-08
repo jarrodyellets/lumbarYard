@@ -891,14 +891,31 @@ input[type=number]::-webkit-outer-spin-button {
 	margin-bottom: 20px;
 }
 
+.reviewDescription, .reviewDetails {
+	margin-bottom: 10px;
+}
+
+.reviewAddress {
+	margin-bottom: 40px;
+}
+
 .checkoutButton {
-	width: 30%;
 	border: 1px solid #353535;
 	color: #353535;
-	font-size: .9em;
-	padding: 5px 10px;
+	font-size: 1em;
+	margin-right: 20px;
+	padding: 5px 15px;
 	border-radius: 5px;
 	text-transform: uppercase;
+}
+
+.purchaseButton {
+	background: #dbd263;
+}
+
+.paymentButtons {
+	display: flex;
+	margin-top: 20px;
 }
 
 .orderSubTotal {
@@ -907,6 +924,10 @@ input[type=number]::-webkit-outer-spin-button {
 
 .checkoutOrder {
 	width: 40%;
+}
+
+.merch {
+	margin-bottom: 10px;
 }
 
 .orderSubTotalText {

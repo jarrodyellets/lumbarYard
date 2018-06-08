@@ -8,40 +8,48 @@ const Address = (props) => {
         <label htmlFor="firstName">First Name</label>
         <input className="checkoutInput" type="text" 
                                                       name="firstName" 
-                                                      value={props.customer.name}
+                                                      required
+                                                      value={props.customer.firstName}
                                                       autoComplete="name"
                                                       onChange={(e) => {props.handleCustomer(e, "firstName")}} />
         <label htmlFor="lastName">Last Name</label>
         <input className="checkoutInput" type="text" 
-                                                      name="lastName" 
-                                                      value={props.customer.name}
+                                                      name="lastName"
+                                                      required 
+                                                      value={props.customer.lastName}
                                                       autoComplete="name"
                                                       onChange={(e) => {props.handleCustomer(e, "lastName")}} />
         <label htmlFor="street">Street</label>
         <input className="checkoutInput" type="text" 
                                                       name="street" 
+                                                      required
                                                       value={props.customer.street}
                                                       autoComplete="address-level1"
                                                       onChange={(e) => {props.handleCustomer(e, "street")}} />
         <label htmlFor="city">City</label>
         <input className="checkoutInput" type="text" 
                                                       name="city" 
+                                                      required
                                                       value={props.customer.city}
                                                       autoComplete="address-level2"
                                                       onChange={(e) => {props.handleCustomer(e, "city")}} />
         <label htmlFor="state">State</label>
         <input className="checkoutInput" type="text" 
-                                                      name="state" 
+                                                      name="state"
+                                                      required 
                                                       value={props.customer.state}
                                                       autoComplete="address-level2"
                                                       onChange={(e) => {props.handleCustomer(e, "state")}} />
         <label htmlFor="zip">Zip Code</label>
         <input className="checkoutInput" type="text" 
                                                       name="zip" 
+                                                      required
                                                       value={props.customer.zip}
                                                       autoComplete="postal-code"
                                                       onChange={(e) => {props.handleCustomer(e, "zip")}} />
-        <button className="checkoutButton" type="submit">Next</button>
+        <div className="paymentButtons">
+          <button className="checkoutButton" type="submit">Next</button>
+        </div>
       </form>
     </div>
     )

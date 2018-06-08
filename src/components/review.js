@@ -3,12 +3,12 @@ import React from 'react';
 const Review = (props) => {
   return(
     <div className="reviewWrapper">
-      <h3>Review Order</h3>
+      <h3>Review Payment</h3>
       <div className="reviewGrid">
         <div className="reviewDescription">Name:</div>
         <div className="reviewDetails">{props.customer.firstName} {props.customer.lastName}</div>
-        <div className="reviewDescription">Address:</div>
-        <div className="reviewDetails">
+        <div className="reviewDescription reviewAddress">Address:</div>
+        <div className="reviewDetails reviewAddress">
           <div>{props.customer.street}</div>
           <div>
             <span>{props.customer.city}, </span>
@@ -18,9 +18,9 @@ const Review = (props) => {
         </div>
         <div className="reviewDescription">Card Type:</div>
         <div className="reviewDetails">{props.customer.cardType}</div>
-        <div className="reviewDescription">Name on Card</div>
+        <div className="reviewDescription">Card Number:</div>
         <div className="reviewDetails">{props.customer.cardNumber}</div>
-        <div className="reviewDescription">Card Name:</div>
+        <div className="reviewDescription">Name On Card:</div>
         <div className="reviewDetails">{props.customer.cardName}</div>
         <div className="reviewDescription">Expiration Date:</div>
         <div className="reviewDetails">{props.customer.exDate}</div>
