@@ -958,6 +958,39 @@ input[type=number]::-webkit-outer-spin-button {
 	text-align: right;
 }
 
+.thanksWrapper {
+	padding: 40px;
+	margin: 0 auto;
+	max-width: 1000px;
+}
+
+.thanksTitle {
+	width: 100%;
+	height: 50px;
+	color: #353535;
+	background: #dbd263;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	font-size: 2.2em;
+	padding-left: 10px;
+}
+
+.thanksInnerWrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	border-left: 1px solid #dbd263;
+	border-right: 1px solid #dbd263;
+	border-bottom: 1px solid #dbd263;
+	padding: 20px;
+}
+
+.thanksMessage {
+	font-size: 1.4em;
+	text-align: center;
+}
+
 .footerWrapper {
 	position: absolute;
 	bottom: 0;

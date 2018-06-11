@@ -9,6 +9,7 @@ import About from './components/about';
 import Contact from './components/contact';
 import Cart from './components/cart';
 import Checkout from './components/checkout';
+import Thanks from './components/thanks';
 import Footer from './components/footer';
 
 import mattress from './data/mattress';
@@ -266,11 +267,13 @@ class App extends Component {
 																												 taxes={this.state.taxes}
 																												 quantity={this.state.quantity}
 																												 cart={this.state.cart}
+																												 handlePage={this.handlePage}
 																												 customer={this.state.customer}
 																												 handleCustomer={this.handleCustomer}
 																												 handleSection={this.handleSection}
 																												 section={this.state.section}
 																												 grandTotal={this.state.grandTotal} />)}
+					{(this.state.page == "thanks") && (<Thanks customer={this.state.customer} />)}
 				</div>
 				<Footer />
 			</div>
