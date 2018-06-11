@@ -4,7 +4,7 @@ const Address = (props) => {
   return(
     <div className="addressWrapper">
       <h3>Delivery Address</h3>
-      <form className="addressForm" onSubmit={() => {props.handleSection("payment")}}>
+      <form className="addressForm" onSubmit={(e) => {props.handleSection(e, "payment")}}>
         <label htmlFor="firstName">First Name</label>
         <input className="checkoutInput" type="text" 
                                                       name="firstName" 
