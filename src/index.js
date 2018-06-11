@@ -56,6 +56,7 @@ class App extends Component {
 		this.handleRemove = this.handleRemove.bind(this);
 		this.handleSection = this.handleSection.bind(this);
     this.handleCustomer = this.handleCustomer.bind(this);
+    this.handlePurchase = this.handlePurchase.bind(this);
 	}
 
 	componentDidMount(){
@@ -142,6 +143,26 @@ class App extends Component {
 			quantity: newQuantity
 		}, () => {
 			this.handleTotal()
+		})
+	}
+
+	handlePurchase(){
+		this.setState({
+			cart: [],
+			quantity: 0,
+      customer: {
+        firstName: "",
+        lastName: "",
+        street: "",
+        city: "",
+        state: "",
+        zip: "",
+        cardType: "Visa",
+        cardNumber: "",
+        cardName: "",
+        exDate: "",
+        code: ""
+      } 
 		})
 	}
 
@@ -272,8 +293,15 @@ class App extends Component {
 																												 handleCustomer={this.handleCustomer}
 																												 handleSection={this.handleSection}
 																												 section={this.state.section}
+																												 handlePurchase={this.handlePurchase}
 																												 grandTotal={this.state.grandTotal} />)}
-					{(this.state.page == "thanks") && (<Thanks customer={this.state.customer} />)}
+					{(this.state.page == "thanks") && (<Thanks customer={this.state.customer}
+																										 subTotal={this.state.subTotal}
+																										 shipping={this.state.shipping}
+																										 taxes={this.state.taxes}
+																										 quantity={this.state.quantity}
+																										 grandTotal={this.state.grandTotal}
+																										 cart={this.state.cart} />)}
 				</div>
 				<Footer />
 			</div>

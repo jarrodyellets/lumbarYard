@@ -44,7 +44,10 @@ const Checkout = (props) => {
       </div>
       <div className="paymentButtons">
         {(props.section == "review") && (<button className="checkoutButton" onClick={() => {props.handleSection("payment")}}>Back</button>)}
-        {(props.section == "review") && (<button className="purchaseButton checkoutButton" onClick={() => {props.handlePage("thanks")}}>Complete Purchase</button>)}
+        {(props.section == "review") && (<button className="purchaseButton checkoutButton" 
+                                                 onClick={() => {props.handlePage("thanks"); 
+                                                                props.handlePurchase(); 
+                                                                props.handleSection("address")}}>Complete Purchase</button>)}
       </div>
     </div>
   )
