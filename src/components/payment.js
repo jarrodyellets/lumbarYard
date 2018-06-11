@@ -4,7 +4,7 @@ const Payment = (props) => {
   return(
     <div className="paymentWrapper">
       <h3>Payment</h3>
-      <form className="paymentForm" onSubmit={() => {props.handleSection("review")}}>
+      <form className="paymentForm" onSubmit={(e) => {props.handleSection(e, "review")}}>
         <label htmlFor="cardType" >Card Type</label>
         <select className="checkoutInput" value={props.customer.cardType} autoComplete="cc-type" onChange={(e) => {props.handleCustomer(e, "cardType")}} required >
           <option value="Visa" >Visa</option>

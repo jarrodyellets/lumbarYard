@@ -234,7 +234,6 @@ class App extends Component {
 
 	handleSection(e, section){
 		e.preventDefault();
-    console.log(this.state.customer);
     this.setState({
       section: section
     })
