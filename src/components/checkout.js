@@ -13,15 +13,6 @@ const Checkout = (props) => {
         <div className={props.section == "review" ? "checkoutMenuItem checkoutActive" : "checkoutMenuItem"}>3. Review</div>
       </div>
       <div className="checkoutInnerWrapper">
-        <div className="checkoutInfoWrapper">
-          {(props.section == "address") && (<Address handleSection={props.handleSection} 
-                                                          handleCustomer={props.handleCustomer} 
-                                                          customer={props.customer} />)}
-          {(props.section == "payment") && (<Payment handleSection={props.handleSection} 
-                                                          handleCustomer={props.handleCustomer}
-                                                          customer={props.customer} />)}
-          {(props.section == "review") && (<Review customer={props.customer} />)}
-        </div>
         <div className="checkoutOrder">
           <h3 className="orderTitle">Order Summary</h3>
           <div className="orderInnerWrapper">
@@ -40,6 +31,15 @@ const Checkout = (props) => {
               </div>
             </div>
           </div>
+        </div>
+        <div className="checkoutInfoWrapper">
+          {(props.section == "address") && (<Address handleSection={props.handleSection} 
+                                                          handleCustomer={props.handleCustomer} 
+                                                          customer={props.customer} />)}
+          {(props.section == "payment") && (<Payment handleSection={props.handleSection} 
+                                                          handleCustomer={props.handleCustomer}
+                                                          customer={props.customer} />)}
+          {(props.section == "review") && (<Review customer={props.customer} />)}
         </div>
       </div>
       <div className="paymentButtons">
