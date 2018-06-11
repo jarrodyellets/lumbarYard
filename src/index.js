@@ -240,6 +240,7 @@ class App extends Component {
   }
 
   handleCustomer(e, value){
+  	e.preventDefault();
     let customer = this.state.customer;
     customer[value] = e.target.value;
     this.setState({
