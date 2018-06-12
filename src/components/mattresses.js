@@ -3,7 +3,7 @@ import SingleMattress from './singleMattress';
 
 const Mattresses = (props) =>{
   const mattresses = props.mattress.map((mattress) => {
-    return  <div key={mattress.id}>
+    return  <div className="mattressGridChild" key={mattress.id}>
               <SingleMattress name={mattress.name}
                               size={mattress.size}
                               image={mattress.image}
@@ -12,6 +12,7 @@ const Mattresses = (props) =>{
                               index={mattress.index}
                               mattress={props.mattress}
                               handleCurrentMattress={props.handleCurrentMattress} />
+              <hr className={["mattressHr" + mattress.index, "mattressHr"].join(" ")} />
             </div>
   });
   return (

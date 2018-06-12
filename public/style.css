@@ -361,6 +361,8 @@ button:focus {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	max-width: 1300px;
+	margin: 0 auto;
 }
 
 .newTitleUpper {
@@ -419,6 +421,8 @@ button:focus {
 
 .mattressWrapper {
 	padding: 40px;
+	max-width: 1000px;
+	margin: 0 auto;
 }
 
 .mattressTitle {
@@ -435,9 +439,9 @@ button:focus {
 
 .mattressGrid {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-row-gap: 100px;
+	grid-template-columns: repeat(2, 1fr);
 	grid-column-gap: 50px;
+	grid-row-gap: 50px;
 	border-left: 1px solid #dbd263;
 	border-right: 1px solid #dbd263;
 	border-bottom: 1px solid #dbd263;
@@ -450,6 +454,15 @@ button:focus {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	margin-bottom: 50px;
+}
+
+.mattressGridChild:nth-of-type(5) > .singleWrapper {
+	margin-bottom: 0;
+}
+
+.mattressGridChild:nth-of-type(6) > .singleWrapper {
+	margin-bottom: 0;
 }
 
 .singleTitle {
@@ -476,10 +489,28 @@ button:focus {
 	text-transform: uppercase;
 }
 
+.mattressHr {
+  border: 0;
+  margin: 0;
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+
+.mattressHr4, .mattressHr5 {
+	display: none;
+}
+
+.mattressHr:nth-child(5) {
+	display: none;
+}
+
 .detailWrapper {
 	display: flex;
 	justify-content: center;
 	padding: 40px 0;
+	max-width: 1300px;
+	margin: 0 auto;
 }
 
 .detailLeft {
@@ -1166,6 +1197,12 @@ input[type=number]::-webkit-outer-spin-button {
 		grid-template-columns: repeat(1, 1fr);
 	}
 
+	.mattressHr4 {
+		display: block;
+ }
+ .mattressGridChild:nth-of-type(5) > .singleWrapper {
+		margin-bottom: 50px;
+ }
 	.subTotalText {
 		text-align: right;
 		width: 80%;
