@@ -559,7 +559,7 @@ button:focus {
 	width: 100%;
 	margin: 0 auto;
 	max-width: 1000px;
-	padding: 40px 0;
+	padding: 40px;
 }
 
 .aboutImg {
@@ -580,7 +580,7 @@ button:focus {
 	width: 100%;
 	margin: 0 auto;
 	max-width: 1000px;
-	padding: 40px 0;
+	padding: 40px;
 	display: flex;
 }
 
