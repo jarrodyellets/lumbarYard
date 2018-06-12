@@ -108,6 +108,10 @@ body {
 	color: #353535;
 }
 
+button:focus {
+	outline: none;
+}
+
 .cart {
 	position: relative;
 	text-decoration: none;
@@ -613,6 +617,8 @@ body {
 
 .cartWrapper {
 	padding: 40px;
+	max-width: 1000px;
+	margin: 0 auto;
 }
 
 .cartHeader {
