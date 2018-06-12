@@ -1170,7 +1170,6 @@ input[type=number]::-webkit-outer-spin-button {
 
 	.contactWrapper {
 		flex-direction: column;
-		padding: 20px 20px;
 	}
 
 	.contactLeft {
@@ -1200,9 +1199,11 @@ input[type=number]::-webkit-outer-spin-button {
 	.mattressHr4 {
 		display: block;
  }
- .mattressGridChild:nth-of-type(5) > .singleWrapper {
+
+  .mattressGridChild:nth-of-type(5) > .singleWrapper {
 		margin-bottom: 50px;
- }
+  }
+
 	.subTotalText {
 		text-align: right;
 		width: 80%;
@@ -1430,11 +1431,6 @@ input[type=number]::-webkit-outer-spin-button {
 
 	.mattressGrid {
 		grid-row-gap: 60px;
-	}
-
-	.aboutWrapper {
-		padding-left: 15px;
-		padding-right: 15px;
 	}
 
 	.detailWrapper {
