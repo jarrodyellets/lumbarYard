@@ -2,7 +2,7 @@ import React from 'react';
 
 const TopLinks = () => {
 	return (
-			<div className="topIcons">
+			<div className="topIcons" aria-label="top icons">
 				<div className="topLeft">
 					<i className="fab fa-facebook socialTop"></i>
 					<i className="fab fa-instagram socialTop"></i>

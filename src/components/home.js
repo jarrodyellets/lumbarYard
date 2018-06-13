@@ -6,7 +6,7 @@ import New from './new';
 
 const Home = (props) => {
 	return (
-		<div className="homeWrapper">
+		<div className="homeWrapper" aria-label="home">
 			<SlideShow mattress={props.mattress}
 								 width={props.width}
                  handlePage={props.handlePage}

@@ -2,10 +2,10 @@ import React from 'react';
 
 const Thanks = (props) => {
   return(
-    <div className="thanksWrapper">
+    <div className="thanksWrapper" aria-label="thank you">
       <div className="thanksTitle">Purchase Complete</div>
       <div className="thanksInnerWrapper">
-        <img className="thanksLogo" src="https://www.jarrodyellets.com/images/lumbar/lumbarLogo1.png" />
+        <img className="thanksLogo" src="https://www.jarrodyellets.com/images/lumbar/lumbarLogo1.png" alt="lumbar yard logo" />
         <div className="thanksMessage">Thank you for your purchase!</div>
         <div className="thanksMessage">Your products will be arriving in 3-5 business days.</div>
         <div className="thanksMessage">Please print your receipt for your records</div>

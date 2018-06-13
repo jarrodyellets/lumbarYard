@@ -2,9 +2,9 @@ import React from 'react';
 
 const Featured = (props) => {
 	return(
-		<div className="featuredDiv">
+		<div className="featuredDiv" aria-label="featured">
 			<div className="featuredLeft">
-				<img className="featuredLogo" src="https://www.jarrodyellets.com/images/lumbar/lumbarLogo1.png" />
+				<img className="featuredLogo" src="https://www.jarrodyellets.com/images/lumbar/lumbarLogo1.png" alt="Lumbar Yard logo"/>
 				<div className="featuredLeftTitle">Druidia Air Mattress</div>
 				<div className="featuredLeftDescription">The king of air mattresses!</div>
 				<div className="featuredLeftPrice">$999</div>
@@ -18,7 +18,7 @@ const Featured = (props) => {
 					Every morning I awake refreshed and ready to do battle with Dark Helmet."</div>
 					<div>-Lone Star-</div>
 				</div>
-				<img className="featuredRightImg" src="https://www.jarrodyellets.com/images/lumbar/mat1war.png" />
+				<img className="featuredRightImg" src="https://www.jarrodyellets.com/images/lumbar/mat1war.png" alt="NexGen Memory foam mattress" />
 			</div>
 		</div>
 		)

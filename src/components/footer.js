@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
 	return (
-		<div className="footerWrapper">
+		<div className="footerWrapper" aria-label="footer">
 			<div className="footerAddress">
 				<div className="addressDiv">
 					<div>129 W 81st St</div>

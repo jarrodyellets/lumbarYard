@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => {
 	return (
-		<div className="aboutWrapper">
+		<div className="aboutWrapper" aria-label="about">
 			<img src="https://www.jarrodyellets.com/images/lumbar/gack.jpg" className="aboutImg" />
 			<div className="aboutTitle">Todd Gack, Founder and CEO</div>
 			<div>Growing up in The Netherlands, I learned early on that one of the most important things you can do for yourself is to get 
@@ -16,7 +16,7 @@ const About = () => {
 			Too much latex, and you will sweat all night.  At The Lumbar Yard, we put each mattress through years of testing before we release it to the public.
 			</div>
 			<br />
-			<img src="https://www.jarrodyellets.com/images/lumbar/store.jpg" className="aboutStore" />
+			<img src="https://www.jarrodyellets.com/images/lumbar/store.jpg" className="aboutStore" alt="Old Store"/>
 			<div className="aboutStoreCaption">Original Store, 1997</div>
 			<br />
 			<div>Todd Gack started The Lumbar Yard out of his Brooklyn Studio apartment in 1997.  After being open for 3 years, he quickly realized he need a bigger

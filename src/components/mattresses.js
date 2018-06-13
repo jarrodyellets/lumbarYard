@@ -16,7 +16,7 @@ const Mattresses = (props) =>{
             </div>
   });
   return (
-    <div className="mattressWrapper">
+    <div className="mattressWrapper" aria-label="mattresses">
       <div className="mattressTitle">Mattress Collections</div>
       <div className="mattressGrid">
         {mattresses}

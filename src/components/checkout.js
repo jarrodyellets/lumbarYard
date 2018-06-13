@@ -5,7 +5,7 @@ import Review from './review';
 
 const Checkout = (props) => {
   return (
-    <div className="checkoutWrapper">
+    <div className="checkoutWrapper" aria-label="checkout">
       <div className="checkoutTitle">Checkout</div>
       <div className="checkoutMenu">
         <div className={props.section == "address" ? "checkoutMenuItem checkoutActive" : "checkoutMenuItem"} >1. Address</div>

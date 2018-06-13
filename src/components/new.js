@@ -2,10 +2,10 @@ import React from 'react';
 
 const New = (props) => {
 	return(
-		<div className="newWrapper">
-			<img src="https://www.jarrodyellets.com/images/lumbar/new.png" className="newNew" />
+		<div className="newWrapper" aria-label="new mattress">
+			<img src="https://www.jarrodyellets.com/images/lumbar/new.png" className="newNew" alt="new mattress" />
 			<div className="newContent">
-				<img src="https://www.jarrodyellets.com/images/lumbar/lumbarLogo1.png" className="featuredLogo" />
+				<img src="https://www.jarrodyellets.com/images/lumbar/lumbarLogo1.png" className="featuredLogo" alt="lumbar yard logo" />
 				<div className="newTitleUpper newTitle">NexGen</div>
 				<div className="newTitleLower newTitle">Memory Foam</div>
 				<div className="newDescription">{props.mattress[3].description}</div>
@@ -23,7 +23,7 @@ const New = (props) => {
 						<div>-Marty McFly-</div>
 					</div>
 				</div>
-				<img src="https://www.jarrodyellets.com/images/lumbar/mat3phone.png" className="newImg" />
+				<img src="https://www.jarrodyellets.com/images/lumbar/mat3phone.png" className="newImg" alt="nexgen memory foam mattress" />
 			</div>
 		</div>
 		)

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Address = (props) => {
   return(
-    <div className="addressWrapper">
+    <div className="addressWrapper" aria-label="address">
       <h3>Delivery Address</h3>
       <form className="addressForm" onSubmit={(e) => {props.handleSection(e, "payment")}}>
         <label htmlFor="firstName">First Name</label>

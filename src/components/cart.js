@@ -19,7 +19,7 @@ const Cart = (props) => {
       )
   })
   return (
-    <div className="cartWrapper">
+    <div className="cartWrapper" aria-label="cart">
       <div className="cartTitle">Your Cart</div>
       <div className="cartHeader">
         <div className="cartHeaderItem headerItem">Item</div>

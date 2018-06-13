@@ -2,7 +2,7 @@ import React from 'react';
 
 const Nav = (props) => {
 	return (
-		<div className={props.sticky ? "nav-bar sticky" : "nav-bar"} id="nav-bar">
+		<div className={props.sticky ? "nav-bar sticky" : "nav-bar"} id="nav-bar" aria-label="nav bar">
 			<a href="#home" className="brand" onClick={()=> {props.handlePage("home")}}><div className="brandImg"></div></a>
 			<div className="linksWrapper">
 				<div className="linksDiv" id="linksDiv">

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Review = (props) => {
   return(
-    <div className="reviewWrapper">
+    <div className="reviewWrapper" aria-label="review payment">
       <h3>Review Payment</h3>
       <div className="reviewGrid">
         <div className="reviewDescription">Name:</div>

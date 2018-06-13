@@ -2,7 +2,7 @@ import React from 'react';
 
 const Contact = () => {
 	return (
-		<div className="contactWrapper">
+		<div className="contactWrapper" aria-label="contact">
 			<div className="contactLeft">
 				<h1 className="contactTitle">Contact Us</h1>
 				<div className="contactText">We are here to answer any questions you may have about our products or services.

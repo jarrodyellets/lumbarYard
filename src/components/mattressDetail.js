@@ -2,7 +2,7 @@ import React from 'react';
 
 const MattressDetail = (props) => {
   return (
-    <div className="detailWrapper">
+    <div className="detailWrapper" aria-label="mattress detail">
       <div className="detailLeft">
         <div className="detailTitle">{props.currentMattress.name} Mattress</div>
         <div className="detailDetail">{props.currentMattress.description}</div>
@@ -25,7 +25,7 @@ const MattressDetail = (props) => {
                                                     1); props.handlePage("cart")}}>Add To Cart</button>
       </div>
       <div className="detailRight">
-        <img src={props.currentMattress.image} className="detailImage" />
+        <img src={props.currentMattress.image} className="detailImage" alt="current mattress" />
       </div>
     </div>
     )

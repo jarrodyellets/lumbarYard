@@ -28,9 +28,9 @@ class CartItem extends Component {
     let price = (Number((this.props.price).replace(/[^\d.]/g, ''))) * this.props.quantity;
     let stringPrice = '$' + price.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
     return(
-    <div className="cartItemWrapper">
+    <div className="cartItemWrapper" aria-label="cart item">
       <div className="cartItemItem">
-        <img src={this.props.image} className="cartItemImage" />
+        <img src={this.props.image} className="cartItemImage" alt="Item in cart"/>
         <div className="cartItemDescription">
           <div className="cartItemName">{this.props.name} Mattress</div>
           <div className="cartItemSize"><span className="size">Size: </span>{this.props.size}</div>

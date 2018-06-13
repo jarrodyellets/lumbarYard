@@ -2,7 +2,7 @@ import React from 'react';
 
 const Payment = (props) => {
   return(
-    <div className="paymentWrapper">
+    <div className="paymentWrapper" aria-label="payment">
       <h3>Payment</h3>
       <form className="paymentForm" onSubmit={(e) => {props.handleSection(e, "review")}}>
         <label htmlFor="cardType" >Card Type</label>
