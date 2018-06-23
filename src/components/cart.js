@@ -32,7 +32,7 @@ const Cart = (props) => {
       </div>
       <div className="cartSubTotal">
         <div className="subTotalText">
-          <div className="subtotal">Subtotal ({props.quantity} {props.quantity == 0 || props.cart.length > 1 ? "items" : "item"}):</div>
+          <div className="subtotal">Subtotal ({props.quantity} {props.quantity == 0 || props.quantity > 1 ? "items" : "item"}):</div>
           <div>Shipping:</div>
           <div className="taxes">Taxes (4.5%):</div>
         </div>
