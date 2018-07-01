@@ -11,15 +11,15 @@ const Contact = () => {
 					<form className="contactForm" method="POST" action="https://formspress.io/jarrod@jarrodyellets.com">
 						<div className="contactFormUpper">
 							<div className="contactLabel">
-								<label htmlFor="name">Name</label>
+								<label htmlFor="name">Name:</label>
 								<input type="text" className="contactInput input" name="name" id="name" size="35" required />
 							</div>
 							<div className="contactLabel">
-								<label htmlFor="email">Email</label>
+								<label htmlFor="email">Email:</label>
 								<input className="input" type="email" name="email" id="email" size="35" required />
 							</div>
 						</div>
-						<label htmlFor="message">Message</label>
+						<label htmlFor="message">Message:</label>
 						<textarea className="contactTextArea input" name="text" id="text" rows="10" cols="60" required />
 						<button type="submit" className="contactButton">Submit</button>
 					</form>
