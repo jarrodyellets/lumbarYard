@@ -576,6 +576,12 @@ button:focus {
 	width: 100%;
 }
 
+.aboutStoreCaption {
+	font-size: .8em;
+	margin-top: 3px;
+	font-style: italic;
+}
+
 .contactWrapper {
 	width: 100%;
 	margin: 0 auto;
