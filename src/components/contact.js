@@ -27,15 +27,15 @@ const Contact = () => {
 			</div>
 			<div className="contactRight">
 				<div className="contactContact">
-					<div className="contactBold">Email</div>
+					<div className="contactBold">Email:</div>
 					<div>jarrod@jarrodyellets.com</div>
 				</div>
 				<div className="contactContact">
-					<div className="contactBold">Telephone</div>
+					<div className="contactBold">Telephone:</div>
 					<div>212-555-2390</div>
 				</div>
 				<div className="contactContact">
-					<div className="contactBold">Address</div>
+					<div className="contactBold">Address:</div>
 					<div>129 W 81st St</div>
 					<div>New York, NY</div>
 				</div>
