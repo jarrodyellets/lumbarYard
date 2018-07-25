@@ -660,6 +660,7 @@ button:focus {
 
 .contactTitle {
 	margin-top: 0;
+	margin-bottom: .3em;
 }
 
 .contactText {
@@ -708,6 +709,7 @@ button:focus {
 .contactRight {
 	display: flex;
 	flex-direction: column;
+	margin-top: 3.0em;
 }
 
 .contactContact {
