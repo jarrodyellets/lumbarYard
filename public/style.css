@@ -644,9 +644,15 @@ button:focus {
 
 .contactWrapper {
 	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 40px;
+}
+
+.innerContactWrapper {
+	width: 100%;
 	margin: 0 auto;
 	max-width: 1000px;
-	padding: 40px;
 	display: flex;
 }
 
@@ -709,7 +715,6 @@ button:focus {
 .contactRight {
 	display: flex;
 	flex-direction: column;
-	margin-top: 3.0em;
 }
 
 .contactContact {
@@ -1246,7 +1251,7 @@ input[type=number]::-webkit-outer-spin-button {
 		font-size: .7em;
 	}
 
-	.contactWrapper {
+	.innerContactWrapper {
 		flex-direction: column;
 	}
 
