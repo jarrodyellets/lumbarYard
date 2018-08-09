@@ -287,6 +287,11 @@ button:focus {
 	border-radius: 5px;
 }
 
+.slideButton:hover {
+	background: #faf9f5;
+	color: rgb(35, 35, 35);
+}
+
 .carousel-indicators {
 	display: none;
 }
