@@ -365,6 +365,10 @@ button:focus {
 	text-transform: uppercase;
 }
 
+.featuredButton:hover {
+	background: #faf9f5;
+}
+
 .featuredRightDescription {
 	font-size: 1em;
 	width: 70%;
