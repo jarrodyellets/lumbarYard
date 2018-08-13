@@ -953,6 +953,10 @@ input[type=number]::-webkit-outer-spin-button {
 	text-transform: uppercase;
 }
 
+.cartButton:hover {
+	background: #faf9f5;
+}
+
 .checkout {
 	background: #dbd263;
 	margin-left: 30px;
