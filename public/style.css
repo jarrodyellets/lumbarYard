@@ -558,6 +558,10 @@ button:focus {
 	text-transform: uppercase;
 }
 
+.singleButton:hover {
+	background: #faf9f5;
+}
+
 .mattressHr {
   border: 0;
   margin: 0;
