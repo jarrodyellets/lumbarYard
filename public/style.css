@@ -184,6 +184,28 @@ button:focus {
 	font-size: 22px;
 }
 
+.cart:hover .shoppingCart {
+	animation: cartAni .5s; 
+}
+
+@keyframes cartAni {
+	0% {
+		transform: translate(0px);
+	}
+	5% {
+		transform: translate(3px);
+	}
+	50% {
+		transform: translate(-10px)
+	}
+	95% {
+		transform: translate(2px);
+	}
+	100% {
+		transform: translate(0px);
+	}
+}
+
 .cartQuantity {
 	position: absolute;
 	top: -10px;
