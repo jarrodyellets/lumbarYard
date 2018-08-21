@@ -40,7 +40,7 @@ let mattress = [
 	price: ["$399.00", "$499.00", "$699.00", "$999.00"],
 	size: ["Twin", "Double", "Queen", "King"],
 	image: "https://www.jarrodyellets.com/images/lumbar/mat2.png",
-	description: "First mattress ever designed by the Lumbar Yard.  Built with a mix of foam, latex and springs, this mattress will fit most sleeping needs.",
+	description: "First mattress ever designed by the Lumbar Yard.  Built with a mix of foam, latex, and springs, this mattress will fit most sleeping needs.",
 	id: "lumb",
 	index: 4
 },
