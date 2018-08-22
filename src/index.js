@@ -57,7 +57,7 @@ class App extends Component {
 		this.handleSection = this.handleSection.bind(this);
     this.handleCustomer = this.handleCustomer.bind(this);
     this.handlePurchase = this.handlePurchase.bind(this);
-	}
+	} 
 
 	componentDidMount(){ 
 		window.addEventListener('scroll', this.handleScroll);
