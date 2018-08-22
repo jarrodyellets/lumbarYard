@@ -87,7 +87,7 @@ class App extends Component {
 					sticky: false
 				})
 		}
-	}
+	} 
 
 	handlePage(page){
 		this.setState({
