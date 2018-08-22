@@ -1,9 +1,9 @@
 import React from 'react';
 
 const Contact = () => {
-	return (
-		<div className="contactWrapper" aria-label="contact">
-			<h1 className="contactTitle">Contact Us</h1>
+  return (
+    <div className="contactWrapper" aria-label="contact">
+      <h1 className="contactTitle">Contact Us</h1>
       <div className="innerContactWrapper">
         <div className="contactLeft">
           <div className="contactText">We are here to answer any questions you may have about our products or services.
@@ -47,8 +47,8 @@ const Contact = () => {
           </div>
         </div>
       </div>
-		</div>
-		)
+    </div>
+    )
 }
 
 export default Contact;
