@@ -204,13 +204,13 @@ class App extends Component {
     let taxes = totalNum * .045
     let formatedTaxes = '$' + taxes.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
     let total = taxes + totalWithShipping
-    let formattedShipping = '$' + total.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+    let grandTotal = '$' + total.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
     shipping = totalNum < 1000 && totalNum != 0 ? "$150.00" : "Free";
     this.setState({
       subTotal: subTotal,
       shipping: shipping,
       taxes: formatedTaxes,
-      grandTotal: formattedShipping
+      grandTotal: grandTotal
     })
   }
 
