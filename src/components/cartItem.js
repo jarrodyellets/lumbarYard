@@ -12,12 +12,14 @@ class CartItem extends Component {
 
   }
 
+// Update form with mattress quantity
   componentWillReceiveProps(nextProps){
     this.setState({
       quantity: nextProps.quantity
     })
   }
 
+// Display mattress quantity
   handleQuantity(e){
     this.setState({
       quantity: Number(e.target.value) == 0 ? undefined : Number(e.target.value)
