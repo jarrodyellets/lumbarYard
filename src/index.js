@@ -67,6 +67,7 @@ class App extends Component {
     window.removeEventListener('scroll', this.handleScroll);
   }
 
+// Handle responsive nav
   handleHamburger(){
     const links = document.getElementById("linksDiv");
     links.className += " width";
@@ -77,6 +78,7 @@ class App extends Component {
     links.className = "linksDiv"
   }
 
+// Handle sticky nav
   handleScroll(){
     if (window.scrollY > 60){
       this.setState({
@@ -89,6 +91,7 @@ class App extends Component {
     }
   } 
 
+// New page starts at top
   handlePage(page){
     this.setState({
       page: page
@@ -98,12 +101,14 @@ class App extends Component {
     })
   }
 
+// Handles mattress size
   handleIndex(e){
     this.setState({
       mattressIndex: e.target.value
     })
   }
 
+// Handles currently selected mattress
   handleCurrentMattress(mattress){
     this.setState({
       currentMattress: mattress
@@ -112,6 +117,7 @@ class App extends Component {
     })
   }
 
+// Add items to cart
   handleCartAdd(name, price, size, image, id, quantity) {
     let cart = this.state.cart;
     let newQuantity = this.state.quantity + 1;
@@ -146,6 +152,7 @@ class App extends Component {
     })
   }
 
+// Resets cart after purchase
   handlePurchase(){
     this.setState({
       cart: [],
@@ -166,6 +173,7 @@ class App extends Component {
     })
   }
 
+// Updates cart after change
   handleUpdateCart(e, id, quantity) {
     let cart = this.state.cart;
     let newQuantity = 0;
@@ -187,6 +195,7 @@ class App extends Component {
     })
   }
 
+// Handles bill amount, taxes, and grand total
   handleTotal(){
     let totalPrice = [];
     let subTotal
@@ -214,6 +223,7 @@ class App extends Component {
     })
   }
 
+// Removes mattress from cart
   handleRemove(id){
     let cart = this.state.cart;
     let quantity;
@@ -232,6 +242,7 @@ class App extends Component {
     })
   }
 
+// Handles current section of checkout
   handleSection(e, section){
     e.preventDefault();
     this.setState({
@@ -239,6 +250,7 @@ class App extends Component {
     })
   }
 
+// Handles customer checkout info
   handleCustomer(e, value){
     e.preventDefault();
     let customer = this.state.customer;
