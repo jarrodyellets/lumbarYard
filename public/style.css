@@ -422,6 +422,10 @@ button:focus {
 	font-weight: 700;
 }
 
+.financeButton:hover {
+	background: #faf9f5;
+}
+
 .newWrapper {
 	position: relative;
 	padding: 50px 0;
