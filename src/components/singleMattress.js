@@ -10,8 +10,8 @@ const SingleMattress = (props) => {
       <div className="singlePrice">{props.price[0]} - {props.price[props.price.length -1]}</div>
       <button className="singleButton" onClick={props.handleCurrentMattress.bind(props.handleCurrentMattress, props.mattress[props.index])}>Buy Now</button>
     </div>
-    )
-}
+  );
+};
 
 SingleMattress.propTypes = {
   name: PropTypes.string,
@@ -20,6 +20,6 @@ SingleMattress.propTypes = {
   handleCurrentMattress: PropTypes.func,
   index: PropTypes.number,
   mattress: PropTypes.object
-}
+};
 
 export default SingleMattress;
