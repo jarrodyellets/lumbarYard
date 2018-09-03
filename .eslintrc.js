@@ -1,17 +1,21 @@
-export default {
+module.exports = {
     "env": {
         "browser": true,
         "es6": true
     },
-    "extends": "eslint:recommended",
+    "extends": [ 
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
     "parserOptions": {
+        "sourceType": "module",
         "ecmaFeatures": {
             "jsx": true
         },
         "ecmaVersion": 2018
     },
     "plugins": [
-        "react"
+        "react",
     ],
     "rules": {
         "indent": [
@@ -20,15 +24,16 @@ export default {
         ],
         "linebreak-style": [
             "error",
-            "unix"
+            "windows"
         ],
         "quotes": [
             "error",
-            "double"
+            "single"
         ],
         "semi": [
             "error",
             "always"
         ]
+
     }
 };

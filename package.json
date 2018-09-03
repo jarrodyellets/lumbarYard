@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "./node_modules/webpack/bin/webpack.js -p --progress && node server.js",
     "dev": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "lint": "eslint ./"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.11",
     "eslint": "^5.5.0",
+    "eslint-plugin-react": "^7.11.1",
     "html-webpack-plugin": "^3.2.0",
     "style-loader": "^0.21.0",
     "webpack": "^4.7.0",
