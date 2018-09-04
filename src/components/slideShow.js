@@ -7,7 +7,7 @@ const SlideShow = (props) => {
     <div className="carouselDiv" aria-label="slide show">
       <Carousel interval={5000} controls={true} pauseOnHover={false} >
         <Carousel.Item>
-          <img className="slideImg slide1" alt="900x500" src="https://www.jarrodyellets.com/images/lumbar/slide2.jpg" alt="shop all mattresses" />
+          <img className="slideImg slide1" alt="900x500" src="https://www.jarrodyellets.com/images/lumbar/slide2.jpg" />
           <div className="slideWrapper">
             <Carousel.Caption>
                 <h3>feel the good vertibrations</h3>
@@ -16,7 +16,7 @@ const SlideShow = (props) => {
           </div>
         </Carousel.Item>
         <Carousel.Item>
-          <img className="slideImg slide2" alt="900x500" src="https://www.jarrodyellets.com/images/lumbar/slide1.jpg" alt="Hal Kitzmiller mattress" />
+          <img className="slideImg slide2" alt="900x500" src="https://www.jarrodyellets.com/images/lumbar/slide1.jpg" />
           <div className="slideWrapper">
             <Carousel.Caption>
                 <h3>Hal Kitzmiller signature mattress</h3>
