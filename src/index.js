@@ -13,7 +13,7 @@ import Thanks from './components/thanks';
 import Footer from './components/footer';
 
 import mattress from './data/mattress';
-import style from '../public/style.css';
+import '../public/style.css';
 
 class App extends Component {
   constructor(props){
