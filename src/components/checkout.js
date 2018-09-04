@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Address from './address';
 import Payment from './payment';
 import Review from './review';
