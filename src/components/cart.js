@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import CartItem from './cartItem';
 
 const Cart = (props) => {
@@ -56,6 +57,18 @@ const Cart = (props) => {
       </div>
     </div>
     )
+}
+
+Cart.propTypes = {
+  cart: PropTypes.array,
+  handleRemove: PropTypes.func,
+  handleUpdateCart: PropTypes.func,
+  quantity: PropTypes.number,
+  subTotal: PropTypes.string,
+  shipping: PropTypes.string,
+  taxes: PropTypes.string,
+  grandTotal: PropTypes.string,
+  handlePage: PropTypes.func
 }
 
 export default Cart;
