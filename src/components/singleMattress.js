@@ -16,10 +16,10 @@ const SingleMattress = (props) => {
 SingleMattress.propTypes = {
   name: PropTypes.string,
   image: PropTypes.string,
-  price: PropTypes.string,
+  price: PropTypes.array,
   handleCurrentMattress: PropTypes.func,
   index: PropTypes.number,
-  mattress: PropTypes.object
+  mattress: PropTypes.array
 };
 
 export default SingleMattress;

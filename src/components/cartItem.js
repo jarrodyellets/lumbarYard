@@ -61,7 +61,7 @@ CartItem.propTypes = {
   name: PropTypes.string,
   size: PropTypes.string,
   handleUpdateCart: PropTypes.func,
-  id: PropTypes.number,
+  id: PropTypes.string,
   handleRemove: PropTypes.func
 }
 
