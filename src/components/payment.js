@@ -48,7 +48,7 @@ const Payment = (props) => {
                                                       autoComplete="cc-csc"
                                                       onChange={(e) => {props.handleCustomer(e, "code")}} />
         <div className="paymentButtons">
-          <button className="checkoutButton" onClick={() => {props.handleSection("address")}}>Back</button>
+          <button className="checkoutButton" onClick={(e) => {props.handleSection(e, "address")}}>Back</button>
           <button className="checkoutButton" type="submit">Next</button>
         </div>
       </form>
