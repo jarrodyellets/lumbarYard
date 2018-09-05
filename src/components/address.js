@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Address = (props) => {
   return(
@@ -53,6 +54,10 @@ const Address = (props) => {
       </form>
     </div>
     )
+}
+
+Address.propTypes = {
+  customer: PropTypes.object
 }
 
 export default Address;
