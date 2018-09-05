@@ -57,7 +57,9 @@ const Address = (props) => {
 }
 
 Address.propTypes = {
-  customer: PropTypes.object
+  customer: PropTypes.object,
+  handleSection: PropTypes.func,
+  handleCustomer: PropTypes.func
 }
 
 export default Address;
