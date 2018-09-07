@@ -25,6 +25,7 @@ class App extends Component {
       currentMattress: mattress[4],
       mattressIndex: 3,
       cart: [],
+      width: window.screen.availWidth,
       quantity: 0,
       subTotal: "$0.00",
       shipping: "Free",
@@ -273,6 +274,7 @@ class App extends Component {
              handlePage={this.handlePage} />
         <div className="contentWrapper">
           {(this.state.page == "home") && (<Home mattress={mattress}
+                                                 width={this.state.width}
                                                  handlePage={this.handlePage}
                                                  handleCurrentMattress={this.handleCurrentMattress} />)}
           {(this.state.page == "mattresses") && (<Mattresses mattress={mattress}
