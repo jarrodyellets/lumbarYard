@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Address from './address';
 import Payment from './payment';
 import Review from './review';
@@ -51,6 +52,21 @@ const Checkout = (props) => {
       </div>
     </div>
   )
+}
+
+Checkout.propTypes = {
+  section: PropTypes.string,
+  quantity: PropTypes.number,
+  cart: PropTypes.array,
+  subTotal: PropTypes.string,
+  shipping: PropTypes.string,
+  taxes: PropTypes.string,
+  grandTotal: PropTypes.string,
+  handleSection: PropTypes.func,
+  handleCustomer: PropTypes.func,
+  customer: PropTypes.object,
+  handlePage: PropTypes.func,
+  handlePurchase: PropTypes.fucn
 }
 
 export default Checkout;
