@@ -6,7 +6,7 @@ const About = () => {
       <img src="https://www.jarrodyellets.com/images/lumbar/gack.jpg" className="aboutImg" />
       <div className="aboutTitle">Todd Gack, Founder and CEO</div>
       <div>Growing up in The Netherlands, I learned early on that one of the most important things you can do for yourself is to get 
-      a good night's rest.  Nowadays, sleep is taken for granted, when it should be the focal point of a healthy lifestyle.  The quality of your
+      a good night&#39;s rest.  Nowadays, sleep is taken for granted, when it should be the focal point of a healthy lifestyle.  The quality of your
       mattress plays a huge role in your quality of sleep.  Eight hours of sleep on a poorly designed mattress is not the same as eight hours on 
       a well manufactured mattress.  After moving to New York, I soon realized that I was not happy with the quality of mattresses that were available.
       I found that if I deconstructed several mattresses and combined the materials in the correct ratios, I would create a fantastic mattress.  I tried
