@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import SlideShow from './slideShow';
 import Featured from './featured';
 import FinanceBar from './financeBar';
@@ -18,6 +19,13 @@ const Home = (props) => {
            handleCurrentMattress={props.handleCurrentMattress} />
     </div>
     )
+}
+
+Home.propTypes = {
+  mattress: PropTypes.array,
+  width: PropTypes.number,
+  handlePage: PropTypes.func,
+  handleCurrentMattress: PropTypes.func
 }
 
 export default Home;
