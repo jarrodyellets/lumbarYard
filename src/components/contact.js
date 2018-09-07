@@ -7,7 +7,7 @@ const Contact = () => {
       <div className="innerContactWrapper">
         <div className="contactLeft">
           <div className="contactText">We are here to answer any questions you may have about our products or services.
-          Reach out to us and we'll respond as soon as we can.</div>
+          Reach out to us and we&#39;ll respond as soon as we can.</div>
           <div className="contactFormWrapper">
             <form className="contactForm" method="POST" action="https://formspress.io/jarrod@jarrodyellets.com">
               <div className="contactFormUpper">
