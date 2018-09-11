@@ -17,9 +17,9 @@ const New = (props) => {
           </div>
           <div className="newReview">
             <div className="newBold">The future is here</div>
-            <div>"I've been to the future, and they have nothing on the NextGen Memory Foam mattress. 
+            <div>&#34;I&#39;ve been to the future, and they have nothing on the NextGen Memory Foam mattress. 
             After being cramped in the DeLorean all day, nothing beats stretching
-            out on the NextGen Memory Foam mattress!"</div>
+            out on the NextGen Memory Foam mattress!&#34;</div>
             <div>-Marty McFly-</div>
           </div>
         </div>
