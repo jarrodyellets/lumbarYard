@@ -23,7 +23,7 @@ const New = (props) => {
             <div>-Marty McFly-</div>
           </div> 
         </div>
-        <img src="https://www.jarrodyellets.com/images/lumbar/mat3phone.png" className="newImg" alt="nexgen memory foam mattress" />
+        <img src="https://www.jarrodyellets.com/images/lumbar/mat3phone.png" className="newImg" alt="nextgen memory foam mattress" />
       </div>
     </div>
     )
