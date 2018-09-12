@@ -21,7 +21,7 @@ const New = (props) => {
             After being cramped in the DeLorean all day, nothing beats stretching
             out on the NextGen Memory Foam mattress!"</div>
             <div>-Marty McFly-</div>
-          </div>
+          </div> 
         </div>
         <img src="https://www.jarrodyellets.com/images/lumbar/mat3phone.png" className="newImg" alt="nexgen memory foam mattress" />
       </div>
