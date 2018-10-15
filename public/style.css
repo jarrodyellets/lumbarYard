@@ -523,11 +523,12 @@ button:focus {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-column-gap: 50px;
-	grid-row-gap: 50px;
+	grid-row-gap: 40px;
 	border-left: 1px solid #dbd263;
 	border-right: 1px solid #dbd263;
 	border-bottom: 1px solid #dbd263;
 	padding: 40px;
+	background-color: #f5f5f5;
 }
 
 .singleWrapper {
@@ -536,15 +537,9 @@ button:focus {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin-bottom: 50px;
-}
-
-.mattressGridChild:nth-of-type(5) > .singleWrapper {
-	margin-bottom: 0;
-}
-
-.mattressGridChild:nth-of-type(6) > .singleWrapper {
-	margin-bottom: 0;
+	padding: 20px;
+	border: 1px solid #ccc;
+	background: #faf9f5;
 }
 
 .singleTitle {
@@ -573,22 +568,6 @@ button:focus {
 
 .singleButton:hover {
 	background: #faf9f5;
-}
-
-.mattressHr {
-  border: 0;
-  margin: 0;
-  height: 1px;
-  width: 100%;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-}
-
-.mattressHr4, .mattressHr5 {
-	display: none;
-}
-
-.mattressHr:nth-child(5) {
-	display: none;
 }
 
 .detailWrapper {

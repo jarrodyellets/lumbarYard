@@ -12,7 +12,6 @@ const Mattresses = (props) =>{
                               index={mattress.index}
                               mattress={props.mattress}
                               handleCurrentMattress={props.handleCurrentMattress} />
-              <hr className={["mattressHr" + mattress.index, "mattressHr"].join(" ")} />
             </div>
   });
   return (

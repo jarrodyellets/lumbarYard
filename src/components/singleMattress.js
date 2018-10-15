@@ -7,8 +7,8 @@ const SingleMattress = (props) => {
       <div className="singleTitle">{props.name}</div>
       <img src={props.image} className="singleImage" alt="current mattress" />
       <div className="singleSize">Twin, Double, Queen, King</div>
-      <div className="singlePrice">{props.price[0]} - {props.price[props.price.length -1]}</div>
-      <button className="singleButton" onClick={props.handleCurrentMattress.bind(props.handleCurrentMattress, props.mattress[props.index])}>Buy Now</button>
+      <div className="singlePrice">From: {props.price[0]}</div>
+      <button className="singleButton" onClick={props.handleCurrentMattress.bind(props.handleCurrentMattress, props.mattress[props.index])}>Choose Options</button>
     </div>
   );
 };
