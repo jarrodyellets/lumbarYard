@@ -13,6 +13,17 @@ const server = new Hapi.Server({
 })
 
 const init = async () => {
+
+  await server.register(require('inert'));
+
+  server.route({
+    method: 'GET',
+    path: '/',
+    handler: (request, h) => {
+      return h.file('index.html');
+    }
+  })
+  
   try {
     await server.start();
     console.log('Server started');
