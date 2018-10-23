@@ -21,3 +21,5 @@ const init = async () => {
     process.exit(1);
   }
 }
+
+init();
