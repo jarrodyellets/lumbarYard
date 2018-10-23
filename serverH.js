@@ -18,12 +18,14 @@ const init = async () => {
 
   server.route({
     method: 'GET',
-    path: '/',
-    handler: (request, h) => {
-      return h.file('index.html');
+    path: '/{path*}',
+    handler: {
+      directory: {
+        path: 'dist'
+      }
     }
   })
-  
+
   try {
     await server.start();
     console.log('Server started');
