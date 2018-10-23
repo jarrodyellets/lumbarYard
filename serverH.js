@@ -5,11 +5,6 @@ const Path = require('path');
 
 const server = new Hapi.Server({
   port: process.env.PORT || 8000,
-  routes: {
-    files: {
-      relativeTo: Path.join(__dirname, 'dist')
-    }
-  }
 })
 
 const init = async () => {
@@ -21,7 +16,9 @@ const init = async () => {
     path: '/{path*}',
     handler: {
       directory: {
-        path: 'dist'
+        path: Path.join(__dirname, 'dist'),
+        listing: false,
+        index: true
       }
     }
   })
