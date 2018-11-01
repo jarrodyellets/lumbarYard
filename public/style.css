@@ -1066,12 +1066,12 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .orderSubTotalText {
-	width: 50%;
+	width: 60%;
 	text-align: left;
 }
 
 .orderSubTotalPrice {
-	width: 50%;
+	width: 40%;
 	text-align: right;
 }
 

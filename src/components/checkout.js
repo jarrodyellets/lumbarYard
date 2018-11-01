@@ -19,7 +19,7 @@ const Checkout = (props) => {
           <div className="orderInnerWrapper">
             <div className="orderSubTotal">
               <div className="orderSubTotalText">
-                <div className="merch">Merchandise ({props.quantity} {props.quantity == 0 || props.cart.length > 1 ? "items" : "item"}):</div>
+                <div className="merch">Merchandise ({props.quantity} {props.quantity == 0 || props.quantity > 1 ? "items" : "item"}):</div>
                 <div>Shipping:</div>
                 <div className="taxes">Taxes (4.5%):</div>
                 <div className="orderTotal">Order Total: </div>
@@ -66,7 +66,7 @@ Checkout.propTypes = {
   handleCustomer: PropTypes.func,
   customer: PropTypes.object,
   handlePage: PropTypes.func,
-  handlePurchase: PropTypes.fucn
+  handlePurchase: PropTypes.func
 }
 
 export default Checkout;
