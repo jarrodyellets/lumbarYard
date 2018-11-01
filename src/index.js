@@ -112,7 +112,8 @@ class App extends Component {
 // Handles currently selected mattress
   handleCurrentMattress(mattress){
     this.setState({
-      currentMattress: mattress
+      currentMattress: mattress,
+      mattressIndex: 3
     }, () => {
       this.handlePage("mattressDetail")
     })
