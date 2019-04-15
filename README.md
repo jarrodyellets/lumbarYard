@@ -1,6 +1,6 @@
 # The Lumbar Yard
 
-[![Build Status](https://travis-ci.org/jarrodyellets/lumbarYard.svg?branch=master)](https://travis-ci.org/jarrodyellets/lumbarYard)[![Greenkeeper badge](https://badges.greenkeeper.io/jarrodyellets/lumbarYard.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/jarrodyellets/lumbarYard.svg?branch=master)](https://travis-ci.org/jarrodyellets/lumbarYard) [![Greenkeeper badge](https://badges.greenkeeper.io/jarrodyellets/lumbarYard.svg)](https://greenkeeper.io/)
 
 <figure><img src="http://www.jarrodyellets.com/images/lumbar.png" alt="Pillow Real Estate" style="width: 80%; display: block; margin-left: auto; margin-right: auto;"/></figure>
 
