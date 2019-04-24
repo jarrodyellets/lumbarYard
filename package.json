@@ -35,7 +35,7 @@
     "@babel/core": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
     "@babel/preset-react": "^7.0.0",
-    "hapi": "npm:@hapi/hapi@18.x.x",
+    "hapi": "18.1.0",
     "inert": "^5.1.3",
     "path": "^0.12.7",
     "react": "^16.8.6",
