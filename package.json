@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.5.0",
-    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-env": "^7.5.2",
     "@babel/preset-react": "^7.0.0",
     "hapi": "18.1.0",
     "inert": "^5.1.3",
